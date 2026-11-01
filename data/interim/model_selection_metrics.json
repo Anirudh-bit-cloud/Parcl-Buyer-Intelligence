@@ -36,6 +36,17 @@
   "persistent_cluster_diagnostic": {
     "k10_size_32_cluster": "Consists exclusively of 6+ to 11 unit ultra-high volume buyers (mean age 64.0, total spend up to \u20b93.40M)."
   },
+  "satisfaction_uniformity_audit": {
+    "chi2": 1.99,
+    "p_value": 0.7376,
+    "counts": [
+      395,
+      379,
+      404,
+      417,
+      405
+    ]
+  },
   "variants_comparison": {
     "Model_A_PRD_Baseline": {
       "n_features": 76,
@@ -221,7 +232,7 @@
         },
         {
           "k": 3,
-          "inertia": 13361.231738522998,
+          "inertia": 13361.231738523,
           "silhouette": 0.33751843811845866,
           "davies_bouldin": 1.832750315245595,
           "calinski_harabasz": 1608.5858374401832,
@@ -1372,16 +1383,5 @@
       "verdict": "NOT SUPPORTED (No luxury square-foot price premium; satisfaction has no detectable association with spend or joint luxury profile)",
       "is_supported": false
     }
-  ],
-  "satisfaction_uniformity_audit": {
-    "chi2": 1.99,
-    "p_value": 0.7376,
-    "counts": [
-      395,
-      379,
-      404,
-      417,
-      405
-    ]
-  }
+  ]
 }

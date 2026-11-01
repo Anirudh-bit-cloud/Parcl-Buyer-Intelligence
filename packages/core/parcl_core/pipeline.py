@@ -388,7 +388,7 @@ def run_phase_3() -> dict[str, str]:
         },
         "soft_membership_audit": {
             "shipped_method": "kmeans_centroid_distance_softmax",
-            "beta": 1.0,
+            "beta": 1.12,
             "pct_borderline_clients_lt_0_60": pct_low_kmeans_soft_prob,
             "pct_low_gmm_posterior_diagnostic": pct_low_gmm_posterior,
             "diagonal_gmm_overconfidence_diagnostic": "Diagonal GMM in 84 dimensions multiplies 84 density terms, driving likelihood ratios to extreme values and collapsing posteriors to 1.0 or 0.0 (0.00% < 0.60). Centroid distance softmax yields realistic soft membership with 26.45% borderline clients.",
@@ -399,7 +399,12 @@ def run_phase_3() -> dict[str, str]:
             "collinearity_finding": "96.75% of clients have n_towers == n_units and corr(HHI, 1/n_units)=0.9322. Dropping n_units alone preserved partition through proxy collinearity; dropping all proxies drops ARI to 0.2013.",
         },
         "persistent_cluster_diagnostic": {
-            "k10_size_32_cluster": "Consists exclusively of 6+ to 11 unit ultra-high volume buyers (mean age 64.0, total spend up to $3.40M).",
+            "k10_size_32_cluster": "Consists exclusively of 6+ to 11 unit ultra-high volume buyers (mean age 64.0, total spend up to ₹3.40M).",
+        },
+        "satisfaction_uniformity_audit": {
+            "chi2": 1.990,
+            "p_value": 0.7376,
+            "counts": [395, 379, 404, 417, 405],
         },
         "variants_comparison": variants_comparison,
         "kmeans_battery": km_battery,
