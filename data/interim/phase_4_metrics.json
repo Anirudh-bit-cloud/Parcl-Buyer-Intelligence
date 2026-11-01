@@ -1,0 +1,678 @@
+{
+  "inventory_metadata": {
+    "total_towers": 20,
+    "raw_available_rows": 2695,
+    "distinct_available_units": 932,
+    "units_later_sold": 2243,
+    "current_available_units": 313,
+    "deduplication_rule": "Latest record per (tower_number, unit_number) in temporal sequence"
+  },
+  "opportunity_finder_client_backtest": {
+    "n_splits": 5,
+    "n_clients": 2000,
+    "n_transactions": 7305,
+    "evaluation_protocol": "5-Fold Cross-Validation Split BY CLIENT (Train 80% clients, Test 20% clients)",
+    "full_model": {
+      "hit_rate_pct": 47.33,
+      "mrr": 0.7105,
+      "weights": {
+        "category": 0.35,
+        "price": 0.3,
+        "floor_area": 0.2,
+        "tower": 0.15
+      }
+    },
+    "baselines_and_ablations": {
+      "random_baseline": {
+        "hit_rate_pct": 25.0,
+        "mrr": 0.5208
+      },
+      "majority_class_baseline": {
+        "majority_cluster_id": 3,
+        "majority_cluster_transactions": 2335,
+        "hit_rate_pct": 31.96,
+        "note": "Majority transaction segment is Cluster 3 (2,335 of 7,305 transactions = 31.96%)."
+      },
+      "category_only_baseline": {
+        "hit_rate_pct": 31.62,
+        "mrr": 0.5673
+      },
+      "tower_only_baseline": {
+        "hit_rate_pct": 47.12,
+        "mrr": 0.7127
+      },
+      "price_only_baseline": {
+        "hit_rate_pct": 25.5,
+        "mrr": 0.5365
+      },
+      "area_only_baseline": {
+        "hit_rate_pct": 25.41,
+        "mrr": 0.535
+      },
+      "no_category_ablation": {
+        "hit_rate_pct": 46.6,
+        "mrr": 0.7092,
+        "finding": "Addresses category leakage: office_share is partly circular with clustering features. When category is completely removed, hit rate remains 46.60%, proving predictive signal is genuinely driven by tower geography."
+      }
+    },
+    "lift_metrics": {
+      "lift_over_random_multiple": 1.89,
+      "lift_over_majority_pct_points": 15.36,
+      "lift_over_category_only_pct_points": 15.7,
+      "lift_over_tower_only_pct_points": 0.21,
+      "price_area_discriminative_signal": "Price-only (25.5%) and Area-only (25.41%) achieve random-level hit rates (~25.5%), confirming that unit sizing and pricing alone provide virtually zero discriminative signal across segments."
+    },
+    "volume_group_structural_property": {
+      "volume_group_accuracy_pct": 79.4,
+      "volume_group_auc": 0.8331,
+      "towers_1_2_7_8_13_14_19_20_share_3unit": 0.0,
+      "towers_1_2_7_8_13_14_19_20_share_4plus": 66.62,
+      "hit_rate_ceiling_note": "Tower mix almost determines the 3-unit vs 4+ volume group (0.0% vs 66.6% in towers 1,2,7,8,13,14,19,20; accuracy=79.40%, AUC=0.8331). Because segments within each volume group (0 vs 3, 1 vs 2) share virtually identical tower footprints, 4-class Hit Rate has an effective theoretical ceiling of ~50%. This tower distribution pattern is an observed data property / structural artifact of the dataset, not organic buyer preference."
+    },
+    "client_level_tower_test": {
+      "chi2_statistic": 4722.0832,
+      "p_value": 0.0,
+      "degrees_of_freedom": 57,
+      "conclusion": "Tower mix differs substantially and significantly across segments at the client level (chi2=4722.08, p < 0.0001, dof=57). Segment 1 and 2 concentrate in towers 4-6, 10-11, 16-17; Segments 0 and 3 concentrate in towers 1-2, 7-8, 13-14, 19-20."
+    },
+    "weight_sensitivity_notice": "Weight sensitivity across heuristic configs is strictly exploratory."
+  },
+  "segment_rank_correlations": {
+    "spearman_rank_correlations": {
+      "Cluster_0_vs_Cluster_0": 1.0,
+      "Cluster_0_vs_Cluster_1": 0.8098,
+      "Cluster_0_vs_Cluster_2": 0.7197,
+      "Cluster_0_vs_Cluster_3": 0.9946,
+      "Cluster_1_vs_Cluster_0": 0.8098,
+      "Cluster_1_vs_Cluster_1": 1.0,
+      "Cluster_1_vs_Cluster_2": 0.9514,
+      "Cluster_1_vs_Cluster_3": 0.8188,
+      "Cluster_2_vs_Cluster_0": 0.7197,
+      "Cluster_2_vs_Cluster_1": 0.9514,
+      "Cluster_2_vs_Cluster_2": 1.0,
+      "Cluster_2_vs_Cluster_3": 0.723,
+      "Cluster_3_vs_Cluster_0": 0.9946,
+      "Cluster_3_vs_Cluster_1": 0.8188,
+      "Cluster_3_vs_Cluster_2": 0.723,
+      "Cluster_3_vs_Cluster_3": 1.0
+    },
+    "pairwise_unique": {
+      "Cluster_0_vs_Cluster_1": 0.8098,
+      "Cluster_0_vs_Cluster_2": 0.7197,
+      "Cluster_0_vs_Cluster_3": 0.9946,
+      "Cluster_1_vs_Cluster_2": 0.9514,
+      "Cluster_1_vs_Cluster_3": 0.8188,
+      "Cluster_2_vs_Cluster_3": 0.723
+    },
+    "interpretation": "Segments S0 and S3 have near-perfect rank correlation (rho=0.9959) because both buy 4 units with ~14% office across similar towers, differing only by buyer age (42 vs 69 yrs). Segments S1 and S2 have very high rank correlation (rho=0.9528) sharing 3-unit tower footprints. Inventory preference effectively partitions into 3-unit buyers (S1/S2) vs 4-unit buyers (S0/S3), confirming segments are not fully distinguishable by property affinity alone."
+  },
+  "segment_top_opportunities": {
+    "Cluster_0": {
+      "top_overall": [
+        {
+          "listing_id": 20365,
+          "unit_number": 43,
+          "tower_number": 2,
+          "unit_category": "Apartment",
+          "sale_price": 315555.56,
+          "floor_area_sqft": 1118.94,
+          "price_per_sqft": 282.01,
+          "affinity_score": 0.9883
+        },
+        {
+          "listing_id": 200449,
+          "unit_number": 51,
+          "tower_number": 20,
+          "unit_category": "Apartment",
+          "sale_price": 328980.19,
+          "floor_area_sqft": 1062.33,
+          "price_per_sqft": 309.68,
+          "affinity_score": 0.9734
+        },
+        {
+          "listing_id": 80385,
+          "unit_number": 46,
+          "tower_number": 8,
+          "unit_category": "Apartment",
+          "sale_price": 320650.8,
+          "floor_area_sqft": 1175.51,
+          "price_per_sqft": 272.78,
+          "affinity_score": 0.9728
+        }
+      ],
+      "top_apartments": [
+        {
+          "listing_id": 20365,
+          "unit_number": 43,
+          "tower_number": 2,
+          "unit_category": "Apartment",
+          "sale_price": 315555.56,
+          "floor_area_sqft": 1118.94,
+          "price_per_sqft": 282.01,
+          "affinity_score": 0.9883
+        },
+        {
+          "listing_id": 200449,
+          "unit_number": 51,
+          "tower_number": 20,
+          "unit_category": "Apartment",
+          "sale_price": 328980.19,
+          "floor_area_sqft": 1062.33,
+          "price_per_sqft": 309.68,
+          "affinity_score": 0.9734
+        },
+        {
+          "listing_id": 80385,
+          "unit_number": 46,
+          "tower_number": 8,
+          "unit_category": "Apartment",
+          "sale_price": 320650.8,
+          "floor_area_sqft": 1175.51,
+          "price_per_sqft": 272.78,
+          "affinity_score": 0.9728
+        }
+      ],
+      "top_offices": [
+        {
+          "listing_id": 80140,
+          "unit_number": 17,
+          "tower_number": 8,
+          "unit_category": "Office",
+          "sale_price": 330111.23,
+          "floor_area_sqft": 1109.27,
+          "price_per_sqft": 297.59,
+          "affinity_score": 0.6849
+        },
+        {
+          "listing_id": 140182,
+          "unit_number": 20,
+          "tower_number": 14,
+          "unit_category": "Office",
+          "sale_price": 347553.21,
+          "floor_area_sqft": 1224.91,
+          "price_per_sqft": 283.74,
+          "affinity_score": 0.6726
+        },
+        {
+          "listing_id": 90231,
+          "unit_number": 33,
+          "tower_number": 9,
+          "unit_category": "Office",
+          "sale_price": 337626.66,
+          "floor_area_sqft": 973.52,
+          "price_per_sqft": 346.81,
+          "affinity_score": 0.617
+        }
+      ]
+    },
+    "Cluster_1": {
+      "top_overall": [
+        {
+          "listing_id": 110258,
+          "unit_number": 31,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 354022.3,
+          "floor_area_sqft": 1232.68,
+          "price_per_sqft": 287.2,
+          "affinity_score": 0.9942
+        },
+        {
+          "listing_id": 110176,
+          "unit_number": 19,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 364813.91,
+          "floor_area_sqft": 1083.98,
+          "price_per_sqft": 336.55,
+          "affinity_score": 0.9888
+        },
+        {
+          "listing_id": 110195,
+          "unit_number": 23,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 322447.96,
+          "floor_area_sqft": 1098.83,
+          "price_per_sqft": 293.45,
+          "affinity_score": 0.98
+        }
+      ],
+      "top_apartments": [
+        {
+          "listing_id": 110258,
+          "unit_number": 31,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 354022.3,
+          "floor_area_sqft": 1232.68,
+          "price_per_sqft": 287.2,
+          "affinity_score": 0.9942
+        },
+        {
+          "listing_id": 110176,
+          "unit_number": 19,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 364813.91,
+          "floor_area_sqft": 1083.98,
+          "price_per_sqft": 336.55,
+          "affinity_score": 0.9888
+        },
+        {
+          "listing_id": 110195,
+          "unit_number": 23,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 322447.96,
+          "floor_area_sqft": 1098.83,
+          "price_per_sqft": 293.45,
+          "affinity_score": 0.98
+        }
+      ],
+      "top_offices": [
+        {
+          "listing_id": 170425,
+          "unit_number": 49,
+          "tower_number": 17,
+          "unit_category": "Office",
+          "sale_price": 354856.93,
+          "floor_area_sqft": 1283.67,
+          "price_per_sqft": 276.44,
+          "affinity_score": 0.6601
+        },
+        {
+          "listing_id": 170191,
+          "unit_number": 21,
+          "tower_number": 17,
+          "unit_category": "Office",
+          "sale_price": 367790.56,
+          "floor_area_sqft": 1320.97,
+          "price_per_sqft": 278.42,
+          "affinity_score": 0.6439
+        },
+        {
+          "listing_id": 40120,
+          "unit_number": 14,
+          "tower_number": 4,
+          "unit_category": "Office",
+          "sale_price": 335954.58,
+          "floor_area_sqft": 1322.66,
+          "price_per_sqft": 254.0,
+          "affinity_score": 0.6362
+        }
+      ]
+    },
+    "Cluster_2": {
+      "top_overall": [
+        {
+          "listing_id": 110258,
+          "unit_number": 31,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 354022.3,
+          "floor_area_sqft": 1232.68,
+          "price_per_sqft": 287.2,
+          "affinity_score": 0.996
+        },
+        {
+          "listing_id": 110176,
+          "unit_number": 19,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 364813.91,
+          "floor_area_sqft": 1083.98,
+          "price_per_sqft": 336.55,
+          "affinity_score": 0.9851
+        },
+        {
+          "listing_id": 110512,
+          "unit_number": 61,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 388520.34,
+          "floor_area_sqft": 1299.46,
+          "price_per_sqft": 298.99,
+          "affinity_score": 0.9815
+        }
+      ],
+      "top_apartments": [
+        {
+          "listing_id": 110258,
+          "unit_number": 31,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 354022.3,
+          "floor_area_sqft": 1232.68,
+          "price_per_sqft": 287.2,
+          "affinity_score": 0.996
+        },
+        {
+          "listing_id": 110176,
+          "unit_number": 19,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 364813.91,
+          "floor_area_sqft": 1083.98,
+          "price_per_sqft": 336.55,
+          "affinity_score": 0.9851
+        },
+        {
+          "listing_id": 110512,
+          "unit_number": 61,
+          "tower_number": 11,
+          "unit_category": "Apartment",
+          "sale_price": 388520.34,
+          "floor_area_sqft": 1299.46,
+          "price_per_sqft": 298.99,
+          "affinity_score": 0.9815
+        }
+      ],
+      "top_offices": [
+        {
+          "listing_id": 170425,
+          "unit_number": 49,
+          "tower_number": 17,
+          "unit_category": "Office",
+          "sale_price": 354856.93,
+          "floor_area_sqft": 1283.67,
+          "price_per_sqft": 276.44,
+          "affinity_score": 0.8247
+        },
+        {
+          "listing_id": 170191,
+          "unit_number": 21,
+          "tower_number": 17,
+          "unit_category": "Office",
+          "sale_price": 367790.56,
+          "floor_area_sqft": 1320.97,
+          "price_per_sqft": 278.42,
+          "affinity_score": 0.8194
+        },
+        {
+          "listing_id": 40120,
+          "unit_number": 14,
+          "tower_number": 4,
+          "unit_category": "Office",
+          "sale_price": 335954.58,
+          "floor_area_sqft": 1322.66,
+          "price_per_sqft": 254.0,
+          "affinity_score": 0.7994
+        }
+      ]
+    },
+    "Cluster_3": {
+      "top_overall": [
+        {
+          "listing_id": 20365,
+          "unit_number": 43,
+          "tower_number": 2,
+          "unit_category": "Apartment",
+          "sale_price": 315555.56,
+          "floor_area_sqft": 1118.94,
+          "price_per_sqft": 282.01,
+          "affinity_score": 0.9904
+        },
+        {
+          "listing_id": 30086,
+          "unit_number": 8,
+          "tower_number": 3,
+          "unit_category": "Apartment",
+          "sale_price": 337354.39,
+          "floor_area_sqft": 1152.39,
+          "price_per_sqft": 292.74,
+          "affinity_score": 0.9782
+        },
+        {
+          "listing_id": 30231,
+          "unit_number": 27,
+          "tower_number": 3,
+          "unit_category": "Apartment",
+          "sale_price": 348620.64,
+          "floor_area_sqft": 1117.14,
+          "price_per_sqft": 312.07,
+          "affinity_score": 0.9772
+        }
+      ],
+      "top_apartments": [
+        {
+          "listing_id": 20365,
+          "unit_number": 43,
+          "tower_number": 2,
+          "unit_category": "Apartment",
+          "sale_price": 315555.56,
+          "floor_area_sqft": 1118.94,
+          "price_per_sqft": 282.01,
+          "affinity_score": 0.9904
+        },
+        {
+          "listing_id": 30086,
+          "unit_number": 8,
+          "tower_number": 3,
+          "unit_category": "Apartment",
+          "sale_price": 337354.39,
+          "floor_area_sqft": 1152.39,
+          "price_per_sqft": 292.74,
+          "affinity_score": 0.9782
+        },
+        {
+          "listing_id": 30231,
+          "unit_number": 27,
+          "tower_number": 3,
+          "unit_category": "Apartment",
+          "sale_price": 348620.64,
+          "floor_area_sqft": 1117.14,
+          "price_per_sqft": 312.07,
+          "affinity_score": 0.9772
+        }
+      ],
+      "top_offices": [
+        {
+          "listing_id": 80140,
+          "unit_number": 17,
+          "tower_number": 8,
+          "unit_category": "Office",
+          "sale_price": 330111.23,
+          "floor_area_sqft": 1109.27,
+          "price_per_sqft": 297.59,
+          "affinity_score": 0.6653
+        },
+        {
+          "listing_id": 140182,
+          "unit_number": 20,
+          "tower_number": 14,
+          "unit_category": "Office",
+          "sale_price": 347553.21,
+          "floor_area_sqft": 1224.91,
+          "price_per_sqft": 283.74,
+          "affinity_score": 0.6645
+        },
+        {
+          "listing_id": 90231,
+          "unit_number": 33,
+          "tower_number": 9,
+          "unit_category": "Office",
+          "sale_price": 337626.66,
+          "floor_area_sqft": 973.52,
+          "price_per_sqft": 346.81,
+          "affinity_score": 0.6295
+        }
+      ]
+    }
+  },
+  "sample_nbo_recommendations_c0001": [
+    {
+      "listing_id": 20365,
+      "unit_number": 43,
+      "tower_number": 2,
+      "unit_category": "Apartment",
+      "floor_area_sqft": 1118.94,
+      "sale_price": 315555.56,
+      "price_per_sqft": 282.01,
+      "client_segment_id": 0,
+      "segment_affinity_score": 0.9883,
+      "tower_diversification_bonus": 0.15,
+      "category_diversification_bonus": 0.0,
+      "final_nbo_score": 1.1383,
+      "diversifies_towers": true,
+      "untested_assumption_note": "Bonuses (+0.15 tower, +0.10 category) are heuristic assumptions. Unclipped score. Client owns 4 of 20 towers (16 unowned); mean available bonus eligibility is ~82%."
+    },
+    {
+      "listing_id": 200449,
+      "unit_number": 51,
+      "tower_number": 20,
+      "unit_category": "Apartment",
+      "floor_area_sqft": 1062.33,
+      "sale_price": 328980.19,
+      "price_per_sqft": 309.68,
+      "client_segment_id": 0,
+      "segment_affinity_score": 0.9734,
+      "tower_diversification_bonus": 0.15,
+      "category_diversification_bonus": 0.0,
+      "final_nbo_score": 1.1234,
+      "diversifies_towers": true,
+      "untested_assumption_note": "Bonuses (+0.15 tower, +0.10 category) are heuristic assumptions. Unclipped score. Client owns 4 of 20 towers (16 unowned); mean available bonus eligibility is ~82%."
+    },
+    {
+      "listing_id": 80385,
+      "unit_number": 46,
+      "tower_number": 8,
+      "unit_category": "Apartment",
+      "floor_area_sqft": 1175.51,
+      "sale_price": 320650.8,
+      "price_per_sqft": 272.78,
+      "client_segment_id": 0,
+      "segment_affinity_score": 0.9728,
+      "tower_diversification_bonus": 0.15,
+      "category_diversification_bonus": 0.0,
+      "final_nbo_score": 1.1228,
+      "diversifies_towers": true,
+      "untested_assumption_note": "Bonuses (+0.15 tower, +0.10 category) are heuristic assumptions. Unclipped score. Client owns 4 of 20 towers (16 unowned); mean available bonus eligibility is ~82%."
+    },
+    {
+      "listing_id": 130408,
+      "unit_number": 46,
+      "tower_number": 13,
+      "unit_category": "Apartment",
+      "floor_area_sqft": 1098.38,
+      "sale_price": 301584.36,
+      "price_per_sqft": 274.57,
+      "client_segment_id": 0,
+      "segment_affinity_score": 0.9686,
+      "tower_diversification_bonus": 0.15,
+      "category_diversification_bonus": 0.0,
+      "final_nbo_score": 1.1186,
+      "diversifies_towers": true,
+      "untested_assumption_note": "Bonuses (+0.15 tower, +0.10 category) are heuristic assumptions. Unclipped score. Client owns 4 of 20 towers (16 unowned); mean available bonus eligibility is ~82%."
+    },
+    {
+      "listing_id": 200200,
+      "unit_number": 24,
+      "tower_number": 20,
+      "unit_category": "Apartment",
+      "floor_area_sqft": 1188.07,
+      "sale_price": 368118.52,
+      "price_per_sqft": 309.85,
+      "client_segment_id": 0,
+      "segment_affinity_score": 0.9589,
+      "tower_diversification_bonus": 0.15,
+      "category_diversification_bonus": 0.0,
+      "final_nbo_score": 1.1089,
+      "diversifies_towers": true,
+      "untested_assumption_note": "Bonuses (+0.15 tower, +0.10 category) are heuristic assumptions. Unclipped score. Client owns 4 of 20 towers (16 unowned); mean available bonus eligibility is ~82%."
+    }
+  ],
+  "marketing_scenario_calculator": {
+    "calculator_type": "Marketing Scenario Calculator (Illustrative)",
+    "total_budget": 100000.0,
+    "total_modeled_clients": 60.0,
+    "total_modeled_gross_sales_volume": 75881028.0,
+    "revenue_label_notice": "Figures reflect modeled gross sales volume (GMV), NOT net profit. Net profit depends on unobserved operating costs and commissions. Assumption note: Assumes every acquired client buys at historical average sales, with no conversion funnel or multi-touch attribution model.",
+    "channel_targeting_empirical_finding": {
+      "spend_difference_pct": 2.83,
+      "spend_anova_f": 2.1176,
+      "spend_anova_p": 0.1206,
+      "spend_kruskal_h": 3.2741,
+      "spend_kruskal_p": 0.1946,
+      "segment_mix_chi2": 0.75,
+      "segment_mix_p": 0.9933,
+      "segment_mix_dof": 6,
+      "conclusion": "The empirical data DOES NOT SUPPORT segment-specific channel targeting. Segment mix across channels is statistically indistinguishable (chi2=0.7500, p=0.9933), and historical sales per client differ by only ~2.5-2.8% across channels (ANOVA p=0.1206)."
+    },
+    "channel_breakdown": {
+      "Website": {
+        "allocated_budget": 50000.0,
+        "budget_share": 0.5,
+        "illustrative_cpa_input": 1200.0,
+        "modeled_clients_acquired": 41.7,
+        "historical_mean_sales_per_client": 1274770.93,
+        "modeled_gross_sales_volume": 53115455.42,
+        "historical_channel_metrics": {
+          "historical_client_count": 1103,
+          "historical_share": 0.5515,
+          "historical_mean_sales_per_client": 1274770.93,
+          "historical_median_sales_per_client": 1238162.97,
+          "mean_units": 3.68,
+          "loan_rate": 0.3663
+        }
+      },
+      "Agency": {
+        "allocated_budget": 35000.0,
+        "budget_share": 0.35,
+        "illustrative_cpa_input": 3500.0,
+        "modeled_clients_acquired": 10.0,
+        "historical_mean_sales_per_client": 1243488.9,
+        "modeled_gross_sales_volume": 12434889.0,
+        "historical_channel_metrics": {
+          "historical_client_count": 705,
+          "historical_share": 0.3525,
+          "historical_mean_sales_per_client": 1243488.9,
+          "historical_median_sales_per_client": 1210176.2,
+          "mean_units": 3.61,
+          "loan_rate": 0.366
+        }
+      },
+      "Client": {
+        "allocated_budget": 15000.0,
+        "budget_share": 0.15,
+        "illustrative_cpa_input": 1800.0,
+        "modeled_clients_acquired": 8.3,
+        "historical_mean_sales_per_client": 1239682.03,
+        "modeled_gross_sales_volume": 10330683.58,
+        "historical_channel_metrics": {
+          "historical_client_count": 192,
+          "historical_share": 0.096,
+          "historical_mean_sales_per_client": 1239682.03,
+          "historical_median_sales_per_client": 1223339.08,
+          "mean_units": 3.63,
+          "loan_rate": 0.3854
+        }
+      }
+    }
+  },
+  "verified_sample_metadata": {
+    "sample_client_id": "C0001",
+    "sample_client_owned_towers": [
+      3,
+      4,
+      9,
+      15
+    ],
+    "sample_listing_ids": [
+      20365,
+      200449,
+      80385,
+      130408,
+      200200
+    ],
+    "client_id_range": [
+      "C0001",
+      "C2000"
+    ],
+    "unit_number_range": [
+      1,
+      70
+    ],
+    "current_inventory_size": 313
+  }
+}

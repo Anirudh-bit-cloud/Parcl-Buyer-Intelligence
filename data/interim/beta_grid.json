@@ -1,0 +1,196 @@
+{
+  "evaluation_protocol": "5-Fold Cross-Validation on N=2,000 cohort clients (84 Model B3 features)",
+  "criterion_name": "out-of-fold agreement log-likelihood",
+  "held_out_definition": "Held-out clients in validation fold scored against training-fold centroids aligned to production centroids via Hungarian assignment (linear_sum_assignment). Evaluates agreement with full-cohort production labels.",
+  "leakage_disclosure": "Target cluster labels (y_i) were fit on the full 2,000-client cohort. Scoring held-out validation points measures out-of-fold agreement with the production partition rather than external ground truth.",
+  "selection_rule": "Empirical maximizer of out-of-fold agreement log-likelihood across the evaluated beta grid. Balances probability concentration against overconfident boundary mismatch penalties.",
+  "chosen_beta": 1.12,
+  "chosen_mean_agreement_log_likelihood": -0.6021,
+  "chosen_mean_log_likelihood": -0.6021,
+  "chosen_ambiguity_pct": 0.55,
+  "out_of_fold_agreement_rate_pct": 85.8,
+  "chosen_p_max_quantiles": {
+    "p05": 0.5397,
+    "p25": 0.6413,
+    "p50": 0.6948,
+    "p75": 0.7686,
+    "p95": 0.9639
+  },
+  "grid": [
+    {
+      "beta": 0.1,
+      "mean_agreement_log_likelihood": -1.1682,
+      "mean_log_likelihood": -1.1682,
+      "ambiguity_pct": 100.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 0.3,
+      "mean_agreement_log_likelihood": -0.8734,
+      "mean_log_likelihood": -0.8734,
+      "ambiguity_pct": 90.15,
+      "is_chosen": false
+    },
+    {
+      "beta": 0.51,
+      "mean_agreement_log_likelihood": -0.7114,
+      "mean_log_likelihood": -0.7114,
+      "ambiguity_pct": 19.15,
+      "is_chosen": false
+    },
+    {
+      "beta": 0.71,
+      "mean_agreement_log_likelihood": -0.639,
+      "mean_log_likelihood": -0.639,
+      "ambiguity_pct": 4.4,
+      "is_chosen": false
+    },
+    {
+      "beta": 0.92,
+      "mean_agreement_log_likelihood": -0.6085,
+      "mean_log_likelihood": -0.6085,
+      "ambiguity_pct": 1.6,
+      "is_chosen": false
+    },
+    {
+      "beta": 1.12,
+      "mean_agreement_log_likelihood": -0.6021,
+      "mean_log_likelihood": -0.6021,
+      "ambiguity_pct": 0.55,
+      "is_chosen": true
+    },
+    {
+      "beta": 1.33,
+      "mean_agreement_log_likelihood": -0.6086,
+      "mean_log_likelihood": -0.6086,
+      "ambiguity_pct": 0.35,
+      "is_chosen": false
+    },
+    {
+      "beta": 1.53,
+      "mean_agreement_log_likelihood": -0.6223,
+      "mean_log_likelihood": -0.6223,
+      "ambiguity_pct": 0.1,
+      "is_chosen": false
+    },
+    {
+      "beta": 1.73,
+      "mean_agreement_log_likelihood": -0.641,
+      "mean_log_likelihood": -0.641,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 1.94,
+      "mean_agreement_log_likelihood": -0.6646,
+      "mean_log_likelihood": -0.6646,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 2.14,
+      "mean_agreement_log_likelihood": -0.69,
+      "mean_log_likelihood": -0.69,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 2.35,
+      "mean_agreement_log_likelihood": -0.7193,
+      "mean_log_likelihood": -0.7193,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 2.55,
+      "mean_agreement_log_likelihood": -0.7492,
+      "mean_log_likelihood": -0.7492,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 2.75,
+      "mean_agreement_log_likelihood": -0.781,
+      "mean_log_likelihood": -0.781,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 2.96,
+      "mean_agreement_log_likelihood": -0.8159,
+      "mean_log_likelihood": -0.8159,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 3.16,
+      "mean_agreement_log_likelihood": -0.8505,
+      "mean_log_likelihood": -0.8505,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 3.37,
+      "mean_agreement_log_likelihood": -0.8881,
+      "mean_log_likelihood": -0.8881,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 3.57,
+      "mean_agreement_log_likelihood": -0.925,
+      "mean_log_likelihood": -0.925,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 3.78,
+      "mean_agreement_log_likelihood": -0.9647,
+      "mean_log_likelihood": -0.9647,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 3.98,
+      "mean_agreement_log_likelihood": -1.0032,
+      "mean_log_likelihood": -1.0032,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 4.18,
+      "mean_agreement_log_likelihood": -1.0425,
+      "mean_log_likelihood": -1.0425,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 4.39,
+      "mean_agreement_log_likelihood": -1.0844,
+      "mean_log_likelihood": -1.0844,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 4.59,
+      "mean_agreement_log_likelihood": -1.1248,
+      "mean_log_likelihood": -1.1248,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 4.8,
+      "mean_agreement_log_likelihood": -1.1678,
+      "mean_log_likelihood": -1.1678,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 5.0,
+      "mean_agreement_log_likelihood": -1.2092,
+      "mean_log_likelihood": -1.2092,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    }
+  ]
+}

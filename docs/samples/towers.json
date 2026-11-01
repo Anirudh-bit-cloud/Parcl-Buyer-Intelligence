@@ -1,0 +1,344 @@
+{
+  "total_towers": 20,
+  "total_sold_units": 7305,
+  "total_available_units": 313,
+  "towers": [
+    {
+      "tower_number": 1,
+      "total_sales_units": 349,
+      "currently_available_units": 12,
+      "mean_sale_price_inr": 277838.14,
+      "mean_sale_price_display": "₹2,77,838",
+      "mean_price_per_sqft_inr": 300.4,
+      "apartment_units_sold": 295,
+      "office_units_sold": 54,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.4499,
+        "Cluster_1": 0.0,
+        "Cluster_2": 0.0,
+        "Cluster_3": 0.5501
+      }
+    },
+    {
+      "tower_number": 2,
+      "total_sales_units": 441,
+      "currently_available_units": 11,
+      "mean_sale_price_inr": 285683.5,
+      "mean_sale_price_display": "₹2,85,684",
+      "mean_price_per_sqft_inr": 305.14,
+      "apartment_units_sold": 388,
+      "office_units_sold": 53,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.4898,
+        "Cluster_1": 0.0,
+        "Cluster_2": 0.0,
+        "Cluster_3": 0.5102
+      }
+    },
+    {
+      "tower_number": 3,
+      "total_sales_units": 419,
+      "currently_available_units": 14,
+      "mean_sale_price_inr": 296290.27,
+      "mean_sale_price_display": "₹2,96,290",
+      "mean_price_per_sqft_inr": 303.69,
+      "apartment_units_sold": 368,
+      "office_units_sold": 51,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.4153,
+        "Cluster_1": 0.0811,
+        "Cluster_2": 0.0382,
+        "Cluster_3": 0.4654
+      }
+    },
+    {
+      "tower_number": 4,
+      "total_sales_units": 339,
+      "currently_available_units": 17,
+      "mean_sale_price_inr": 304742.91,
+      "mean_sale_price_display": "₹3,04,743",
+      "mean_price_per_sqft_inr": 302.3,
+      "apartment_units_sold": 287,
+      "office_units_sold": 52,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.0501,
+        "Cluster_1": 0.4779,
+        "Cluster_2": 0.351,
+        "Cluster_3": 0.1209
+      }
+    },
+    {
+      "tower_number": 5,
+      "total_sales_units": 350,
+      "currently_available_units": 17,
+      "mean_sale_price_inr": 287822.63,
+      "mean_sale_price_display": "₹2,87,823",
+      "mean_price_per_sqft_inr": 302.64,
+      "apartment_units_sold": 312,
+      "office_units_sold": 38,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.0514,
+        "Cluster_1": 0.5229,
+        "Cluster_2": 0.3314,
+        "Cluster_3": 0.0943
+      }
+    },
+    {
+      "tower_number": 6,
+      "total_sales_units": 350,
+      "currently_available_units": 21,
+      "mean_sale_price_inr": 403955.03,
+      "mean_sale_price_display": "₹4,03,955",
+      "mean_price_per_sqft_inr": 304.61,
+      "apartment_units_sold": 298,
+      "office_units_sold": 52,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.0714,
+        "Cluster_1": 0.5086,
+        "Cluster_2": 0.3543,
+        "Cluster_3": 0.0657
+      }
+    },
+    {
+      "tower_number": 7,
+      "total_sales_units": 387,
+      "currently_available_units": 12,
+      "mean_sale_price_inr": 322466.62,
+      "mean_sale_price_display": "₹3,22,467",
+      "mean_price_per_sqft_inr": 300.56,
+      "apartment_units_sold": 329,
+      "office_units_sold": 58,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.4367,
+        "Cluster_1": 0.0,
+        "Cluster_2": 0.0,
+        "Cluster_3": 0.5633
+      }
+    },
+    {
+      "tower_number": 8,
+      "total_sales_units": 344,
+      "currently_available_units": 24,
+      "mean_sale_price_inr": 385607.89,
+      "mean_sale_price_display": "₹3,85,608",
+      "mean_price_per_sqft_inr": 302.23,
+      "apartment_units_sold": 296,
+      "office_units_sold": 48,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.5581,
+        "Cluster_1": 0.0,
+        "Cluster_2": 0.0,
+        "Cluster_3": 0.4419
+      }
+    },
+    {
+      "tower_number": 9,
+      "total_sales_units": 391,
+      "currently_available_units": 19,
+      "mean_sale_price_inr": 364818.76,
+      "mean_sale_price_display": "₹3,64,819",
+      "mean_price_per_sqft_inr": 301.78,
+      "apartment_units_sold": 333,
+      "office_units_sold": 58,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.3325,
+        "Cluster_1": 0.2072,
+        "Cluster_2": 0.1202,
+        "Cluster_3": 0.3402
+      }
+    },
+    {
+      "tower_number": 10,
+      "total_sales_units": 325,
+      "currently_available_units": 10,
+      "mean_sale_price_inr": 405603.85,
+      "mean_sale_price_display": "₹4,05,604",
+      "mean_price_per_sqft_inr": 303.46,
+      "apartment_units_sold": 270,
+      "office_units_sold": 55,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.04,
+        "Cluster_1": 0.5231,
+        "Cluster_2": 0.3692,
+        "Cluster_3": 0.0677
+      }
+    },
+    {
+      "tower_number": 11,
+      "total_sales_units": 400,
+      "currently_available_units": 21,
+      "mean_sale_price_inr": 355227.66,
+      "mean_sale_price_display": "₹3,55,228",
+      "mean_price_per_sqft_inr": 300.57,
+      "apartment_units_sold": 348,
+      "office_units_sold": 52,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.0325,
+        "Cluster_1": 0.525,
+        "Cluster_2": 0.375,
+        "Cluster_3": 0.0675
+      }
+    },
+    {
+      "tower_number": 12,
+      "total_sales_units": 305,
+      "currently_available_units": 8,
+      "mean_sale_price_inr": 395158.27,
+      "mean_sale_price_display": "₹3,95,158",
+      "mean_price_per_sqft_inr": 303.28,
+      "apartment_units_sold": 259,
+      "office_units_sold": 46,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.2295,
+        "Cluster_1": 0.3148,
+        "Cluster_2": 0.1902,
+        "Cluster_3": 0.2656
+      }
+    },
+    {
+      "tower_number": 13,
+      "total_sales_units": 430,
+      "currently_available_units": 16,
+      "mean_sale_price_inr": 362140.69,
+      "mean_sale_price_display": "₹3,62,141",
+      "mean_price_per_sqft_inr": 300.34,
+      "apartment_units_sold": 375,
+      "office_units_sold": 55,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.4953,
+        "Cluster_1": 0.0,
+        "Cluster_2": 0.0,
+        "Cluster_3": 0.5047
+      }
+    },
+    {
+      "tower_number": 14,
+      "total_sales_units": 366,
+      "currently_available_units": 15,
+      "mean_sale_price_inr": 332875.04,
+      "mean_sale_price_display": "₹3,32,875",
+      "mean_price_per_sqft_inr": 304.06,
+      "apartment_units_sold": 308,
+      "office_units_sold": 58,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.5219,
+        "Cluster_1": 0.0,
+        "Cluster_2": 0.0,
+        "Cluster_3": 0.4781
+      }
+    },
+    {
+      "tower_number": 15,
+      "total_sales_units": 369,
+      "currently_available_units": 16,
+      "mean_sale_price_inr": 349247.41,
+      "mean_sale_price_display": "₹3,49,247",
+      "mean_price_per_sqft_inr": 304.89,
+      "apartment_units_sold": 313,
+      "office_units_sold": 56,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.1274,
+        "Cluster_1": 0.4363,
+        "Cluster_2": 0.2818,
+        "Cluster_3": 0.1545
+      }
+    },
+    {
+      "tower_number": 16,
+      "total_sales_units": 296,
+      "currently_available_units": 13,
+      "mean_sale_price_inr": 327392.36,
+      "mean_sale_price_display": "₹3,27,392",
+      "mean_price_per_sqft_inr": 302.74,
+      "apartment_units_sold": 244,
+      "office_units_sold": 52,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.0473,
+        "Cluster_1": 0.5338,
+        "Cluster_2": 0.3716,
+        "Cluster_3": 0.0473
+      }
+    },
+    {
+      "tower_number": 17,
+      "total_sales_units": 329,
+      "currently_available_units": 19,
+      "mean_sale_price_inr": 389188.67,
+      "mean_sale_price_display": "₹3,89,189",
+      "mean_price_per_sqft_inr": 302.09,
+      "apartment_units_sold": 268,
+      "office_units_sold": 61,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.0304,
+        "Cluster_1": 0.5289,
+        "Cluster_2": 0.3708,
+        "Cluster_3": 0.0699
+      }
+    },
+    {
+      "tower_number": 18,
+      "total_sales_units": 428,
+      "currently_available_units": 18,
+      "mean_sale_price_inr": 360687.16,
+      "mean_sale_price_display": "₹3,60,687",
+      "mean_price_per_sqft_inr": 300.54,
+      "apartment_units_sold": 360,
+      "office_units_sold": 68,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.3458,
+        "Cluster_1": 0.1495,
+        "Cluster_2": 0.0911,
+        "Cluster_3": 0.4136
+      }
+    },
+    {
+      "tower_number": 19,
+      "total_sales_units": 322,
+      "currently_available_units": 14,
+      "mean_sale_price_inr": 363089.91,
+      "mean_sale_price_display": "₹3,63,090",
+      "mean_price_per_sqft_inr": 301.18,
+      "apartment_units_sold": 265,
+      "office_units_sold": 57,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.5248,
+        "Cluster_1": 0.0,
+        "Cluster_2": 0.0,
+        "Cluster_3": 0.4752
+      }
+    },
+    {
+      "tower_number": 20,
+      "total_sales_units": 365,
+      "currently_available_units": 16,
+      "mean_sale_price_inr": 358999.01,
+      "mean_sale_price_display": "₹3,58,999",
+      "mean_price_per_sqft_inr": 302.05,
+      "apartment_units_sold": 309,
+      "office_units_sold": 56,
+      "segment_transaction_shares": {
+        "Cluster_0": 0.5151,
+        "Cluster_1": 0.0,
+        "Cluster_2": 0.0,
+        "Cluster_3": 0.4849
+      }
+    }
+  ],
+  "active_filters": {
+    "country": null,
+    "region": null,
+    "acquisition_purpose": null,
+    "client_type": null,
+    "assigned_cluster": null
+  },
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": false,
+    "untested_assumptions_notice": "Physical development spans exactly 20 towers. Current inventory evaluates 313 deduplicated units.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "total_buyers": 2000,
+  "total_transactions": 7305,
+  "total_sales_volume_inr": 2520750960.84,
+  "total_sales_volume_display": "₹2,52,07,50,961",
+  "mean_sales_price_inr": 345072.0,
+  "mean_sales_price_display": "₹3,45,072",
+  "mean_units_per_buyer": 3.65,
+  "mean_buyer_spend_inr": 1260375.48,
+  "mean_buyer_spend_display": "₹12,60,375",
+  "available_units_count": 313,
+  "towers_count": 20,
+  "segments": [
+    {
+      "segment_id": 0,
+      "segment_name": "Concentrated Residential Buyers",
+      "buyer_count": 536,
+      "share_pct": 26.8,
+      "mean_spend_inr": 1376040.58,
+      "mean_spend_display": "₹13,76,041",
+      "total_units": 2174
+    },
+    {
+      "segment_id": 1,
+      "segment_name": "Emerging Multi-Tower Accumulators",
+      "buyer_count": 557,
+      "share_pct": 27.85,
+      "mean_spend_inr": 1052023.46,
+      "mean_spend_display": "₹10,52,023",
+      "total_units": 1671
+    },
+    {
+      "segment_id": 2,
+      "segment_name": "Commercial Office Diversifiers",
+      "buyer_count": 375,
+      "share_pct": 18.75,
+      "mean_spend_inr": 1100608.39,
+      "mean_spend_display": "₹11,00,608",
+      "total_units": 1125
+    },
+    {
+      "segment_id": 3,
+      "segment_name": "Established Senior Estate Investors",
+      "buyer_count": 532,
+      "share_pct": 26.6,
+      "mean_spend_inr": 1474601.49,
+      "mean_spend_display": "₹14,74,601",
+      "total_units": 2335
+    }
+  ],
+  "key_takeaways": [
+    "Evaluated cohort contains 2,000 buyers accounting for 7,305 physical property transactions.",
+    "Overall gross sales volume stands at ₹2,52,07,50,961 with an average unit price of ₹3,45,072.",
+    "All buyers in the cohort hold at least 3 units, establishing an exclusively multi-unit client population.",
+    "Tower concentration shows a structural split: Clusters 1 and 2 occupy Towers 4-6, 10-11, 16-17; Clusters 0 and 3 occupy Towers 1-2, 7-8, 13-14, 19-20."
+  ],
+  "active_filters": {
+    "country": null,
+    "region": null,
+    "acquisition_purpose": null,
+    "client_type": null,
+    "assigned_cluster": null
+  },
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": false,
+    "untested_assumptions_notice": "All monetary values displayed in Indian Rupees (₹) with Indian lakh/crore digit grouping.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

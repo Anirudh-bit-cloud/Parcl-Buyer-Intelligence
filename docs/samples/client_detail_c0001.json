@@ -1,0 +1,87 @@
+{
+  "client_id": "C0001",
+  "client_type": "INDIVIDUAL",
+  "first_name": "Kareem",
+  "last_name": "Liu",
+  "country": "USA",
+  "region": "California",
+  "age": 57,
+  "satisfaction_score": 4,
+  "loan_applied": true,
+  "referral_channel": "Website",
+  "total_spend_inr": 1246764.72,
+  "total_spend_display": "₹12,46,765",
+  "n_units": 4,
+  "office_share": 0.0,
+  "owned_towers": [
+    3,
+    4,
+    9,
+    15
+  ],
+  "assigned_cluster": 0,
+  "assigned_segment_name": "Concentrated Residential Buyers",
+  "soft_membership_probabilities": {
+    "Cluster_0": 0.5085,
+    "Cluster_1": 0.0059,
+    "Cluster_2": 0.0044,
+    "Cluster_3": 0.4812
+  },
+  "is_ambiguous_boundary": true,
+  "transactions": [
+    {
+      "listing_id": 90343,
+      "tower_number": 9,
+      "unit_number": 40,
+      "transaction_date": "2024-10-01 00:00:00",
+      "unit_category": "Apartment",
+      "floor_area_sqft": 1090.32,
+      "sale_price_inr": 351419.29,
+      "sale_price_display": "₹3,51,419",
+      "price_per_sqft_inr": 322.31
+    },
+    {
+      "listing_id": 4051,
+      "tower_number": 4,
+      "unit_number": 51,
+      "transaction_date": "2024-12-01 00:00:00",
+      "unit_category": "Apartment",
+      "floor_area_sqft": 1608.84,
+      "sale_price_inr": 496266.41,
+      "sale_price_display": "₹4,96,266",
+      "price_per_sqft_inr": 308.46
+    },
+    {
+      "listing_id": 150099,
+      "tower_number": 15,
+      "unit_number": 15,
+      "transaction_date": "2025-05-01 00:00:00",
+      "unit_category": "Apartment",
+      "floor_area_sqft": 522.71,
+      "sale_price_inr": 175599.9,
+      "sale_price_display": "₹1,75,600",
+      "price_per_sqft_inr": 335.94
+    },
+    {
+      "listing_id": 30432,
+      "tower_number": 3,
+      "unit_number": 50,
+      "transaction_date": "2025-12-01 00:00:00",
+      "unit_category": "Apartment",
+      "floor_area_sqft": 713.67,
+      "sale_price_inr": 223479.12,
+      "sale_price_display": "₹2,23,479",
+      "price_per_sqft_inr": 313.14
+    }
+  ],
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": false,
+    "untested_assumptions_notice": "None",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

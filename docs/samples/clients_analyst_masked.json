@@ -1,0 +1,118 @@
+{
+  "clients": [
+    {
+      "client_id": "C0001",
+      "client_type": "INDIVIDUAL",
+      "first_name": "K***",
+      "last_name": "L***",
+      "country": "USA",
+      "region": "California",
+      "age": 57,
+      "satisfaction_score": 4,
+      "loan_applied": true,
+      "referral_channel": "Website",
+      "total_spend_inr": 1246764.72,
+      "total_spend_display": "₹12,46,765",
+      "n_units": 4,
+      "assigned_cluster": 0,
+      "assigned_segment_name": "Concentrated Residential Buyers",
+      "top_soft_probability": 0.5085
+    },
+    {
+      "client_id": "C0002",
+      "client_type": "INDIVIDUAL",
+      "first_name": "T***",
+      "last_name": "O***",
+      "country": "USA",
+      "region": "California",
+      "age": 63,
+      "satisfaction_score": 1,
+      "loan_applied": false,
+      "referral_channel": "Website",
+      "total_spend_inr": 1841095.93,
+      "total_spend_display": "₹18,41,096",
+      "n_units": 5,
+      "assigned_cluster": 3,
+      "assigned_segment_name": "Established Senior Estate Investors",
+      "top_soft_probability": 0.667
+    },
+    {
+      "client_id": "C0003",
+      "client_type": "INDIVIDUAL",
+      "first_name": "K***",
+      "last_name": "G***",
+      "country": "USA",
+      "region": "California",
+      "age": 66,
+      "satisfaction_score": 4,
+      "loan_applied": true,
+      "referral_channel": "Agency",
+      "total_spend_inr": 1661457.59,
+      "total_spend_display": "₹16,61,458",
+      "n_units": 5,
+      "assigned_cluster": 3,
+      "assigned_segment_name": "Established Senior Estate Investors",
+      "top_soft_probability": 0.6639
+    },
+    {
+      "client_id": "C0004",
+      "client_type": "INDIVIDUAL",
+      "first_name": "R***",
+      "last_name": "G***",
+      "country": "USA",
+      "region": "California",
+      "age": 66,
+      "satisfaction_score": 5,
+      "loan_applied": false,
+      "referral_channel": "Website",
+      "total_spend_inr": 1608263.51,
+      "total_spend_display": "₹16,08,264",
+      "n_units": 6,
+      "assigned_cluster": 3,
+      "assigned_segment_name": "Established Senior Estate Investors",
+      "top_soft_probability": 0.6542
+    },
+    {
+      "client_id": "C0005",
+      "client_type": "COMPANY",
+      "first_name": "M***",
+      "last_name": "C***",
+      "country": "USA",
+      "region": "California",
+      "age": 49,
+      "satisfaction_score": 5,
+      "loan_applied": false,
+      "referral_channel": "Website",
+      "total_spend_inr": 3653385.38,
+      "total_spend_display": "₹36,53,385",
+      "n_units": 13,
+      "assigned_cluster": 0,
+      "assigned_segment_name": "Concentrated Residential Buyers",
+      "top_soft_probability": 0.5037
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "page_size": 5,
+    "total_records": 2000,
+    "total_pages": 400
+  },
+  "active_filters": {
+    "country": null,
+    "region": null,
+    "acquisition_purpose": null,
+    "client_type": null,
+    "assigned_cluster": null
+  },
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": false,
+    "untested_assumptions_notice": "None",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country.",
+      "Server-side personal identity masking active under current role."
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcl Buyer Intelligence - Data Quality & Lineage Report</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #09090b; color: #f4f4f5; line-height: 1.5; padding: 2rem; max-width: 1000px; margin: 0 auto; }
+        h1, h2, h3 { color: #ffffff; font-weight: 600; border-bottom: 1px solid #27272a; padding-bottom: 0.5rem; }
+        .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; background: #27272a; color: #a1a1aa; }
+        .badge-success { background: #064e3b; color: #34d399; }
+        .badge-warning { background: #78350f; color: #fbbf24; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .card { background: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 1.5rem; }
+        .metric-val { font-size: 1.75rem; font-weight: 700; color: #ffffff; font-variant-numeric: tabular-nums; }
+        .metric-label { font-size: 0.875rem; color: #a1a1aa; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+        th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid #27272a; }
+        th { color: #a1a1aa; font-weight: 500; }
+        code { background: #27272a; padding: 0.1rem 0.3rem; border-radius: 4px; font-size: 0.85rem; color: #38bdf8; }
+    </style>
+</head>
+<body>
+    <h1>Parcl Buyer Intelligence - Data Quality & Lineage Report</h1>
+    <p>Reference Audit Date: <code>2025-12-31</code></p>
+
+    <h2>1. Executive Data Quality & Volume Summary</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="metric-label">Clean Client Cohort</div>
+            <div class="metric-val">2,000</div>
+            <p class="metric-label">Raw Rows: 2,000 | Nulls: 0</p>
+        </div>
+        <div class="card">
+            <div class="metric-label">Sold Property Transactions</div>
+            <div class="metric-val">7,305</div>
+            <p class="metric-label">Joined to clients with zero orphan refs</p>
+        </div>
+        <div class="card">
+            <div class="metric-label">Available Inventory Units</div>
+            <div class="metric-val">313</div>
+            <p class="metric-label">Preserved for Opportunity Finder matching</p>
+        </div>
+    </div>
+
+    <h2>2. Empirical Statistical Tests</h2>
+    <div class="card">
+        <h3>Satisfaction Score Uniformity Test (Chi-Square Goodness-of-Fit)</h3>
+        <p>H₀: Satisfaction scores are uniformly distributed across categories [1, 2, 3, 4, 5].</p>
+        <table>
+            <tr><th>Metric</th><th>Empirical Value</th></tr>
+            <tr><td>Chi-Square Statistic (χ²)</td><td><code>1.9900</code></td></tr>
+            <tr><td>Degrees of Freedom</td><td><code>4</code></td></tr>
+            <tr><td>p-value</td><td><code>0.7376</code></td></tr>
+            <tr><td>Evaluation Status</td><td><span class="badge badge-warning">Uniform (p &gt; 0.05)</span></td></tr>
+        </table>
+        <p><strong>Conclusion:</strong> The marginal distribution of satisfaction_score is consistent with discrete uniform (chi2=1.99, p=0.738, df=4). Bivariate dependency tests against acquisition purpose, loan application, referral channel, country, and observed spend are scheduled in Phase 2.</p>
+    </div>
+
+    <div class="card" style="margin-top: 1.5rem;">
+        <h3>Date of Birth Sensitivity Analysis (Slash vs. Dash)</h3>
+        <table>
+            <tr><th>Metric</th><th>Value</th></tr>
+            <tr><td>Slash Formats (MM/DD/YYYY)</td><td><code>1,145</code></td></tr>
+            <tr><td>Dash Formats (Ambiguous DD-MM vs MM-DD)</td><td><code>855</code></td></tr>
+            <tr><td>Exact Same Date (DD == MM)</td><td><code>65</code></td></tr>
+            <tr><td>Mean Age (DD-MM-YYYY default)</td><td><code>55.10 years</code></td></tr>
+            <tr><td>Mean Age (MM-DD-YYYY alternative)</td><td><code>55.10 years</code></td></tr>
+            <tr><td>Mean Fractional Deviation</td><td><code>0.326 years</code></td></tr>
+            <tr><td>Max Fractional Deviation</td><td><code>0.887 years</code></td></tr>
+            <tr><td>Mean Integer Age Deviation</td><td><code>0.000 years</code></td></tr>
+            <tr><td>Age Band Switch Rate</td><td><code>0.00%</code></td></tr>
+        </table>
+    </div>
+
+    <h2>3. Canonical Normalization Matrix</h2>
+    <table>
+        <tr><th>Attribute</th><th>Raw Values Observed</th><th>Canonical Enum</th><th>UI Display Label</th></tr>
+        <tr><td><code>client_type</code></td><td>Individual, Company</td><td><code>INDIVIDUAL</code>, <code>COMPANY</code></td><td>Individual, Corporate</td></tr>
+        <tr><td><code>acquisition_purpose</code></td><td>Home, Investment</td><td><code>HOME</code>, <code>INVESTMENT</code></td><td>Personal use, Investment</td></tr>
+        <tr><td><code>sale_price</code></td><td>Formatted currency ($300,385.62)</td><td><code>float64</code></td><td>Standard currency format</td></tr>
+        <tr><td><code>referral_channel</code></td><td>Website, Agency, Client</td><td>Canonical Enum</td><td>Website, Agency, Client</td></tr>
+    </table>
+</body>
+</html>

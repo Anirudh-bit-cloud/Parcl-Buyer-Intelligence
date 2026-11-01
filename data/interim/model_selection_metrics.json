@@ -1,0 +1,1387 @@
+{
+  "production_variant": "Model_B3_Downweighted_Geo",
+  "k_selected": 4,
+  "kneedle_elbow": 5,
+  "k2_strong_structure": {
+    "silhouette": 0.5072,
+    "davies_bouldin": 0.8066,
+    "calinski_harabasz": 2869.59,
+    "finding": "Strong partition splitting 3-unit vs 4+ unit buyers, largely produced by the 5.73-sigma quantile-transform gap."
+  },
+  "k4_weak_substructure": {
+    "silhouette": 0.12109575025524469,
+    "davies_bouldin": 2.6079365562973615,
+    "calinski_harabasz": 1177.1309389013966,
+    "finding": "Weak, nuanced substructure dividing portfolio asset-mix (residential vs commercial) and age."
+  },
+  "weak_cluster_policy_triggered": true,
+  "cophenetic_correlation": 0.9065958379652849,
+  "pairwise_algorithm_ari": {
+    "kmeans_vs_ward": 0.6362989985205268,
+    "kmeans_vs_gmm": 0.3837364699949496,
+    "ward_vs_gmm": 0.5031411722313454
+  },
+  "soft_membership_audit": {
+    "shipped_method": "kmeans_centroid_distance_softmax",
+    "beta": 1.12,
+    "pct_borderline_clients_lt_0_60": 26.450000000000003,
+    "pct_low_gmm_posterior_diagnostic": 0.0,
+    "diagonal_gmm_overconfidence_diagnostic": "Diagonal GMM in 84 dimensions multiplies 84 density terms, driving likelihood ratios to extreme values and collapsing posteriors to 1.0 or 0.0 (0.00% < 0.60). Centroid distance softmax yields realistic soft membership with 26.45% borderline clients."
+  },
+  "sensitivity_analysis": {
+    "without_n_units_only_ari": 0.9276,
+    "without_all_unit_proxies_ari": 0.20129575368563293,
+    "collinearity_finding": "96.75% of clients have n_towers == n_units and corr(HHI, 1/n_units)=0.9322. Dropping n_units alone preserved partition through proxy collinearity; dropping all proxies drops ARI to 0.2013."
+  },
+  "persistent_cluster_diagnostic": {
+    "k10_size_32_cluster": "Consists exclusively of 6+ to 11 unit ultra-high volume buyers (mean age 64.0, total spend up to $3.40M)."
+  },
+  "variants_comparison": {
+    "Model_A_PRD_Baseline": {
+      "n_features": 76,
+      "best_k_silhouette": 2,
+      "max_silhouette": 0.16334921627833957,
+      "k4_silhouette": 0.13323082553999954,
+      "k4_davies_bouldin": 1.8924551050207923,
+      "k4_stability_mean_ari": 0.7830139964170153,
+      "metrics_by_k": [
+        {
+          "k": 2,
+          "inertia": 7230.212630321256,
+          "silhouette": 0.16334921627833957,
+          "davies_bouldin": 2.090597938080989,
+          "calinski_harabasz": 414.4339105674476,
+          "min_cluster_size": 774,
+          "max_cluster_size": 1226
+        },
+        {
+          "k": 3,
+          "inertia": 6285.666684069033,
+          "silhouette": 0.14981614275506927,
+          "davies_bouldin": 1.852045599942783,
+          "calinski_harabasz": 388.28051758499333,
+          "min_cluster_size": 571,
+          "max_cluster_size": 715
+        },
+        {
+          "k": 4,
+          "inertia": 5746.977988554388,
+          "silhouette": 0.13323082553999954,
+          "davies_bouldin": 1.8924551050207923,
+          "calinski_harabasz": 345.3398874274043,
+          "min_cluster_size": 393,
+          "max_cluster_size": 602
+        },
+        {
+          "k": 5,
+          "inertia": 5450.9968457693085,
+          "silhouette": 0.1332885772539229,
+          "davies_bouldin": 2.039669654469128,
+          "calinski_harabasz": 300.01308947588535,
+          "min_cluster_size": 259,
+          "max_cluster_size": 530
+        },
+        {
+          "k": 6,
+          "inertia": 5205.0246898602745,
+          "silhouette": 0.13050221853384247,
+          "davies_bouldin": 2.049546728522405,
+          "calinski_harabasz": 270.0725386417826,
+          "min_cluster_size": 232,
+          "max_cluster_size": 424
+        }
+      ]
+    },
+    "Model_B1_Full_With_Sat": {
+      "n_features": 85,
+      "best_k_silhouette": 2,
+      "max_silhouette": 0.4568662285368155,
+      "k4_silhouette": 0.10104310527099142,
+      "k4_davies_bouldin": 2.9403412133549316,
+      "k4_stability_mean_ari": 0.7681961778548168,
+      "metrics_by_k": [
+        {
+          "k": 2,
+          "inertia": 18233.814785797505,
+          "silhouette": 0.4568662285368155,
+          "davies_bouldin": 0.9187304260929797,
+          "calinski_harabasz": 2254.090589033365,
+          "min_cluster_size": 932,
+          "max_cluster_size": 1068
+        },
+        {
+          "k": 3,
+          "inertia": 17273.142738176914,
+          "silhouette": 0.2954213070243278,
+          "davies_bouldin": 2.1151580617775516,
+          "calinski_harabasz": 1244.665262588403,
+          "min_cluster_size": 375,
+          "max_cluster_size": 1068
+        },
+        {
+          "k": 4,
+          "inertia": 16446.970812385676,
+          "silhouette": 0.10104310527099142,
+          "davies_bouldin": 2.9403412133549316,
+          "calinski_harabasz": 904.4435310451089,
+          "min_cluster_size": 375,
+          "max_cluster_size": 596
+        },
+        {
+          "k": 5,
+          "inertia": 15637.56436373904,
+          "silhouette": 0.10459441234744221,
+          "davies_bouldin": 2.627038579304197,
+          "calinski_harabasz": 738.9014700370803,
+          "min_cluster_size": 85,
+          "max_cluster_size": 557
+        },
+        {
+          "k": 6,
+          "inertia": 15154.224160480657,
+          "silhouette": 0.09374943410794893,
+          "davies_bouldin": 2.6223656647633677,
+          "calinski_harabasz": 622.3887134580045,
+          "min_cluster_size": 85,
+          "max_cluster_size": 510
+        }
+      ]
+    },
+    "Model_B2_Purged_Sat": {
+      "n_features": 84,
+      "best_k_silhouette": 2,
+      "max_silhouette": 0.48042877330684824,
+      "k4_silhouette": 0.1053757250357162,
+      "k4_davies_bouldin": 2.8132197751507837,
+      "k4_stability_mean_ari": 0.7763555516517889,
+      "metrics_by_k": [
+        {
+          "k": 2,
+          "inertia": 16235.19418731352,
+          "silhouette": 0.48042877330684824,
+          "davies_bouldin": 0.863764502716819,
+          "calinski_harabasz": 2531.4088511937393,
+          "min_cluster_size": 932,
+          "max_cluster_size": 1068
+        },
+        {
+          "k": 3,
+          "inertia": 15275.806493187833,
+          "silhouette": 0.3146709842205074,
+          "davies_bouldin": 1.979394565324771,
+          "calinski_harabasz": 1407.2331298611198,
+          "min_cluster_size": 375,
+          "max_cluster_size": 1068
+        },
+        {
+          "k": 4,
+          "inertia": 14510.250635643424,
+          "silhouette": 0.1053757250357162,
+          "davies_bouldin": 2.8132197751507837,
+          "calinski_harabasz": 1022.2603698086557,
+          "min_cluster_size": 375,
+          "max_cluster_size": 557
+        },
+        {
+          "k": 5,
+          "inertia": 13723.317040662574,
+          "silhouette": 0.11234826647277893,
+          "davies_bouldin": 2.5286007785663407,
+          "calinski_harabasz": 838.8533263817121,
+          "min_cluster_size": 87,
+          "max_cluster_size": 557
+        },
+        {
+          "k": 6,
+          "inertia": 13240.925275234411,
+          "silhouette": 0.10027874155618656,
+          "davies_bouldin": 2.5052105463201033,
+          "calinski_harabasz": 709.7118576530596,
+          "min_cluster_size": 87,
+          "max_cluster_size": 506
+        }
+      ]
+    },
+    "Model_B3_Downweighted_Geo": {
+      "n_features": 84,
+      "best_k_silhouette": 2,
+      "max_silhouette": 0.5071608418128659,
+      "k4_silhouette": 0.12109575025524469,
+      "k4_davies_bouldin": 2.6079365562973615,
+      "k4_stability_mean_ari": 0.8109361264474267,
+      "metrics_by_k": [
+        {
+          "k": 2,
+          "inertia": 14319.742368101484,
+          "silhouette": 0.5071608418128659,
+          "davies_bouldin": 0.8066260110914135,
+          "calinski_harabasz": 2869.590525590454,
+          "min_cluster_size": 932,
+          "max_cluster_size": 1068
+        },
+        {
+          "k": 3,
+          "inertia": 13361.231738522998,
+          "silhouette": 0.33751843811845866,
+          "davies_bouldin": 1.832750315245595,
+          "calinski_harabasz": 1608.5858374401832,
+          "min_cluster_size": 375,
+          "max_cluster_size": 1068
+        },
+        {
+          "k": 4,
+          "inertia": 12597.778405532525,
+          "silhouette": 0.12109575025524469,
+          "davies_bouldin": 2.6079365562973615,
+          "calinski_harabasz": 1177.1309389013966,
+          "min_cluster_size": 375,
+          "max_cluster_size": 557
+        },
+        {
+          "k": 5,
+          "inertia": 11808.05263239865,
+          "silhouette": 0.13018852714914067,
+          "davies_bouldin": 2.325173265498778,
+          "calinski_harabasz": 974.7779775697959,
+          "min_cluster_size": 87,
+          "max_cluster_size": 557
+        },
+        {
+          "k": 6,
+          "inertia": 11328.782684547754,
+          "silhouette": 0.11677209956189985,
+          "davies_bouldin": 2.2964399168489855,
+          "calinski_harabasz": 829.2771798255071,
+          "min_cluster_size": 87,
+          "max_cluster_size": 508
+        }
+      ]
+    },
+    "Model_B4_Pure_Behavior": {
+      "n_features": 17,
+      "best_k_silhouette": 2,
+      "max_silhouette": 0.5172602645030624,
+      "k4_silhouette": 0.12751965329555195,
+      "k4_davies_bouldin": 2.5324030174487273,
+      "k4_stability_mean_ari": 0.7977162770223963,
+      "metrics_by_k": [
+        {
+          "k": 2,
+          "inertia": 13681.258428364143,
+          "silhouette": 0.5172602645030624,
+          "davies_bouldin": 0.7861019300496398,
+          "calinski_harabasz": 3003.3609966615136,
+          "min_cluster_size": 932,
+          "max_cluster_size": 1068
+        },
+        {
+          "k": 3,
+          "inertia": 12723.040153634716,
+          "silhouette": 0.34664940425719315,
+          "davies_bouldin": 1.7796041850076791,
+          "calinski_harabasz": 1689.1699578159119,
+          "min_cluster_size": 375,
+          "max_cluster_size": 1068
+        },
+        {
+          "k": 4,
+          "inertia": 11960.74122927285,
+          "silhouette": 0.12751965329555195,
+          "davies_bouldin": 2.5324030174487273,
+          "calinski_harabasz": 1239.6922362276591,
+          "min_cluster_size": 375,
+          "max_cluster_size": 557
+        },
+        {
+          "k": 5,
+          "inertia": 11171.98981096049,
+          "silhouette": 0.1374597867714785,
+          "davies_bouldin": 2.2558505308171006,
+          "calinski_harabasz": 1030.1220571803512,
+          "min_cluster_size": 87,
+          "max_cluster_size": 557
+        },
+        {
+          "k": 6,
+          "inertia": 10699.529813375922,
+          "silhouette": 0.12145950583633677,
+          "davies_bouldin": 2.229603392530914,
+          "calinski_harabasz": 877.6693916177595,
+          "min_cluster_size": 87,
+          "max_cluster_size": 494
+        }
+      ]
+    }
+  },
+  "kmeans_battery": [
+    {
+      "k": 2,
+      "inertia": 14319.742368101484,
+      "silhouette": 0.5071608418128659,
+      "davies_bouldin": 0.8066260110914135,
+      "calinski_harabasz": 2869.590525590454,
+      "min_cluster_size": 932,
+      "max_cluster_size": 1068
+    },
+    {
+      "k": 3,
+      "inertia": 13361.231738522998,
+      "silhouette": 0.33751843811845866,
+      "davies_bouldin": 1.832750315245595,
+      "calinski_harabasz": 1608.5858374401832,
+      "min_cluster_size": 375,
+      "max_cluster_size": 1068
+    },
+    {
+      "k": 4,
+      "inertia": 12597.778405532525,
+      "silhouette": 0.12109575025524469,
+      "davies_bouldin": 2.6079365562973615,
+      "calinski_harabasz": 1177.1309389013966,
+      "min_cluster_size": 375,
+      "max_cluster_size": 557
+    },
+    {
+      "k": 5,
+      "inertia": 11808.05263239865,
+      "silhouette": 0.13018852714914067,
+      "davies_bouldin": 2.325173265498778,
+      "calinski_harabasz": 974.7779775697959,
+      "min_cluster_size": 87,
+      "max_cluster_size": 557
+    },
+    {
+      "k": 6,
+      "inertia": 11328.782684547756,
+      "silhouette": 0.11677209956189985,
+      "davies_bouldin": 2.2964399168489855,
+      "calinski_harabasz": 829.2771798255071,
+      "min_cluster_size": 87,
+      "max_cluster_size": 508
+    },
+    {
+      "k": 7,
+      "inertia": 10878.344510227229,
+      "silhouette": 0.11359276412460564,
+      "davies_bouldin": 2.191747473238281,
+      "calinski_harabasz": 733.0721843638263,
+      "min_cluster_size": 86,
+      "max_cluster_size": 385
+    },
+    {
+      "k": 8,
+      "inertia": 10515.118789402512,
+      "silhouette": 0.109108715605617,
+      "davies_bouldin": 2.0678427063234865,
+      "calinski_harabasz": 659.5565514434128,
+      "min_cluster_size": 32,
+      "max_cluster_size": 405
+    },
+    {
+      "k": 9,
+      "inertia": 10183.632269671918,
+      "silhouette": 0.10792833201271361,
+      "davies_bouldin": 2.055425419742134,
+      "calinski_harabasz": 603.6994669130876,
+      "min_cluster_size": 84,
+      "max_cluster_size": 305
+    },
+    {
+      "k": 10,
+      "inertia": 9866.804421894618,
+      "silhouette": 0.10919672057687614,
+      "davies_bouldin": 1.9432592128265154,
+      "calinski_harabasz": 560.6747375972027,
+      "min_cluster_size": 32,
+      "max_cluster_size": 320
+    },
+    {
+      "k": 11,
+      "inertia": 9635.056670040429,
+      "silhouette": 0.10660341509994509,
+      "davies_bouldin": 1.918556074336003,
+      "calinski_harabasz": 521.2687420220434,
+      "min_cluster_size": 32,
+      "max_cluster_size": 258
+    },
+    {
+      "k": 12,
+      "inertia": 9424.942196586755,
+      "silhouette": 0.10565969103284428,
+      "davies_bouldin": 1.9237950674469955,
+      "calinski_harabasz": 488.23058167267095,
+      "min_cluster_size": 32,
+      "max_cluster_size": 242
+    }
+  ],
+  "gap_statistics": [
+    {
+      "k": 2,
+      "gap": 1.3313747513481449,
+      "s_k": 0.009217977121703701,
+      "actual_log_wcss": 9.56939444929843,
+      "ref_log_wcss": 10.900769200646575
+    },
+    {
+      "k": 3,
+      "gap": 1.3214971543676928,
+      "s_k": 0.006127166724067567,
+      "actual_log_wcss": 9.500112638838077,
+      "ref_log_wcss": 10.82160979320577
+    },
+    {
+      "k": 4,
+      "gap": 1.2914796413717209,
+      "s_k": 0.006792469961856036,
+      "actual_log_wcss": 9.441275760372667,
+      "ref_log_wcss": 10.732755401744388
+    },
+    {
+      "k": 5,
+      "gap": 1.2958313757744033,
+      "s_k": 0.0052087976836447435,
+      "actual_log_wcss": 9.379818296158852,
+      "ref_log_wcss": 10.675649671933256
+    },
+    {
+      "k": 6,
+      "gap": 1.2801289352678786,
+      "s_k": 0.0019285736395058648,
+      "actual_log_wcss": 9.336508946165518,
+      "ref_log_wcss": 10.616637881433396
+    },
+    {
+      "k": 7,
+      "gap": 1.2799764039747377,
+      "s_k": 0.009486973802201471,
+      "actual_log_wcss": 9.294805455201221,
+      "ref_log_wcss": 10.574781859175959
+    }
+  ],
+  "gmm_battery": [
+    {
+      "k": 2,
+      "bic": -493319.52854614524,
+      "aic": -495207.0326750109,
+      "mean_assignment_entropy": 3.973726561725943e-09
+    },
+    {
+      "k": 3,
+      "bic": -925360.07191295,
+      "aic": -928194.1285574783,
+      "mean_assignment_entropy": 2.47385229961165e-06
+    },
+    {
+      "k": 4,
+      "bic": -1016676.8662773021,
+      "aic": -1020457.4754374931,
+      "mean_assignment_entropy": 3.616706017435182e-09
+    },
+    {
+      "k": 5,
+      "bic": -1101536.5098489565,
+      "aic": -1106263.67152481,
+      "mean_assignment_entropy": 1.1960687078705006e-06
+    },
+    {
+      "k": 6,
+      "bic": -1161625.205526829,
+      "aic": -1167298.9197183452,
+      "mean_assignment_entropy": 2.307964407221356e-06
+    },
+    {
+      "k": 7,
+      "bic": -1179560.9551809556,
+      "aic": -1186181.2218881343,
+      "mean_assignment_entropy": 1.8179299081710723e-07
+    },
+    {
+      "k": 8,
+      "bic": -1231797.7891666354,
+      "aic": -1239364.6083894768,
+      "mean_assignment_entropy": 2.834187461521863e-08
+    },
+    {
+      "k": 9,
+      "bic": -1265377.8204591533,
+      "aic": -1273891.1921976572,
+      "mean_assignment_entropy": 6.447122276076389e-10
+    },
+    {
+      "k": 10,
+      "bic": -1285152.8998511063,
+      "aic": -1294612.824105273,
+      "mean_assignment_entropy": 6.722587452734853e-07
+    }
+  ],
+  "bootstrap_stability": {
+    "n_clusters": 4,
+    "n_iterations": 100,
+    "mean_ari": 0.7729803285575888,
+    "std_ari": 0.14709881800381044,
+    "p5_ari": 0.5413489995619608,
+    "p95_ari": 0.9416692648715506,
+    "is_stable": true
+  },
+  "named_segments": {
+    "Cluster_0": {
+      "cluster_id": 0,
+      "generated_name": "Emerging Multi-Tower Accumulators",
+      "persona": "Younger acquisitive buyers (mean age 42.1) building multi-unit holdings (mean 4.06 units) across residential and commercial towers.",
+      "size": 536,
+      "share": 0.268,
+      "measured_traits": {
+        "age_mean": 42.05,
+        "units_mean": 4.06,
+        "office_share_mean": 0.13
+      }
+    },
+    "Cluster_1": {
+      "cluster_id": 1,
+      "generated_name": "Concentrated Residential Buyers",
+      "persona": "Pure residential buyers purchasing exactly 3 residential units across three towers with zero commercial office allocation.",
+      "size": 557,
+      "share": 0.2785,
+      "measured_traits": {
+        "age_mean": 54.11,
+        "units_mean": 3.0,
+        "office_share_mean": 0.0
+      }
+    },
+    "Cluster_2": {
+      "cluster_id": 2,
+      "generated_name": "Commercial Office Diversifiers",
+      "persona": "Specialized commercial allocators dedicating significant portfolio capital (37.8% office share) to workplace suites.",
+      "size": 375,
+      "share": 0.1875,
+      "measured_traits": {
+        "age_mean": 55.19,
+        "units_mean": 3.0,
+        "office_share_mean": 0.38
+      }
+    },
+    "Cluster_3": {
+      "cluster_id": 3,
+      "generated_name": "Established Senior Estate Investors",
+      "persona": "Senior mature capital allocators (mean age 69.2) holding the largest multi-tower portfolios (mean 4.39 units, span 15.5 months).",
+      "size": 532,
+      "share": 0.266,
+      "measured_traits": {
+        "age_mean": 69.21,
+        "units_mean": 4.39,
+        "office_share_mean": 0.16
+      }
+    }
+  },
+  "cluster_profiles": {
+    "n_clusters": 4,
+    "n_cohort": 2000,
+    "cluster_profiles": {
+      "Cluster_0": {
+        "cluster_id": 0,
+        "size": 536,
+        "share": 0.268,
+        "numeric_metrics": {
+          "age": {
+            "mean": 42.05,
+            "median": 42.0,
+            "smd": -0.752
+          },
+          "n_units": {
+            "mean": 4.06,
+            "median": 4.0,
+            "smd": 0.48
+          },
+          "avg_floor_area": {
+            "mean": 1124.56,
+            "median": 1117.49,
+            "smd": -0.104
+          },
+          "price_per_sqft": {
+            "mean": 302.02,
+            "median": 302.21,
+            "smd": -0.031
+          },
+          "n_towers": {
+            "mean": 4.0,
+            "median": 4.0,
+            "smd": 0.563
+          },
+          "portfolio_towers_hhi": {
+            "mean": 0.25,
+            "median": 0.25,
+            "smd": -0.754
+          },
+          "purchase_span_months": {
+            "mean": 13.53,
+            "median": 14.0,
+            "smd": 0.072
+          },
+          "office_share": {
+            "mean": 0.13,
+            "median": 0.0,
+            "smd": -0.081
+          },
+          "apartment_share": {
+            "mean": 0.87,
+            "median": 1.0,
+            "smd": 0.081
+          },
+          "total_spend": {
+            "mean": 1376040.58,
+            "median": 1362796.5,
+            "smd": 0.333
+          },
+          "avg_price": {
+            "mean": 339485.86,
+            "median": 339450.23,
+            "smd": -0.109
+          }
+        },
+        "categorical_metrics": {
+          "acquisition_purpose": {
+            "HOME": {
+              "share": 0.694,
+              "lift": 100.2
+            },
+            "INVESTMENT": {
+              "share": 0.306,
+              "lift": 99.5
+            }
+          },
+          "client_type": {
+            "INDIVIDUAL": {
+              "share": 0.9254,
+              "lift": 97.6
+            },
+            "COMPANY": {
+              "share": 0.0746,
+              "lift": 144.9
+            }
+          },
+          "referral_channel": {
+            "Website": {
+              "share": 0.556,
+              "lift": 100.8
+            },
+            "Agency": {
+              "share": 0.3433,
+              "lift": 97.4
+            },
+            "Client": {
+              "share": 0.1007,
+              "lift": 104.9
+            }
+          },
+          "loan_applied": {
+            "False": {
+              "share": 0.6045,
+              "lift": 95.6
+            },
+            "True": {
+              "share": 0.3955,
+              "lift": 107.5
+            }
+          },
+          "country": {
+            "USA": {
+              "share": 0.7537,
+              "lift": 98.0
+            },
+            "UK": {
+              "share": 0.0466,
+              "lift": 98.2
+            },
+            "Canada": {
+              "share": 0.041,
+              "lift": 96.6
+            },
+            "Germany": {
+              "share": 0.028,
+              "lift": 99.9
+            },
+            "France": {
+              "share": 0.028,
+              "lift": 105.6
+            },
+            "Belgium": {
+              "share": 0.0336,
+              "lift": 156.2
+            },
+            "Mexico": {
+              "share": 0.0261,
+              "lift": 130.6
+            },
+            "Australia": {
+              "share": 0.0168,
+              "lift": 86.1
+            },
+            "Russia": {
+              "share": 0.0168,
+              "lift": 93.3
+            },
+            "Denmark": {
+              "share": 0.0093,
+              "lift": 124.4
+            }
+          },
+          "is_multi_unit": {
+            "True": {
+              "share": 1.0,
+              "lift": 100.0
+            }
+          }
+        }
+      },
+      "Cluster_1": {
+        "cluster_id": 1,
+        "size": 557,
+        "share": 0.2785,
+        "numeric_metrics": {
+          "age": {
+            "mean": 54.11,
+            "median": 54.0,
+            "smd": -0.057
+          },
+          "n_units": {
+            "mean": 3.0,
+            "median": 3.0,
+            "smd": -0.777
+          },
+          "avg_floor_area": {
+            "mean": 1163.56,
+            "median": 1138.42,
+            "smd": 0.073
+          },
+          "price_per_sqft": {
+            "mean": 301.49,
+            "median": 301.09,
+            "smd": -0.064
+          },
+          "n_towers": {
+            "mean": 3.0,
+            "median": 3.0,
+            "smd": -0.866
+          },
+          "portfolio_towers_hhi": {
+            "mean": 0.33,
+            "median": 0.33,
+            "smd": 0.989
+          },
+          "purchase_span_months": {
+            "mean": 11.72,
+            "median": 12.0,
+            "smd": -0.268
+          },
+          "office_share": {
+            "mean": 0.0,
+            "median": 0.0,
+            "smd": -0.805
+          },
+          "apartment_share": {
+            "mean": 1.0,
+            "median": 1.0,
+            "smd": 0.805
+          },
+          "total_spend": {
+            "mean": 1052023.46,
+            "median": 1032856.46,
+            "smd": -0.599
+          },
+          "avg_price": {
+            "mean": 350674.49,
+            "median": 344285.49,
+            "smd": 0.051
+          }
+        },
+        "categorical_metrics": {
+          "acquisition_purpose": {
+            "HOME": {
+              "share": 0.6679,
+              "lift": 96.4
+            },
+            "INVESTMENT": {
+              "share": 0.3321,
+              "lift": 108.0
+            }
+          },
+          "client_type": {
+            "INDIVIDUAL": {
+              "share": 0.9533,
+              "lift": 100.5
+            },
+            "COMPANY": {
+              "share": 0.0467,
+              "lift": 90.6
+            }
+          },
+          "referral_channel": {
+            "Website": {
+              "share": 0.5512,
+              "lift": 99.9
+            },
+            "Agency": {
+              "share": 0.3519,
+              "lift": 99.8
+            },
+            "Client": {
+              "share": 0.0969,
+              "lift": 101.0
+            }
+          },
+          "loan_applied": {
+            "False": {
+              "share": 0.6284,
+              "lift": 99.4
+            },
+            "True": {
+              "share": 0.3716,
+              "lift": 101.0
+            }
+          },
+          "country": {
+            "USA": {
+              "share": 0.7469,
+              "lift": 97.1
+            },
+            "UK": {
+              "share": 0.0431,
+              "lift": 90.7
+            },
+            "Canada": {
+              "share": 0.0503,
+              "lift": 118.3
+            },
+            "Germany": {
+              "share": 0.0413,
+              "lift": 147.5
+            },
+            "France": {
+              "share": 0.0251,
+              "lift": 94.8
+            },
+            "Belgium": {
+              "share": 0.0162,
+              "lift": 75.2
+            },
+            "Mexico": {
+              "share": 0.018,
+              "lift": 89.8
+            },
+            "Australia": {
+              "share": 0.0251,
+              "lift": 128.9
+            },
+            "Russia": {
+              "share": 0.0251,
+              "lift": 139.6
+            },
+            "Denmark": {
+              "share": 0.009,
+              "lift": 119.7
+            }
+          },
+          "is_multi_unit": {
+            "True": {
+              "share": 1.0,
+              "lift": 100.0
+            }
+          }
+        }
+      },
+      "Cluster_2": {
+        "cluster_id": 2,
+        "size": 375,
+        "share": 0.1875,
+        "numeric_metrics": {
+          "age": {
+            "mean": 55.19,
+            "median": 55.0,
+            "smd": 0.006
+          },
+          "n_units": {
+            "mean": 3.0,
+            "median": 3.0,
+            "smd": -0.777
+          },
+          "avg_floor_area": {
+            "mean": 1201.99,
+            "median": 1179.52,
+            "smd": 0.248
+          },
+          "price_per_sqft": {
+            "mean": 305.18,
+            "median": 305.37,
+            "smd": 0.167
+          },
+          "n_towers": {
+            "mean": 3.0,
+            "median": 3.0,
+            "smd": -0.866
+          },
+          "portfolio_towers_hhi": {
+            "mean": 0.33,
+            "median": 0.33,
+            "smd": 0.989
+          },
+          "purchase_span_months": {
+            "mean": 11.48,
+            "median": 11.0,
+            "smd": -0.313
+          },
+          "office_share": {
+            "mean": 0.38,
+            "median": 0.33,
+            "smd": 1.24
+          },
+          "apartment_share": {
+            "mean": 0.62,
+            "median": 0.67,
+            "smd": -1.24
+          },
+          "total_spend": {
+            "mean": 1100608.39,
+            "median": 1077170.94,
+            "smd": -0.459
+          },
+          "avg_price": {
+            "mean": 366869.46,
+            "median": 359056.98,
+            "smd": 0.284
+          }
+        },
+        "categorical_metrics": {
+          "acquisition_purpose": {
+            "HOME": {
+              "share": 0.704,
+              "lift": 101.7
+            },
+            "INVESTMENT": {
+              "share": 0.296,
+              "lift": 96.3
+            }
+          },
+          "client_type": {
+            "INDIVIDUAL": {
+              "share": 0.9493,
+              "lift": 100.1
+            },
+            "COMPANY": {
+              "share": 0.0507,
+              "lift": 98.4
+            }
+          },
+          "referral_channel": {
+            "Website": {
+              "share": 0.5413,
+              "lift": 98.2
+            },
+            "Agency": {
+              "share": 0.368,
+              "lift": 104.4
+            },
+            "Client": {
+              "share": 0.0907,
+              "lift": 94.4
+            }
+          },
+          "loan_applied": {
+            "False": {
+              "share": 0.648,
+              "lift": 102.5
+            },
+            "True": {
+              "share": 0.352,
+              "lift": 95.7
+            }
+          },
+          "country": {
+            "USA": {
+              "share": 0.7653,
+              "lift": 99.5
+            },
+            "UK": {
+              "share": 0.048,
+              "lift": 101.1
+            },
+            "Canada": {
+              "share": 0.0507,
+              "lift": 119.2
+            },
+            "Germany": {
+              "share": 0.0267,
+              "lift": 95.2
+            },
+            "France": {
+              "share": 0.0373,
+              "lift": 140.9
+            },
+            "Belgium": {
+              "share": 0.0133,
+              "lift": 62.0
+            },
+            "Mexico": {
+              "share": 0.0187,
+              "lift": 93.3
+            },
+            "Australia": {
+              "share": 0.024,
+              "lift": 123.1
+            },
+            "Russia": {
+              "share": 0.008,
+              "lift": 44.4
+            },
+            "Denmark": {
+              "share": 0.008,
+              "lift": 106.7
+            }
+          },
+          "is_multi_unit": {
+            "True": {
+              "share": 1.0,
+              "lift": 100.0
+            }
+          }
+        }
+      },
+      "Cluster_3": {
+        "cluster_id": 3,
+        "size": 532,
+        "share": 0.266,
+        "numeric_metrics": {
+          "age": {
+            "mean": 69.21,
+            "median": 69.0,
+            "smd": 0.814
+          },
+          "n_units": {
+            "mean": 4.39,
+            "median": 4.0,
+            "smd": 0.877
+          },
+          "avg_floor_area": {
+            "mean": 1115.31,
+            "median": 1102.98,
+            "smd": -0.146
+          },
+          "price_per_sqft": {
+            "mean": 302.18,
+            "median": 301.8,
+            "smd": -0.02
+          },
+          "n_towers": {
+            "mean": 4.27,
+            "median": 4.0,
+            "smd": 0.949
+          },
+          "portfolio_towers_hhi": {
+            "mean": 0.24,
+            "median": 0.25,
+            "smd": -0.972
+          },
+          "purchase_span_months": {
+            "mean": 15.42,
+            "median": 16.0,
+            "smd": 0.429
+          },
+          "office_share": {
+            "mean": 0.16,
+            "median": 0.14,
+            "smd": 0.05
+          },
+          "apartment_share": {
+            "mean": 0.84,
+            "median": 0.86,
+            "smd": -0.05
+          },
+          "total_spend": {
+            "mean": 1474601.49,
+            "median": 1410226.94,
+            "smd": 0.616
+          },
+          "avg_price": {
+            "mean": 337055.93,
+            "median": 331407.3,
+            "smd": -0.144
+          }
+        },
+        "categorical_metrics": {
+          "acquisition_purpose": {
+            "HOME": {
+              "share": 0.7086,
+              "lift": 102.3
+            },
+            "INVESTMENT": {
+              "share": 0.2914,
+              "lift": 94.7
+            }
+          },
+          "client_type": {
+            "INDIVIDUAL": {
+              "share": 0.9662,
+              "lift": 101.9
+            },
+            "COMPANY": {
+              "share": 0.0338,
+              "lift": 65.7
+            }
+          },
+          "referral_channel": {
+            "Website": {
+              "share": 0.5545,
+              "lift": 100.5
+            },
+            "Agency": {
+              "share": 0.3515,
+              "lift": 99.7
+            },
+            "Client": {
+              "share": 0.094,
+              "lift": 97.9
+            }
+          },
+          "loan_applied": {
+            "False": {
+              "share": 0.6523,
+              "lift": 103.2
+            },
+            "True": {
+              "share": 0.3477,
+              "lift": 94.5
+            }
+          },
+          "country": {
+            "USA": {
+              "share": 0.8102,
+              "lift": 105.4
+            },
+            "UK": {
+              "share": 0.0526,
+              "lift": 110.8
+            },
+            "Canada": {
+              "share": 0.0301,
+              "lift": 70.8
+            },
+            "Germany": {
+              "share": 0.015,
+              "lift": 53.7
+            },
+            "France": {
+              "share": 0.0188,
+              "lift": 70.9
+            },
+            "Belgium": {
+              "share": 0.0207,
+              "lift": 96.2
+            },
+            "Mexico": {
+              "share": 0.0169,
+              "lift": 84.6
+            },
+            "Australia": {
+              "share": 0.0132,
+              "lift": 67.5
+            },
+            "Russia": {
+              "share": 0.0188,
+              "lift": 104.4
+            },
+            "Denmark": {
+              "share": 0.0038,
+              "lift": 50.1
+            }
+          },
+          "is_multi_unit": {
+            "True": {
+              "share": 1.0,
+              "lift": 100.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "surrogate_rules": "|--- quantile_units__n_units <= -2.33\n|   |--- std_num__office_share <= 0.10\n|   |   |--- class: 1\n|   |--- std_num__office_share >  0.10\n|   |   |--- class: 2\n|--- quantile_units__n_units >  -2.33\n|   |--- std_num__age <= 0.08\n|   |   |--- std_num__portfolio_towers_hhi <= -1.66\n|   |   |   |--- class: 3\n|   |   |--- std_num__portfolio_towers_hhi >  -1.66\n|   |   |   |--- class: 0\n|   |--- std_num__age >  0.08\n|   |   |--- std_num__age <= 0.43\n|   |   |   |--- class: 3\n|   |   |--- std_num__age >  0.43\n|   |   |   |--- class: 3\n",
+  "surrogate_fidelity": 0.9655,
+  "tree_shap_top_features": [
+    {
+      "feature": "quantile_units__n_units",
+      "mean_abs_shap": 0.24884399999999984
+    },
+    {
+      "feature": "std_num__office_share",
+      "mean_abs_shap": 0.11287957671673862
+    },
+    {
+      "feature": "std_num__age",
+      "mean_abs_shap": 0.11116867616922249
+    },
+    {
+      "feature": "std_num__portfolio_towers_hhi",
+      "mean_abs_shap": 0.009608810142946948
+    },
+    {
+      "feature": "std_num__avg_floor_area",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "std_num__price_per_sqft",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "std_num__n_towers",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "std_num__purchase_span_months",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "bool_pass__loan_applied",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "bool_pass__is_multi_unit",
+      "mean_abs_shap": 0.0
+    }
+  ],
+  "descriptive_cluster_separation_kw": [
+    {
+      "feature": "n_units",
+      "kruskal_wallis_h": 1891.5930749376964,
+      "asymptotic_p_value": 0.0,
+      "descriptive_note": "Circular feature separation metric; effect size only"
+    },
+    {
+      "feature": "n_towers",
+      "kruskal_wallis_h": 1891.3972936874834,
+      "asymptotic_p_value": 0.0,
+      "descriptive_note": "Circular feature separation metric; effect size only"
+    },
+    {
+      "feature": "portfolio_towers_hhi",
+      "kruskal_wallis_h": 1824.4635821541583,
+      "asymptotic_p_value": 0.0,
+      "descriptive_note": "Circular feature separation metric; effect size only"
+    },
+    {
+      "feature": "office_share",
+      "kruskal_wallis_h": 1112.25937184893,
+      "asymptotic_p_value": 7.96854840471635e-241,
+      "descriptive_note": "Circular feature separation metric; effect size only"
+    },
+    {
+      "feature": "age",
+      "kruskal_wallis_h": 671.3815471037306,
+      "asymptotic_p_value": 3.3683685996240756e-145,
+      "descriptive_note": "Circular feature separation metric; effect size only"
+    },
+    {
+      "feature": "total_spend",
+      "kruskal_wallis_h": 611.3054846102314,
+      "asymptotic_p_value": 3.5684412298882106e-132,
+      "descriptive_note": "Circular feature separation metric; effect size only"
+    },
+    {
+      "feature": "purchase_span_months",
+      "kruskal_wallis_h": 175.40861830537466,
+      "asymptotic_p_value": 8.648147539012427e-38,
+      "descriptive_note": "Circular feature separation metric; effect size only"
+    },
+    {
+      "feature": "avg_floor_area",
+      "kruskal_wallis_h": 36.63410075202442,
+      "asymptotic_p_value": 5.499113082374601e-08,
+      "descriptive_note": "Circular feature separation metric; effect size only"
+    },
+    {
+      "feature": "satisfaction_score",
+      "kruskal_wallis_h": 2.789544044004084,
+      "asymptotic_p_value": 0.4252240472187091,
+      "descriptive_note": "Circular feature separation metric; effect size only"
+    }
+  ],
+  "descriptive_cluster_separation_chi2": [
+    {
+      "feature": "client_type",
+      "chi2_stat": 9.537970001899774,
+      "p_value": 0.022930835313629067,
+      "cramers_v": 0.06905783808482487
+    },
+    {
+      "feature": "country",
+      "chi2_stat": 29.921787753343693,
+      "p_value": 0.31767952576001834,
+      "cramers_v": 0.07061844394743687
+    },
+    {
+      "feature": "loan_applied",
+      "chi2_stat": 3.1286106482018816,
+      "p_value": 0.3722178557436072,
+      "cramers_v": 0.03955129990406056
+    },
+    {
+      "feature": "acquisition_purpose",
+      "chi2_stat": 2.4777495631620368,
+      "p_value": 0.479325659500612,
+      "cramers_v": 0.035197653069217814
+    },
+    {
+      "feature": "referral_channel",
+      "chi2_stat": 0.7500047970580334,
+      "p_value": 0.9933476698429942,
+      "cramers_v": 0.013693107728507372
+    }
+  ],
+  "prd_truth_matrix": [
+    {
+      "prd_cluster": "C1",
+      "prd_hypothesis_name": "Global Investors",
+      "prd_assumed_traits": "High income, international buyers, pure investment focus",
+      "empirical_finding": "US buyers represent 76.9% of cohort; investment share is identical between US (30.56%) and international buyers (31.39%) with chi2=0.0784 (p=0.7795, Cramer's V=0.0063). Domestic buyers spend slightly more than international buyers (mean $1,269,852 vs $1,228,828; two-sample t=2.2253, p=0.0262; Kruskal-Wallis H=6.7460, p=0.0094). International buyers do NOT form a distinct higher-spend investor cluster.",
+      "statistical_test": "Chi-Square Independence (US vs Non-US Investment Purpose): chi2=0.0784, p=0.7795, V=0.0063; Spend Comparison (US vs Intl): US mean $1,269,852 vs Intl mean $1,228,828, t=2.2253, p=0.0262",
+      "verdict": "NOT SUPPORTED (US and international buyers exhibit virtually identical investment share; domestic spend exceeds international; no distinct international investor cluster)",
+      "is_supported": false
+    },
+    {
+      "prd_cluster": "C2",
+      "prd_hypothesis_name": "First-Time Buyers",
+      "prd_assumed_traits": "Younger age, loan dependent, single home purchase",
+      "empirical_finding": "Zero clients in the dataset have <3 purchases; minimum units is 3 (mean units in younger cluster is 4.06). Loan financing rate is uniform (~50.4%) across all cohorts with no age correlation (r=-0.0289, p=0.1960). First-time single-unit homebuyers do not exist in the property portfolio.",
+      "statistical_test": "Portfolio Min-Units Audit & Pearson Correlation: min_units=3.0, corr(loan_applied, age) r=-0.0289, p=0.1960",
+      "verdict": "NOT SUPPORTED (No single-unit buyers exist in dataset; min units is 3, mean is 4.06; loan rate has no age dependence)",
+      "is_supported": false
+    },
+    {
+      "prd_cluster": "C3",
+      "prd_hypothesis_name": "Corporate Buyers",
+      "prd_assumed_traits": "Companies purchasing multiple units",
+      "empirical_finding": "Company clients represent 5.15% (103 clients) of dataset. Crucially, companies do NOT purchase significantly more units than individuals: company mean is 3.70 units vs individual mean of 3.65 units (two-sample t=0.5773, p=0.5638; Kruskal-Wallis H=0.1855, p=0.6667). Corporate designation does not drive multi-unit volume.",
+      "statistical_test": "Two-Sample t-test & Kruskal-Wallis: t=0.5773, p=0.5638; KW H=0.1855, p=0.6667",
+      "verdict": "NOT SUPPORTED (Corporate clients buy same unit volumes as individuals: 3.70 vs 3.65 units; company status does not drive multi-unit clustering)",
+      "is_supported": false
+    },
+    {
+      "prd_cluster": "C4",
+      "prd_hypothesis_name": "Luxury Investors",
+      "prd_assumed_traits": "High satisfaction, high spend, large investments",
+      "empirical_finding": "Satisfaction score has no detectable association with spend (Spearman rho=0.0414, p=0.0639) or property price per sqft (ANOVA F=0.4097, p=0.8018). In a joint test of high satisfaction (score >= 4), top-quartile spend, and top-quartile price/sqft, observed overlap is 72 clients (3.60%), which is independent of high satisfaction (chi2=0.2212, p=0.6381). Spend is driven by unit counts, not luxury premiums.",
+      "statistical_test": "ANOVA across satisfaction levels: F=0.4097, p=0.8018; Joint Luxury Independence Test (high sat vs high spend & price/sqft): chi2=0.2212, p=0.6381; Spearman rank(sat, spend): rho=0.0414, p=0.0639",
+      "verdict": "NOT SUPPORTED (No luxury square-foot price premium; satisfaction has no detectable association with spend or joint luxury profile)",
+      "is_supported": false
+    }
+  ],
+  "satisfaction_uniformity_audit": {
+    "chi2": 1.99,
+    "p_value": 0.7376,
+    "counts": [
+      395,
+      379,
+      404,
+      417,
+      405
+    ]
+  }
+}

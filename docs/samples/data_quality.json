@@ -1,0 +1,65 @@
+{
+  "raw_clients_count": 2000,
+  "raw_properties_count": 10000,
+  "clean_sold_transactions": 7305,
+  "clean_current_inventory": 313,
+  "towers_count": 20,
+  "reference_date": "2025-12-31",
+  "dob_sensitivity_age_switches": 0,
+  "satisfaction_chi2": 1.99,
+  "satisfaction_uniform_p": 0.7376,
+  "datasets": {
+    "clients": {
+      "raw_rows": 2000,
+      "clean_rows": 2000,
+      "null_values_handled": 0,
+      "duplicate_rows_dropped": 0,
+      "demographics": {
+        "countries_count": 10,
+        "top_country": "USA",
+        "top_country_share": 0.769,
+        "regions_count": 57,
+        "mean_age": 55.099,
+        "min_age": 25,
+        "max_age": 94
+      },
+      "referral_channels": {
+        "Website": 1103,
+        "Agency": 705,
+        "Client": 192
+      }
+    },
+    "properties": {
+      "raw_rows": 10000,
+      "sold_units": 7305,
+      "available_units": 313,
+      "null_client_ref_on_sold": 0,
+      "categories": {
+        "Apartment": 8547,
+        "Office": 1453
+      },
+      "pricing": {
+        "mean_sale_price": 345072.00011498976,
+        "median_sale_price": 330997.32,
+        "min_sale_price": 97402.8,
+        "max_sale_price": 736652.27,
+        "mean_price_per_sqft": 302.40846132785765
+      },
+      "towers_count": 20,
+      "transaction_period": {
+        "start": "2024-01",
+        "end": "2025-12"
+      }
+    }
+  },
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": false,
+    "untested_assumptions_notice": "Integer age computed at configured reference date 2025-12-31 is invariant to DD/MM date ambiguity (0 age switches). Satisfaction score marginal distribution is consistent with discrete uniform (chi2=1.990, p=0.7376).",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "Parcl Buyer Intelligence - Data Quality & Lineage Report",
+    "reference_date": "2025-12-31",
+    "client_type_mapping": {
+      "Individual": "INDIVIDUAL (Display: Individual)",
+      "Company": "COMPANY (Display: Corporate)"
+    },
+    "acquisition_purpose_mapping": {
+      "Home": "HOME (Display: Personal use)",
+      "Investment": "INVESTMENT (Display: Investment)"
+    }
+  },
+  "datasets": {
+    "clients": {
+      "raw_rows": 2000,
+      "clean_rows": 2000,
+      "null_values_handled": 0,
+      "duplicate_rows_dropped": 0,
+      "demographics": {
+        "countries_count": 10,
+        "top_country": "USA",
+        "top_country_share": 0.769,
+        "regions_count": 57,
+        "mean_age": 55.099,
+        "min_age": 25,
+        "max_age": 94
+      },
+      "referral_channels": {
+        "Website": 1103,
+        "Agency": 705,
+        "Client": 192
+      }
+    },
+    "properties": {
+      "raw_rows": 10000,
+      "sold_units": 7305,
+      "available_units": 313,
+      "null_client_ref_on_sold": 0,
+      "categories": {
+        "Apartment": 8547,
+        "Office": 1453
+      },
+      "pricing": {
+        "mean_sale_price": 345072.00011498976,
+        "median_sale_price": 330997.32,
+        "min_sale_price": 97402.8,
+        "max_sale_price": 736652.27,
+        "mean_price_per_sqft": 302.40846132785765
+      },
+      "towers_count": 20,
+      "transaction_period": {
+        "start": "2024-01",
+        "end": "2025-12"
+      }
+    }
+  },
+  "empirical_tests": {
+    "dob_sensitivity": {
+      "total_clients": 2000,
+      "slash_format_count": 1145,
+      "dash_format_count": 855,
+      "exact_same_date_count": 65,
+      "mean_fractional_age_diff_years": 0.32629126839426204,
+      "max_fractional_age_diff_years": 0.8870818702642822,
+      "mean_integer_age_diff_years": 0.0,
+      "max_integer_age_diff_years": 0,
+      "mean_age_under_dd_first": 55.099,
+      "mean_age_under_mm_first": 55.099,
+      "age_band_switch_count": 0,
+      "age_band_switch_percentage": 0.0
+    },
+    "satisfaction_uniformity": {
+      "score_distribution": {
+        "1": 395,
+        "2": 379,
+        "3": 404,
+        "4": 417,
+        "5": 405
+      },
+      "expected_count_per_category": 400.0,
+      "chi_square_statistic": 1.9900000000000002,
+      "degrees_of_freedom": 4,
+      "p_value": 0.7375982718653977,
+      "is_uniform_at_alpha_0_05": true,
+      "conclusion": "The marginal distribution of satisfaction_score is consistent with discrete uniform (chi2=1.99, p=0.738, df=4). Bivariate dependency tests against acquisition purpose, loan application, referral channel, country, and observed spend are scheduled in Phase 2."
+    }
+  }
+}

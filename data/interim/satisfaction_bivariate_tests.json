@@ -1,0 +1,46 @@
+{
+  "acquisition_purpose": {
+    "test": "Chi-Square Test of Independence",
+    "chi2_statistic": 0.5324114934441516,
+    "p_value": 0.9702699773490722,
+    "degrees_of_freedom": 4,
+    "cramers_v": 0.0163,
+    "is_significant_alpha_0_05": false
+  },
+  "loan_applied": {
+    "test": "Chi-Square Test of Independence",
+    "chi2_statistic": 1.6625529749074406,
+    "p_value": 0.7975081462541717,
+    "degrees_of_freedom": 4,
+    "cramers_v": 0.0288,
+    "is_significant_alpha_0_05": false
+  },
+  "referral_channel": {
+    "test": "Chi-Square Test of Independence",
+    "chi2_statistic": 7.658713677645709,
+    "p_value": 0.46749748088634047,
+    "degrees_of_freedom": 8,
+    "cramers_v": 0.0438,
+    "is_significant_alpha_0_05": false
+  },
+  "country": {
+    "test": "Chi-Square Test of Independence",
+    "chi2_statistic": 36.04381233984669,
+    "p_value": 0.4665985665741314,
+    "degrees_of_freedom": 36,
+    "cramers_v": 0.0671,
+    "is_significant_alpha_0_05": false
+  },
+  "total_spend": {
+    "kruskal_wallis": {
+      "h_statistic": 5.790938550284409,
+      "p_value": 0.21531458770601594,
+      "is_significant_alpha_0_05": false
+    },
+    "anova": {
+      "f_statistic": 1.4788255168904276,
+      "p_value": 0.20600889048549137,
+      "is_significant_alpha_0_05": false
+    }
+  }
+}

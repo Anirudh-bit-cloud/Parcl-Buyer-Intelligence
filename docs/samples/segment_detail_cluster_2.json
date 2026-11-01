@@ -1,0 +1,166 @@
+{
+  "segment_id": 2,
+  "segment_name": "Commercial Office Diversifiers",
+  "persona_description": "Specialized commercial allocators dedicating significant portfolio capital (37.8% office share) to workplace suites.",
+  "buyer_count": 375,
+  "population_share_pct": 100.0,
+  "mean_spend_inr": 1100608.39,
+  "mean_spend_display": "₹11,00,608",
+  "total_spend_inr": 412728147.48,
+  "total_spend_display": "₹41,27,28,147",
+  "mean_units": 3.0,
+  "commercial_office_share_pct": 37.8,
+  "numeric_metrics": {
+    "age": {
+      "mean": 55.1947,
+      "std": 17.4157,
+      "median": 55.0,
+      "q25": 40.0,
+      "q75": 70.0
+    },
+    "n_units": {
+      "mean": 3.0,
+      "std": 0.0,
+      "median": 3.0,
+      "q25": 3.0,
+      "q75": 3.0
+    },
+    "total_spend": {
+      "mean": 1100608.3933,
+      "std": 231381.9202,
+      "median": 1077170.94,
+      "q25": 934730.63,
+      "q75": 1257951.76
+    },
+    "office_share": {
+      "mean": 0.3778,
+      "std": 0.1161,
+      "median": 0.3333,
+      "q25": 0.3333,
+      "q75": 0.3333
+    },
+    "portfolio_towers_hhi": {
+      "mean": 0.3333,
+      "std": 0.0,
+      "median": 0.3333,
+      "q25": 0.3333,
+      "q75": 0.3333
+    }
+  },
+  "categorical_distributions": {
+    "acquisition_purpose": {
+      "HOME": {
+        "share": 0.704,
+        "lift": 100.0
+      },
+      "INVESTMENT": {
+        "share": 0.296,
+        "lift": 100.0
+      }
+    },
+    "client_type": {
+      "COMPANY": {
+        "share": 0.0507,
+        "lift": 100.0
+      },
+      "INDIVIDUAL": {
+        "share": 0.9493,
+        "lift": 100.0
+      }
+    },
+    "referral_channel": {
+      "Agency": {
+        "share": 0.368,
+        "lift": 100.0
+      },
+      "Client": {
+        "share": 0.0907,
+        "lift": 100.0
+      },
+      "Website": {
+        "share": 0.5413,
+        "lift": 100.0
+      }
+    },
+    "loan_applied": {
+      "False": {
+        "share": 0.648,
+        "lift": 100.0
+      },
+      "True": {
+        "share": 0.352,
+        "lift": 100.0
+      }
+    },
+    "country": {
+      "Australia": {
+        "share": 0.024,
+        "lift": 100.0
+      },
+      "Belgium": {
+        "share": 0.0133,
+        "lift": 100.0
+      },
+      "Canada": {
+        "share": 0.0507,
+        "lift": 100.0
+      },
+      "Denmark": {
+        "share": 0.008,
+        "lift": 100.0
+      },
+      "France": {
+        "share": 0.0373,
+        "lift": 100.0
+      },
+      "Germany": {
+        "share": 0.0267,
+        "lift": 100.0
+      },
+      "Mexico": {
+        "share": 0.0187,
+        "lift": 100.0
+      },
+      "Russia": {
+        "share": 0.008,
+        "lift": 100.0
+      },
+      "UK": {
+        "share": 0.048,
+        "lift": 100.0
+      },
+      "USA": {
+        "share": 0.7653,
+        "lift": 100.0
+      }
+    }
+  },
+  "surrogate_rules": [
+    "quantile_units__n_units <= -2.33 (units == 3)",
+    "std_num__office_share > 0.10 (commercial office allocation > 0%)"
+  ],
+  "silhouette_validation": {
+    "k2_strong_macrostructure_silhouette": 0.5072,
+    "k2_davies_bouldin": 0.8066,
+    "k4_weak_substructure_silhouette": 0.1211,
+    "k4_davies_bouldin": 2.6079,
+    "soft_behavioral_tendencies_framing": "Weak Cluster Policy Triggered: Best k=4 silhouette is 0.1211 (< 0.25). Segments represent overlapping soft behavioral tendencies."
+  },
+  "active_filters": {
+    "country": null,
+    "region": null,
+    "acquisition_purpose": null,
+    "client_type": null,
+    "assigned_cluster": 2
+  },
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": true,
+    "untested_assumptions_notice": "Surrogate rules represent shallow decision tree paths with 96.35% empirical fidelity.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}
