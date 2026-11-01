@@ -15,7 +15,7 @@
       "total_spend_display": "₹12,46,765",
       "n_units": 4,
       "assigned_cluster": 0,
-      "assigned_segment_name": "Concentrated Residential Buyers",
+      "assigned_segment_name": "Emerging Multi-Tower Accumulators",
       "top_soft_probability": 0.5085
     },
     {
@@ -87,7 +87,7 @@
       "total_spend_display": "₹36,53,385",
       "n_units": 13,
       "assigned_cluster": 0,
-      "assigned_segment_name": "Concentrated Residential Buyers",
+      "assigned_segment_name": "Emerging Multi-Tower Accumulators",
       "top_soft_probability": 0.5037
     }
   ],

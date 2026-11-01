@@ -12,8 +12,8 @@
   "segments": [
     {
       "segment_id": 0,
-      "segment_name": "Concentrated Residential Buyers",
-      "persona_label": "Concentrated Residential Portfolios",
+      "segment_name": "Emerging Multi-Tower Accumulators",
+      "persona_label": "Emerging Multi-Tower Portfolio Accumulators",
       "buyer_count": 536,
       "population_share_pct": 26.8,
       "mean_age": 42.1,
@@ -38,8 +38,8 @@
     },
     {
       "segment_id": 1,
-      "segment_name": "Emerging Multi-Tower Accumulators",
-      "persona_label": "Emerging Multi-Tower Portfolio Accumulators",
+      "segment_name": "Concentrated Residential Buyers",
+      "persona_label": "Concentrated Residential Portfolios",
       "buyer_count": 557,
       "population_share_pct": 27.85,
       "mean_age": 54.1,

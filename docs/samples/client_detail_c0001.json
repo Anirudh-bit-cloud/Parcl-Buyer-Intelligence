@@ -20,7 +20,7 @@
     15
   ],
   "assigned_cluster": 0,
-  "assigned_segment_name": "Concentrated Residential Buyers",
+  "assigned_segment_name": "Emerging Multi-Tower Accumulators",
   "soft_membership_probabilities": {
     "Cluster_0": 0.5085,
     "Cluster_1": 0.0059,

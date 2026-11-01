@@ -37,7 +37,7 @@
 
 * **Cohort Size**: 2,000 unique buyers (`C0001` through `C2000`).
 * **Accounting Currency Standard (₹ INR) & Raw Data Relabeling**:
-  * In Phase 1 ingestion, raw property and transaction values carrying a leading `$` symbol (e.g. `$300,385.62`) were stripped to numeric floats.
+  * In Phase 1 ingestion, raw property and transaction values carrying a leading dollar symbol (e.g. `300,385.62`) were stripped to numeric floats.
   * Under sponsor instruction from Parcl Co. Limited and Unified Mentor, all monetary amounts are relabeled directly in **Indian Rupees (₹)** with standard Indian digit grouping (lakh/crore).
   * *Assumption Notice*: Currency is an accounting and display labeling convention and is independent of client geographic provenance (`country: "USA"` and regional attributes remain unchanged). No foreign exchange (FX) conversion has been applied.
 * **Age Calculation & Single Reference Date**:
@@ -47,7 +47,7 @@
   * **Website**: 1,103 buyers (55.15%), Mean sales: ₹12,74,771, **Median sales: ₹12,38,163**, Mean units: 3.68, Loan rate: 36.63%.
   * **Agency**: 705 buyers (35.25%), Mean sales: ₹12,43,489, **Median sales: ₹12,10,176**, Mean units: 3.61, Loan rate: 36.60%.
   * **Client (Referral)**: 192 buyers (9.60%), Mean sales: ₹12,39,682, **Median sales: ₹12,23,339**, Mean units: 3.63, Loan rate: 38.54%.
-* **Satisfaction Score**: Marginal distribution is consistent with discrete uniform across {1, 2, 3, 4, 5} ($\chi^2 = 1.990, p = 0.7376$ across category counts `[395, 379, 404, 417, 405]`). Exhibits no detectable association with acquisition purpose, loan application, referral channel, or total spend.
+* **Satisfaction Score**: Marginal distribution is consistent with discrete uniform across {1, 2, 3, 4, 5} (χ² = 1.990, p = 0.7376 across category counts `[395, 379, 404, 417, 405]`). Exhibits no detectable association with acquisition purpose, loan application, referral channel, or total spend.
 
 ---
 
@@ -91,10 +91,10 @@ To establish complete provenance and eliminate hand-written discrepancy:
   "n_units": 4,
   "total_spend": 1246764.72,
   "assigned_cluster": 0,
-  "cluster_name": "Concentrated Residential Buyers"
+  "cluster_name": "Emerging Multi-Tower Accumulators"
 }
 ```
 
 ### Audit Notes on C0001
 1. **Name and Origin**: The authentic client identity in the underlying data has always been **Kareem Liu, USA, California**.
-2. **Age Derivation**: On configured reference date `2025-12-31`, with date of birth `1968-11-05`, the client has lived 20,875 days. Dividing by 365.2425 yields completed integer age **57**. (The legacy Phase 5 walkthrough reference to age 49 was an error caused by evaluating age relative to 2017: $2017 - 1968 = 49$).
+2. **Age Derivation**: On configured reference date `2025-12-31`, with date of birth `1968-11-05`, the client has lived 20,875 days. Dividing by 365.2425 yields completed integer age **57**. (The legacy Phase 5 walkthrough reference to age 49 was an error caused by evaluating age relative to 2017: 2017 - 1968 = 49).

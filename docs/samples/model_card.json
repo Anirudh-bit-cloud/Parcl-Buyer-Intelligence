@@ -11,150 +11,175 @@
   "beta_calibration_grid": [
     {
       "beta": 0.1,
+      "mean_agreement_log_likelihood": -1.1682,
       "mean_log_likelihood": -1.1682,
       "ambiguity_pct": 100.0,
       "is_chosen": false
     },
     {
       "beta": 0.3,
+      "mean_agreement_log_likelihood": -0.8734,
       "mean_log_likelihood": -0.8734,
       "ambiguity_pct": 90.15,
       "is_chosen": false
     },
     {
       "beta": 0.51,
+      "mean_agreement_log_likelihood": -0.7114,
       "mean_log_likelihood": -0.7114,
       "ambiguity_pct": 19.15,
       "is_chosen": false
     },
     {
       "beta": 0.71,
+      "mean_agreement_log_likelihood": -0.639,
       "mean_log_likelihood": -0.639,
       "ambiguity_pct": 4.4,
       "is_chosen": false
     },
     {
       "beta": 0.92,
+      "mean_agreement_log_likelihood": -0.6085,
       "mean_log_likelihood": -0.6085,
       "ambiguity_pct": 1.6,
       "is_chosen": false
     },
     {
       "beta": 1.12,
+      "mean_agreement_log_likelihood": -0.6021,
       "mean_log_likelihood": -0.6021,
       "ambiguity_pct": 0.55,
       "is_chosen": true
     },
     {
       "beta": 1.33,
+      "mean_agreement_log_likelihood": -0.6086,
       "mean_log_likelihood": -0.6086,
       "ambiguity_pct": 0.35,
       "is_chosen": false
     },
     {
       "beta": 1.53,
+      "mean_agreement_log_likelihood": -0.6223,
       "mean_log_likelihood": -0.6223,
       "ambiguity_pct": 0.1,
       "is_chosen": false
     },
     {
       "beta": 1.73,
+      "mean_agreement_log_likelihood": -0.641,
       "mean_log_likelihood": -0.641,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 1.94,
+      "mean_agreement_log_likelihood": -0.6646,
       "mean_log_likelihood": -0.6646,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 2.14,
+      "mean_agreement_log_likelihood": -0.69,
       "mean_log_likelihood": -0.69,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 2.35,
+      "mean_agreement_log_likelihood": -0.7193,
       "mean_log_likelihood": -0.7193,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 2.55,
+      "mean_agreement_log_likelihood": -0.7492,
       "mean_log_likelihood": -0.7492,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 2.75,
+      "mean_agreement_log_likelihood": -0.781,
       "mean_log_likelihood": -0.781,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 2.96,
+      "mean_agreement_log_likelihood": -0.8159,
       "mean_log_likelihood": -0.8159,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 3.16,
+      "mean_agreement_log_likelihood": -0.8505,
       "mean_log_likelihood": -0.8505,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 3.37,
+      "mean_agreement_log_likelihood": -0.8881,
       "mean_log_likelihood": -0.8881,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 3.57,
+      "mean_agreement_log_likelihood": -0.925,
       "mean_log_likelihood": -0.925,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 3.78,
+      "mean_agreement_log_likelihood": -0.9647,
       "mean_log_likelihood": -0.9647,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 3.98,
+      "mean_agreement_log_likelihood": -1.0032,
       "mean_log_likelihood": -1.0032,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 4.18,
+      "mean_agreement_log_likelihood": -1.0425,
       "mean_log_likelihood": -1.0425,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 4.39,
+      "mean_agreement_log_likelihood": -1.0844,
       "mean_log_likelihood": -1.0844,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 4.59,
+      "mean_agreement_log_likelihood": -1.1248,
       "mean_log_likelihood": -1.1248,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 4.8,
+      "mean_agreement_log_likelihood": -1.1678,
       "mean_log_likelihood": -1.1678,
       "ambiguity_pct": 0.0,
       "is_chosen": false
     },
     {
       "beta": 5.0,
+      "mean_agreement_log_likelihood": -1.2092,
       "mean_log_likelihood": -1.2092,
       "ambiguity_pct": 0.0,
       "is_chosen": false
@@ -165,9 +190,9 @@
       "prd_cluster": "C1",
       "prd_hypothesis_name": "Global Investors",
       "prd_stated_features": "Country: international, purpose: investment, high spend",
-      "data_reality_finding": "Domestic USA buyers spend 3.34% more on average than international buyers (₹12,73,500 vs ₹12,32,374; two-sample t=2.2253, p=0.0262, Cohen's d=0.1181). Investment purpose share is virtually identical between US (30.82%) and international (31.60%) buyers (chi2=0.1120, p=0.7379).",
+      "data_reality_finding": "Domestic USA buyers (n=1,538) spend 3.34% more on average than international buyers (n=462) (₹12,69,852.05 vs ₹12,28,827.94; two-sample Welch's t=2.2443, p=0.0251, Cohen's d=0.1181). Investment purpose share is virtually identical between US (30.56%, 470/1538) and international (31.39%, 145/462) buyers (chi2=0.1139, p=0.7358, dof=1).",
       "empirical_verdict": "NOT SUPPORTED",
-      "statistical_test_evidence": "Two-sample t = 2.2253 (p=0.0262), Cohen's d = 0.1181; chi2 = 0.1120 (p=0.7379)"
+      "statistical_test_evidence": "Two-sample Welch's t = 2.2443 (p=0.0251), Cohen's d = 0.1181; chi2 = 0.1139 (p=0.7358, dof=1)"
     },
     {
       "prd_cluster": "C2",
@@ -181,9 +206,9 @@
       "prd_cluster": "C3",
       "prd_hypothesis_name": "Corporate Buyers",
       "prd_stated_features": "Institutional company structure, bulk commercial portfolio holdings",
-      "data_reality_finding": "Corporate clients represent only 5.15% of all buyers (103 out of 2,000). Commercial office allocations are distributed across both individual and company buyers (company mean units 4.12 vs individual 4.05, ANOVA F=0.18, p=0.83). Corporate status does not form an isolated segment.",
+      "data_reality_finding": "Corporate clients represent only 5.15% of all buyers (103 out of 2,000). Mean units purchased is virtually indistinguishable between companies and individuals (mean 3.6990 vs 3.6500, One-way ANOVA F(1, 1998) = 0.3333, p = 0.5638; two-sample t(1998) = -0.5773, p = 0.5638). Corporate status does not form an isolated segment.",
       "empirical_verdict": "NOT SUPPORTED",
-      "statistical_test_evidence": "Company share = 5.15% (103/2000 clients); Company vs Individual units ANOVA F = 0.18 (p=0.83)"
+      "statistical_test_evidence": "Company share = 5.15% (103/2000 clients); One-way ANOVA F(1, 1998) = 0.3333 (p=0.5638)"
     },
     {
       "prd_cluster": "C4",

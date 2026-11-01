@@ -34,7 +34,7 @@
     "collinearity_finding": "96.75% of clients have n_towers == n_units and corr(HHI, 1/n_units)=0.9322. Dropping n_units alone preserved partition through proxy collinearity; dropping all proxies drops ARI to 0.2013."
   },
   "persistent_cluster_diagnostic": {
-    "k10_size_32_cluster": "Consists exclusively of 6+ to 11 unit ultra-high volume buyers (mean age 64.0, total spend up to $3.40M)."
+    "k10_size_32_cluster": "Consists exclusively of 6+ to 11 unit ultra-high volume buyers (mean age 64.0, total spend up to \u20b93.40M)."
   },
   "variants_comparison": {
     "Model_A_PRD_Baseline": {
@@ -1340,9 +1340,9 @@
       "prd_cluster": "C1",
       "prd_hypothesis_name": "Global Investors",
       "prd_assumed_traits": "High income, international buyers, pure investment focus",
-      "empirical_finding": "US buyers represent 76.9% of cohort; investment share is identical between US (30.56%) and international buyers (31.39%) with chi2=0.0784 (p=0.7795, Cramer's V=0.0063). Domestic buyers spend slightly more than international buyers (mean $1,269,852 vs $1,228,828; two-sample t=2.2253, p=0.0262; Kruskal-Wallis H=6.7460, p=0.0094). International buyers do NOT form a distinct higher-spend investor cluster.",
-      "statistical_test": "Chi-Square Independence (US vs Non-US Investment Purpose): chi2=0.0784, p=0.7795, V=0.0063; Spend Comparison (US vs Intl): US mean $1,269,852 vs Intl mean $1,228,828, t=2.2253, p=0.0262",
-      "verdict": "NOT SUPPORTED (US and international buyers exhibit virtually identical investment share; domestic spend exceeds international; no distinct international investor cluster)",
+      "empirical_finding": "Domestic USA buyers spend \u20b941,024.10 (+3.34%) more on average than international buyers (mean \u20b912,69,852.05 vs \u20b912,28,827.94; Welch's t=2.2443, p=0.0251, Cohen's d=0.1181). Investment share is statistically indistinguishable between USA (30.56%, 470/1538) and international buyers (31.39%, 145/462) with chi2=0.1139 (p=0.7358, dof=1). International buyers do NOT form a distinct higher-spend investor cluster.",
+      "statistical_test": "Chi-Square Independence (USA vs Intl Investment Purpose): chi2=0.1139, p=0.7358, dof=1; Spend Comparison: Welch's t=2.2443, p=0.0251, Cohen's d=0.1181; Mann-Whitney U p=0.0094",
+      "verdict": "NOT SUPPORTED (USA and international buyers exhibit virtually identical investment share; domestic spend exceeds international; no distinct international investor cluster)",
       "is_supported": false
     },
     {
@@ -1358,8 +1358,8 @@
       "prd_cluster": "C3",
       "prd_hypothesis_name": "Corporate Buyers",
       "prd_assumed_traits": "Companies purchasing multiple units",
-      "empirical_finding": "Company clients represent 5.15% (103 clients) of dataset. Crucially, companies do NOT purchase significantly more units than individuals: company mean is 3.70 units vs individual mean of 3.65 units (two-sample t=0.5773, p=0.5638; Kruskal-Wallis H=0.1855, p=0.6667). Corporate designation does not drive multi-unit volume.",
-      "statistical_test": "Two-Sample t-test & Kruskal-Wallis: t=0.5773, p=0.5638; KW H=0.1855, p=0.6667",
+      "empirical_finding": "Company clients represent 5.15% (103 clients) of dataset. Crucially, companies do NOT purchase significantly more units than individuals: company mean is 3.70 units vs individual mean of 3.65 units (one-way ANOVA F(1, 1998)=0.3333, p=0.5638; two-sample t(1998)=-0.5773, p=0.5638; Kruskal-Wallis H=0.1855, p=0.6667). Corporate designation does not drive multi-unit volume.",
+      "statistical_test": "One-way ANOVA: F(1, 1998)=0.3333, p=0.5638; Two-sample t(1998)=-0.5773, p=0.5638; KW H=0.1855, p=0.6667",
       "verdict": "NOT SUPPORTED (Corporate clients buy same unit volumes as individuals: 3.70 vs 3.65 units; company status does not drive multi-unit clustering)",
       "is_supported": false
     },

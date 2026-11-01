@@ -1,0 +1,403 @@
+{
+  "generator_command": "python scripts/generate_samples.py",
+  "git_commit": "70878024e98f6da3c0ec0555992354ff1effad72",
+  "timestamp_utc": "2026-11-01T19:50:20.744063+00:00",
+  "canonical_route_count": 23,
+  "total_sample_files": 26,
+  "canonical_23_routes": [
+    {
+      "index": 1,
+      "name": "root",
+      "route": "/",
+      "method": "GET",
+      "file": "root.json",
+      "sha256": "3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1"
+    },
+    {
+      "index": 2,
+      "name": "api_v1",
+      "route": "/api/v1",
+      "method": "GET",
+      "file": "api_v1.json",
+      "sha256": "3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1"
+    },
+    {
+      "index": 3,
+      "name": "health",
+      "route": "/api/v1/health",
+      "method": "GET",
+      "file": "health.json",
+      "sha256": "ddb7adb4278d5b2f70c01ed9b1103c3a593dcb835b63bd1b40b34ed05f364b14"
+    },
+    {
+      "index": 4,
+      "name": "meta_filters",
+      "route": "/api/v1/meta/filters",
+      "method": "GET",
+      "file": "meta_filters.json",
+      "sha256": "b49c367efd1335fce550bb6a84cbae8c7a674e0acd4b943c1906d10f0933dfff"
+    },
+    {
+      "index": 5,
+      "name": "overview",
+      "route": "/api/v1/overview",
+      "method": "GET",
+      "file": "overview.json",
+      "sha256": "a5c2dd89c12636efb2bcb7bef9ac5f724b1fc2c65f03de27dd6e631c2a50db0c"
+    },
+    {
+      "index": 6,
+      "name": "clients",
+      "route": "/api/v1/clients?page=1&page_size=5",
+      "method": "GET",
+      "file": "clients.json",
+      "sha256": "d95b0925f9770b1ce26ccf6aad92089d006af5fb9667c69c673fddf2e794965c"
+    },
+    {
+      "index": 7,
+      "name": "client_detail_c0001",
+      "route": "/api/v1/clients/C0001",
+      "method": "GET",
+      "file": "client_detail_c0001.json",
+      "sha256": "c1d7688d0c83e1304f4e7e4d5651285081d151131b495d1d992803681f24512a"
+    },
+    {
+      "index": 8,
+      "name": "segments_catalog",
+      "route": "/api/v1/segments",
+      "method": "GET",
+      "file": "segments_catalog.json",
+      "sha256": "71c503ba8d0fe85a6e93b7605a41562657898ccaa782e637c03693d0d059618f"
+    },
+    {
+      "index": 9,
+      "name": "segment_detail_cluster_2",
+      "route": "/api/v1/segments/2",
+      "method": "GET",
+      "file": "segment_detail_cluster_2.json",
+      "sha256": "a2aed76acbd25c50e4f31c8fa61b0af1841916111167f6c102b32b3cd85ea116"
+    },
+    {
+      "index": 10,
+      "name": "behavior",
+      "route": "/api/v1/behavior",
+      "method": "GET",
+      "file": "behavior.json",
+      "sha256": "4f709c4c77489f2fdc8c61ef7c677a2a8f3da8d1d1db828aa3bb6358d38719d8"
+    },
+    {
+      "index": 11,
+      "name": "geo",
+      "route": "/api/v1/geo",
+      "method": "GET",
+      "file": "geo.json",
+      "sha256": "a2da1fa9a08174f563445ccbc4bb4309daa3f304cf48035c0cf0cd9dbb26b784"
+    },
+    {
+      "index": 12,
+      "name": "towers",
+      "route": "/api/v1/towers",
+      "method": "GET",
+      "file": "towers.json",
+      "sha256": "1d59e28ede371fb0b30885969bcba90b6f54bc8189a76ae8ddee9b42358f66de"
+    },
+    {
+      "index": 13,
+      "name": "opportunities_segment_2_office",
+      "route": "/api/v1/recommendations/opportunities?segment_id=2&category_filter=Office&limit=5",
+      "method": "GET",
+      "file": "opportunities_segment_2_office.json",
+      "sha256": "31d249a02f458b736c3c345dcd3187f088230e77d325042c15209b85e1df4132"
+    },
+    {
+      "index": 14,
+      "name": "nbo_c0001",
+      "route": "/api/v1/recommendations/nbo/C0001?top_n=5",
+      "method": "GET",
+      "file": "nbo_c0001.json",
+      "sha256": "4d1f4c026be1fde77ace834b94e2cc9f91a1466c5f46e4c4090166f46a861def"
+    },
+    {
+      "index": 15,
+      "name": "campaign_scenario",
+      "route": "/api/v1/campaigns/scenario",
+      "method": "POST",
+      "file": "campaign_scenario.json",
+      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a"
+    },
+    {
+      "index": 16,
+      "name": "campaign_allocate",
+      "route": "/api/v1/campaigns/allocate",
+      "method": "POST",
+      "file": "campaign_allocate.json",
+      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a"
+    },
+    {
+      "index": 17,
+      "name": "campaign_simulate",
+      "route": "/api/v1/campaigns/simulate",
+      "method": "POST",
+      "file": "campaign_simulate.json",
+      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a"
+    },
+    {
+      "index": 18,
+      "name": "predict_segment",
+      "route": "/api/v1/predict/segment",
+      "method": "POST",
+      "file": "predict_segment.json",
+      "sha256": "7eb3f2fec5a5d33b0a0f3396b4f55ffdcac7924b793962489f6ff457951ea69c"
+    },
+    {
+      "index": 19,
+      "name": "model_selection",
+      "route": "/api/v1/model/selection",
+      "method": "GET",
+      "file": "model_selection.json",
+      "sha256": "1b327b7c90ebf3597e28661ee2b3e5626f55a0b77b0cf5c77d11727514ec0771"
+    },
+    {
+      "index": 20,
+      "name": "model_compare",
+      "route": "/api/v1/model/compare",
+      "method": "GET",
+      "file": "model_compare.json",
+      "sha256": "d0a70b7c48fa275fa0d3e567e13e76fc590e935839dfe5dce1ee27fea9bd2c21"
+    },
+    {
+      "index": 21,
+      "name": "data_quality",
+      "route": "/api/v1/governance/data-quality",
+      "method": "GET",
+      "file": "data_quality.json",
+      "sha256": "a4e5e0aa92c2c5b7fb7a99df47789e0b17d23af77e45c9cb542a6f5d5ce5b00b"
+    },
+    {
+      "index": 22,
+      "name": "model_card",
+      "route": "/api/v1/governance/model-card",
+      "method": "GET",
+      "file": "model_card.json",
+      "sha256": "8978d3e9328359c0de5f294b961b2f2e729d3d70ba8a74e58bff46774484fdeb"
+    },
+    {
+      "index": 23,
+      "name": "projection",
+      "route": "/api/v1/projection",
+      "method": "GET",
+      "file": "projection.json",
+      "sha256": "29b409626a290e0ba0984da48a266171f1d01ca386c907ce56be487f1916d584"
+    }
+  ],
+  "all_samples": {
+    "root": {
+      "route_path": "/",
+      "http_method": "GET",
+      "filename": "root.json",
+      "sha256": "3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1",
+      "byte_size": 244,
+      "is_canonical_23_route": true
+    },
+    "api_v1": {
+      "route_path": "/api/v1",
+      "http_method": "GET",
+      "filename": "api_v1.json",
+      "sha256": "3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1",
+      "byte_size": 244,
+      "is_canonical_23_route": true
+    },
+    "health": {
+      "route_path": "/api/v1/health",
+      "http_method": "GET",
+      "filename": "health.json",
+      "sha256": "ddb7adb4278d5b2f70c01ed9b1103c3a593dcb835b63bd1b40b34ed05f364b14",
+      "byte_size": 380,
+      "is_canonical_23_route": true
+    },
+    "meta_filters": {
+      "route_path": "/api/v1/meta/filters",
+      "http_method": "GET",
+      "filename": "meta_filters.json",
+      "sha256": "b49c367efd1335fce550bb6a84cbae8c7a674e0acd4b943c1906d10f0933dfff",
+      "byte_size": 7752,
+      "is_canonical_23_route": true
+    },
+    "overview": {
+      "route_path": "/api/v1/overview",
+      "http_method": "GET",
+      "filename": "overview.json",
+      "sha256": "a5c2dd89c12636efb2bcb7bef9ac5f724b1fc2c65f03de27dd6e631c2a50db0c",
+      "byte_size": 2486,
+      "is_canonical_23_route": true
+    },
+    "clients": {
+      "route_path": "/api/v1/clients?page=1&page_size=5",
+      "http_method": "GET",
+      "filename": "clients.json",
+      "sha256": "d95b0925f9770b1ce26ccf6aad92089d006af5fb9667c69c673fddf2e794965c",
+      "byte_size": 3347,
+      "is_canonical_23_route": true
+    },
+    "client_detail_c0001": {
+      "route_path": "/api/v1/clients/C0001",
+      "http_method": "GET",
+      "filename": "client_detail_c0001.json",
+      "sha256": "c1d7688d0c83e1304f4e7e4d5651285081d151131b495d1d992803681f24512a",
+      "byte_size": 2301,
+      "is_canonical_23_route": true
+    },
+    "segments_catalog": {
+      "route_path": "/api/v1/segments",
+      "http_method": "GET",
+      "filename": "segments_catalog.json",
+      "sha256": "71c503ba8d0fe85a6e93b7605a41562657898ccaa782e637c03693d0d059618f",
+      "byte_size": 4073,
+      "is_canonical_23_route": true
+    },
+    "segment_detail_cluster_2": {
+      "route_path": "/api/v1/segments/2",
+      "http_method": "GET",
+      "filename": "segment_detail_cluster_2.json",
+      "sha256": "a2aed76acbd25c50e4f31c8fa61b0af1841916111167f6c102b32b3cd85ea116",
+      "byte_size": 3842,
+      "is_canonical_23_route": true
+    },
+    "behavior": {
+      "route_path": "/api/v1/behavior",
+      "http_method": "GET",
+      "filename": "behavior.json",
+      "sha256": "4f709c4c77489f2fdc8c61ef7c677a2a8f3da8d1d1db828aa3bb6358d38719d8",
+      "byte_size": 2987,
+      "is_canonical_23_route": true
+    },
+    "geo": {
+      "route_path": "/api/v1/geo",
+      "http_method": "GET",
+      "filename": "geo.json",
+      "sha256": "a2da1fa9a08174f563445ccbc4bb4309daa3f304cf48035c0cf0cd9dbb26b784",
+      "byte_size": 5893,
+      "is_canonical_23_route": true
+    },
+    "towers": {
+      "route_path": "/api/v1/towers",
+      "http_method": "GET",
+      "filename": "towers.json",
+      "sha256": "1d59e28ede371fb0b30885969bcba90b6f54bc8189a76ae8ddee9b42358f66de",
+      "byte_size": 9918,
+      "is_canonical_23_route": true
+    },
+    "opportunities_segment_2_office": {
+      "route_path": "/api/v1/recommendations/opportunities?segment_id=2&category_filter=Office&limit=5",
+      "http_method": "GET",
+      "filename": "opportunities_segment_2_office.json",
+      "sha256": "31d249a02f458b736c3c345dcd3187f088230e77d325042c15209b85e1df4132",
+      "byte_size": 2997,
+      "is_canonical_23_route": true
+    },
+    "nbo_c0001": {
+      "route_path": "/api/v1/recommendations/nbo/C0001?top_n=5",
+      "http_method": "GET",
+      "filename": "nbo_c0001.json",
+      "sha256": "4d1f4c026be1fde77ace834b94e2cc9f91a1466c5f46e4c4090166f46a861def",
+      "byte_size": 4278,
+      "is_canonical_23_route": true
+    },
+    "campaign_scenario": {
+      "route_path": "/api/v1/campaigns/scenario",
+      "http_method": "POST",
+      "filename": "campaign_scenario.json",
+      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a",
+      "byte_size": 4020,
+      "is_canonical_23_route": true
+    },
+    "campaign_allocate": {
+      "route_path": "/api/v1/campaigns/allocate",
+      "http_method": "POST",
+      "filename": "campaign_allocate.json",
+      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a",
+      "byte_size": 4020,
+      "is_canonical_23_route": true
+    },
+    "campaign_simulate": {
+      "route_path": "/api/v1/campaigns/simulate",
+      "http_method": "POST",
+      "filename": "campaign_simulate.json",
+      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a",
+      "byte_size": 4020,
+      "is_canonical_23_route": true
+    },
+    "predict_segment": {
+      "route_path": "/api/v1/predict/segment",
+      "http_method": "POST",
+      "filename": "predict_segment.json",
+      "sha256": "7eb3f2fec5a5d33b0a0f3396b4f55ffdcac7924b793962489f6ff457951ea69c",
+      "byte_size": 991,
+      "is_canonical_23_route": true
+    },
+    "model_selection": {
+      "route_path": "/api/v1/model/selection",
+      "http_method": "GET",
+      "filename": "model_selection.json",
+      "sha256": "1b327b7c90ebf3597e28661ee2b3e5626f55a0b77b0cf5c77d11727514ec0771",
+      "byte_size": 7820,
+      "is_canonical_23_route": true
+    },
+    "model_compare": {
+      "route_path": "/api/v1/model/compare",
+      "http_method": "GET",
+      "filename": "model_compare.json",
+      "sha256": "d0a70b7c48fa275fa0d3e567e13e76fc590e935839dfe5dce1ee27fea9bd2c21",
+      "byte_size": 2401,
+      "is_canonical_23_route": true
+    },
+    "data_quality": {
+      "route_path": "/api/v1/governance/data-quality",
+      "http_method": "GET",
+      "filename": "data_quality.json",
+      "sha256": "a4e5e0aa92c2c5b7fb7a99df47789e0b17d23af77e45c9cb542a6f5d5ce5b00b",
+      "byte_size": 1896,
+      "is_canonical_23_route": true
+    },
+    "model_card": {
+      "route_path": "/api/v1/governance/model-card",
+      "http_method": "GET",
+      "filename": "model_card.json",
+      "sha256": "8978d3e9328359c0de5f294b961b2f2e729d3d70ba8a74e58bff46774484fdeb",
+      "byte_size": 7907,
+      "is_canonical_23_route": true
+    },
+    "projection": {
+      "route_path": "/api/v1/projection",
+      "http_method": "GET",
+      "filename": "projection.json",
+      "sha256": "29b409626a290e0ba0984da48a266171f1d01ca386c907ce56be487f1916d584",
+      "byte_size": 643598,
+      "is_canonical_23_route": true
+    },
+    "clients_analyst_masked": {
+      "route_path": "/api/v1/clients?page=1&page_size=5",
+      "http_method": "GET",
+      "filename": "clients_analyst_masked.json",
+      "sha256": "d95b0925f9770b1ce26ccf6aad92089d006af5fb9667c69c673fddf2e794965c",
+      "byte_size": 3347,
+      "is_canonical_23_route": false
+    },
+    "clients_admin_unmasked": {
+      "route_path": "/api/v1/clients?page=1&page_size=5",
+      "http_method": "GET",
+      "filename": "clients_admin_unmasked.json",
+      "sha256": "f0a87592b20a0e234bebfd4cfe07777dd085222ef4a0334d10b60b9bb8aac23f",
+      "byte_size": 3284,
+      "is_canonical_23_route": false
+    },
+    "export": {
+      "route_path": "/api/v1/export?country=USA&assigned_cluster=0",
+      "http_method": "GET",
+      "filename": "export.json",
+      "sha256": "52aeefaa9130f6fdc1c5419ad899d7ee5559f1a316c880f93e879ceff0b9fff2",
+      "byte_size": 222722,
+      "is_canonical_23_route": false
+    }
+  }
+}

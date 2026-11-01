@@ -66,5 +66,5 @@ strict_equality = true
 [tool.pytest.ini_options]
 testpaths = ["packages/core/tests", "apps/api/tests"]
 python_files = ["test_*.py"]
-pythonpath = ["."]
-addopts = "-v --tb=short"
+pythonpath = [".", "packages/core"]
+addopts = "-v --tb=short --import-mode=importlib"

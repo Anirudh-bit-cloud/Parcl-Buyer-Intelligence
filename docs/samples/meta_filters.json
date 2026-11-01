@@ -366,12 +366,12 @@
   "assigned_clusters": [
     {
       "value": "1",
-      "display_label": "Cluster 1: Emerging Multi-Tower Accumulators",
+      "display_label": "Cluster 1: Concentrated Residential Buyers",
       "count": 557
     },
     {
       "value": "0",
-      "display_label": "Cluster 0: Concentrated Residential Buyers",
+      "display_label": "Cluster 0: Emerging Multi-Tower Accumulators",
       "count": 536
     },
     {

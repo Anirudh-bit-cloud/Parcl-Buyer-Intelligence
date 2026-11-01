@@ -255,7 +255,7 @@ def evaluate_satisfaction_uniformity(clients_df: pd.DataFrame) -> dict[str, Any]
         "is_uniform_at_alpha_0_05": bool(chi2_res.pvalue > 0.05),
         "conclusion": (
             "The marginal distribution of satisfaction_score is consistent with discrete uniform "
-            "(chi2=1.99, p=0.738, df=4). Bivariate dependency tests against acquisition purpose, "
+            f"(chi2={chi2_res.statistic:.3f}, p={chi2_res.pvalue:.4f}, df=4). Bivariate dependency tests against acquisition purpose, "
             "loan application, referral channel, country, and observed spend are scheduled in Phase 2."
             if chi2_res.pvalue > 0.05
             else "Satisfaction score is non-uniformly distributed (p <= 0.05)."

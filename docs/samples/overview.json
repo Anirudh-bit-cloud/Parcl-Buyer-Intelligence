@@ -13,7 +13,7 @@
   "segments": [
     {
       "segment_id": 0,
-      "segment_name": "Concentrated Residential Buyers",
+      "segment_name": "Emerging Multi-Tower Accumulators",
       "buyer_count": 536,
       "share_pct": 26.8,
       "mean_spend_inr": 1376040.58,
@@ -22,7 +22,7 @@
     },
     {
       "segment_id": 1,
-      "segment_name": "Emerging Multi-Tower Accumulators",
+      "segment_name": "Concentrated Residential Buyers",
       "buyer_count": 557,
       "share_pct": 27.85,
       "mean_spend_inr": 1052023.46,

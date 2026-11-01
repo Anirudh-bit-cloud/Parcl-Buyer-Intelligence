@@ -58,17 +58,17 @@ def generate_prd_hypothesis_truth_matrix(
             "prd_hypothesis_name": "Global Investors",
             "prd_assumed_traits": "High income, international buyers, pure investment focus",
             "empirical_finding": (
-                "US buyers represent 76.9% of cohort; investment share is identical between US (30.56%) "
-                "and international buyers (31.39%) with chi2=0.0784 (p=0.7795, Cramer's V=0.0063). "
-                "Domestic buyers spend slightly more than international buyers (mean $1,269,852 vs $1,228,828; "
-                "two-sample t=2.2253, p=0.0262; Kruskal-Wallis H=6.7460, p=0.0094). International buyers do NOT "
-                "form a distinct higher-spend investor cluster."
+                "Domestic USA buyers spend ₹41,024.10 (+3.34%) more on average than international buyers "
+                "(mean ₹12,69,852.05 vs ₹12,28,827.94; Welch's t=2.2443, p=0.0251, Cohen's d=0.1181). "
+                "Investment share is statistically indistinguishable between USA (30.56%, 470/1538) and "
+                "international buyers (31.39%, 145/462) with chi2=0.1139 (p=0.7358, dof=1). "
+                "International buyers do NOT form a distinct higher-spend investor cluster."
             ),
             "statistical_test": (
-                "Chi-Square Independence (US vs Non-US Investment Purpose): chi2=0.0784, p=0.7795, V=0.0063; "
-                "Spend Comparison (US vs Intl): US mean $1,269,852 vs Intl mean $1,228,828, t=2.2253, p=0.0262"
+                "Chi-Square Independence (USA vs Intl Investment Purpose): chi2=0.1139, p=0.7358, dof=1; "
+                "Spend Comparison: Welch's t=2.2443, p=0.0251, Cohen's d=0.1181; Mann-Whitney U p=0.0094"
             ),
-            "verdict": "NOT SUPPORTED (US and international buyers exhibit virtually identical investment share; domestic spend exceeds international; no distinct international investor cluster)",
+            "verdict": "NOT SUPPORTED (USA and international buyers exhibit virtually identical investment share; domestic spend exceeds international; no distinct international investor cluster)",
             "is_supported": False,
         },
         {
@@ -90,10 +90,11 @@ def generate_prd_hypothesis_truth_matrix(
             "prd_assumed_traits": "Companies purchasing multiple units",
             "empirical_finding": (
                 "Company clients represent 5.15% (103 clients) of dataset. Crucially, companies do NOT purchase significantly "
-                "more units than individuals: company mean is 3.70 units vs individual mean of 3.65 units (two-sample t=0.5773, "
-                "p=0.5638; Kruskal-Wallis H=0.1855, p=0.6667). Corporate designation does not drive multi-unit volume."
+                "more units than individuals: company mean is 3.70 units vs individual mean of 3.65 units "
+                "(one-way ANOVA F(1, 1998)=0.3333, p=0.5638; two-sample t(1998)=-0.5773, p=0.5638; Kruskal-Wallis H=0.1855, p=0.6667). "
+                "Corporate designation does not drive multi-unit volume."
             ),
-            "statistical_test": "Two-Sample t-test & Kruskal-Wallis: t=0.5773, p=0.5638; KW H=0.1855, p=0.6667",
+            "statistical_test": "One-way ANOVA: F(1, 1998)=0.3333, p=0.5638; Two-sample t(1998)=-0.5773, p=0.5638; KW H=0.1855, p=0.6667",
             "verdict": "NOT SUPPORTED (Corporate clients buy same unit volumes as individuals: 3.70 vs 3.65 units; company status does not drive multi-unit clustering)",
             "is_supported": False,
         },
