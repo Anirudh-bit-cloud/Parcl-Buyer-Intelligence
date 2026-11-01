@@ -1,6 +1,6 @@
 {
   "generator_command": "python scripts/generate_samples.py",
-  "git_commit": "70878024e98f6da3c0ec0555992354ff1effad72",
+  "git_commit": "4a35b9dfa713307ae385c59d17aa8cfbe5ab18a5",
   "timestamp_utc": "2026-11-01T19:50:20.744063+00:00",
   "canonical_route_count": 23,
   "total_sample_files": 26,
