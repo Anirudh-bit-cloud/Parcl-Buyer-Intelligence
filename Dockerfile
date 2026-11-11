@@ -37,7 +37,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY pyproject.toml ./
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 COPY packages/core ./packages/core
-RUN pip install --no-cache-dir -e ./packages/core
+RUN pip install --no-cache-dir -e .
 
 # Install FastAPI and production server dependencies
 RUN pip install --no-cache-dir \
