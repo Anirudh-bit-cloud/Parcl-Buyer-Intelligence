@@ -7,6 +7,8 @@ from pydantic import Field, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+
 class APISettings(BaseSettings):
     """Application configuration for Parcl Buyer Intelligence API."""
 
@@ -41,7 +43,7 @@ class APISettings(BaseSettings):
 
     # Database Configuration (PostgreSQL primary with SQLite local fallback)
     database_url: str = Field(
-        default="sqlite:///e:/parcl-buyer-intelligence/data/parcl.db",
+        default="",
         description="Database connection URI (e.g. postgresql+psycopg2://... or sqlite:///...)",
     )
     database_echo: bool = False
@@ -124,12 +126,12 @@ class APISettings(BaseSettings):
     # Reference Audit Date (Single configured constant used for all age computations)
     reference_date_str: str = "2025-12-31"
 
-    # Paths (anchored on project root)
-    project_root: Path = Path("e:/parcl-buyer-intelligence")
-    data_dir: Path = Path("e:/parcl-buyer-intelligence/data")
-    models_dir: Path = Path("e:/parcl-buyer-intelligence/data/models")
-    interim_dir: Path = Path("e:/parcl-buyer-intelligence/data/interim")
-    processed_dir: Path = Path("e:/parcl-buyer-intelligence/data/processed")
+    # Paths (anchored dynamically on project root)
+    project_root: Path = ROOT_DIR
+    data_dir: Path = ROOT_DIR / "data"
+    models_dir: Path = ROOT_DIR / "data" / "models"
+    interim_dir: Path = ROOT_DIR / "data" / "interim"
+    processed_dir: Path = ROOT_DIR / "data" / "processed"
 
     @model_validator(mode="after")
     def validate_jwt_secret_and_env(self) -> "APISettings":
@@ -137,6 +139,9 @@ class APISettings(BaseSettings):
         env_from_os = os.environ.get("PARCL_API_ENVIRONMENT") or os.environ.get("ENVIRONMENT")
         if env_from_os:
             self.environment = env_from_os
+
+        if not self.database_url:
+            self.database_url = f"sqlite:///{self.data_dir / 'parcl.db'}"
 
         admin_key_os = os.environ.get("PARCL_API_DEMO_ADMIN_KEY") or os.environ.get("DEMO_ADMIN_KEY")
         if admin_key_os:
