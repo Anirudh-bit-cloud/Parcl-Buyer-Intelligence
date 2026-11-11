@@ -58,7 +58,10 @@ RUN pip install --no-cache-dir \
     alembic>=1.13.0 \
     redis>=5.0.0 \
     psycopg2-binary>=2.9.9 \
-    httpx>=0.27.0
+    httpx>=0.27.0 \
+    prometheus-client>=0.20.0 \
+    duckdb>=0.10.0 \
+    cryptography>=42.0.0
 
 # Copy backend code, models, data, scripts, and alembic config
 COPY alembic.ini ./
@@ -74,7 +77,7 @@ EXPOSE 8000
 
 # Health check probe
 HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
-    CMD curl -f http://127.0.0.1:8000/health/ready || exit 1
+    CMD sh -c "curl -f http://127.0.0.1:\${PORT:-8000}/health/ready || exit 1"
 
-# Launch Uvicorn server
-CMD ["python", "-m", "uvicorn", "apps.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Launch Uvicorn server respecting dynamically assigned $PORT
+CMD ["sh", "-c", "python -m uvicorn apps.api.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
