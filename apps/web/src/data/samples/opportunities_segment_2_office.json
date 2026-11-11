@@ -1,0 +1,85 @@
+{
+  "target_segment_id": 2,
+  "target_segment_name": "Commercial Office Diversifiers",
+  "category_filter_applied": "Office",
+  "total_inventory_evaluated": 313,
+  "recommendations": [
+    {
+      "listing_id": 170425,
+      "tower_number": 17,
+      "unit_number": 49,
+      "unit_category": "Office",
+      "sale_price_inr": 354856.93,
+      "sale_price_display": "₹3,54,857",
+      "floor_area_sqft": 1283.67,
+      "price_per_sqft_inr": 276.44,
+      "affinity_score": 0.8247,
+      "heuristic_assumption": "Untested assumptions: weights cat=0.35, price=0.3, area=0.2, tower=0.15; Gaussian bell curve fit."
+    },
+    {
+      "listing_id": 170191,
+      "tower_number": 17,
+      "unit_number": 21,
+      "unit_category": "Office",
+      "sale_price_inr": 367790.56,
+      "sale_price_display": "₹3,67,791",
+      "floor_area_sqft": 1320.97,
+      "price_per_sqft_inr": 278.42,
+      "affinity_score": 0.8194,
+      "heuristic_assumption": "Untested assumptions: weights cat=0.35, price=0.3, area=0.2, tower=0.15; Gaussian bell curve fit."
+    },
+    {
+      "listing_id": 40120,
+      "tower_number": 4,
+      "unit_number": 14,
+      "unit_category": "Office",
+      "sale_price_inr": 335954.58,
+      "sale_price_display": "₹3,35,955",
+      "floor_area_sqft": 1322.66,
+      "price_per_sqft_inr": 254.0,
+      "affinity_score": 0.7994,
+      "heuristic_assumption": "Untested assumptions: weights cat=0.35, price=0.3, area=0.2, tower=0.15; Gaussian bell curve fit."
+    },
+    {
+      "listing_id": 160197,
+      "tower_number": 16,
+      "unit_number": 24,
+      "unit_category": "Office",
+      "sale_price_inr": 411693.07,
+      "sale_price_display": "₹4,11,693",
+      "floor_area_sqft": 1077.77,
+      "price_per_sqft_inr": 381.99,
+      "affinity_score": 0.7724,
+      "heuristic_assumption": "Untested assumptions: weights cat=0.35, price=0.3, area=0.2, tower=0.15; Gaussian bell curve fit."
+    },
+    {
+      "listing_id": 160015,
+      "tower_number": 16,
+      "unit_number": 2,
+      "unit_category": "Office",
+      "sale_price_inr": 424874.5,
+      "sale_price_display": "₹4,24,874",
+      "floor_area_sqft": 1388.75,
+      "price_per_sqft_inr": 305.94,
+      "affinity_score": 0.733,
+      "heuristic_assumption": "Untested assumptions: weights cat=0.35, price=0.3, area=0.2, tower=0.15; Gaussian bell curve fit."
+    }
+  ],
+  "active_filters": {
+    "country": null,
+    "region": null,
+    "acquisition_purpose": null,
+    "client_type": null,
+    "assigned_cluster": 2
+  },
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": false,
+    "untested_assumptions_notice": "Heuristic scoring weights: category=0.35, price=0.30, floor_area=0.20, tower=0.15; evaluated strictly against 313 deduplicated currently available physical units as of Dec 2025.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

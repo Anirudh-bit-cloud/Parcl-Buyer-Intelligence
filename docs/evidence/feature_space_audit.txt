@@ -1,0 +1,106 @@
+Feature List (total 84 features):
+[00] std_num__age
+[01] std_num__avg_floor_area
+[02] std_num__price_per_sqft
+[03] std_num__n_towers
+[04] std_num__portfolio_towers_hhi
+[05] std_num__purchase_span_months
+[06] std_num__office_share
+[07] quantile_units__n_units
+[08] bool_pass__loan_applied
+[09] bool_pass__is_multi_unit
+[10] core_cat__client_type_COMPANY
+[11] core_cat__client_type_INDIVIDUAL
+[12] core_cat__acquisition_purpose_HOME
+[13] core_cat__acquisition_purpose_INVESTMENT
+[14] core_cat__referral_channel_Agency
+[15] core_cat__referral_channel_Client
+[16] core_cat__referral_channel_Website
+[17] geo_cat__country_Australia
+[18] geo_cat__country_Belgium
+[19] geo_cat__country_Canada
+[20] geo_cat__country_Denmark
+[21] geo_cat__country_France
+[22] geo_cat__country_Germany
+[23] geo_cat__country_Mexico
+[24] geo_cat__country_Russia
+[25] geo_cat__country_UK
+[26] geo_cat__country_USA
+[27] geo_cat__region_Alberta
+[28] geo_cat__region_Arizona
+[29] geo_cat__region_Baja California
+[30] geo_cat__region_Bavaria
+[31] geo_cat__region_Berlin
+[32] geo_cat__region_British Columbia
+[33] geo_cat__region_Brittany
+[34] geo_cat__region_Brussels
+[35] geo_cat__region_California
+[36] geo_cat__region_Capital Region
+[37] geo_cat__region_Central Denmark
+[38] geo_cat__region_Colorado
+[39] geo_cat__region_England
+[40] geo_cat__region_Flanders
+[41] geo_cat__region_Florida
+[42] geo_cat__region_Georgia
+[43] geo_cat__region_Hamburg
+[44] geo_cat__region_Hesse
+[45] geo_cat__region_Ile-de-France
+[46] geo_cat__region_Jalisco
+[47] geo_cat__region_Kansas
+[48] geo_cat__region_Krasnodar Krai
+[49] geo_cat__region_Manitoba
+[50] geo_cat__region_Mexico City
+[51] geo_cat__region_Moscow Oblast
+[52] geo_cat__region_Nevada
+[53] geo_cat__region_New South Wales
+[54] geo_cat__region_New York
+[55] geo_cat__region_Normandy
+[56] geo_cat__region_North Denmark
+[57] geo_cat__region_North Rhine-Westphalia
+[58] geo_cat__region_Northern Ireland
+[59] geo_cat__region_Novosibirsk
+[60] geo_cat__region_Nuevo Leon
+[61] geo_cat__region_Occitanie
+[62] geo_cat__region_Ohio
+[63] geo_cat__region_Ontario
+[64] geo_cat__region_Oregon
+[65] geo_cat__region_Provence
+[66] geo_cat__region_Puebla
+[67] geo_cat__region_Quebec
+[68] geo_cat__region_Queensland
+[69] geo_cat__region_Saint Petersburg
+[70] geo_cat__region_Scotland
+[71] geo_cat__region_South Australia
+[72] geo_cat__region_Southern Denmark
+[73] geo_cat__region_Tatarstan
+[74] geo_cat__region_Texas
+[75] geo_cat__region_Utah
+[76] geo_cat__region_Victoria
+[77] geo_cat__region_Virginia
+[78] geo_cat__region_Wales
+[79] geo_cat__region_Wallonia
+[80] geo_cat__region_Washington
+[81] geo_cat__region_Western Australia
+[82] geo_cat__region_Wyoming
+[83] geo_cat__region_Zealand
+
+Block Counts:
+std_num__: 7
+quantile_units__: 1
+bool_pass__: 2
+core_cat__: 7
+geo_cat__country_: 10
+geo_cat__region_: 57
+City Features Count: 0
+
+total_spend in get_feature_names_out: False
+total_spend in feature_names_in: True
+
+Empirical Cohort Imputation Medians:
+price_per_sqft: 302.264583
+avg_floor_area: 1129.176667
+portfolio_towers_hhi: 0.250000
+purchase_span_months: 13.000000
+n_towers: 4.000000
+satisfaction_score: 3.000000
+referral_channel mode: Website

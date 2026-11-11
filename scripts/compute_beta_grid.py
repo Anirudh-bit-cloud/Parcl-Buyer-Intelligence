@@ -97,7 +97,7 @@ def compute_beta_grid(
     for beta in betas:
         lls = []
         ambs = []
-        all_pmax = []
+        all_pmax: list[Any] = []
         for y_val, dists in fold_data:
             # Numerically stable softmax
             scaled_dists = -float(beta) * dists

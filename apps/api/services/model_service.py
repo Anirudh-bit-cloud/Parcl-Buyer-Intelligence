@@ -3,7 +3,7 @@
 
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 import joblib
 import numpy as np
@@ -34,10 +34,10 @@ CLUSTER_PERSONA_LABELS = {
     3: "Established Senior Multi-Estate Investors",
 }
 CLUSTER_PERSONA_DESCRIPTIONS = {
-    0: "Younger acquisitive buyers (mean age 42.1) building multi-unit holdings (mean 4.06 units) across residential and commercial towers.",
+    0: "Younger acquisitive buyers (mean age 42.05) building multi-unit holdings (mean 4.06 units) across residential and commercial towers.",
     1: "Pure residential buyers holding exactly 3 residential units across three towers with zero commercial office allocation.",
-    2: "Specialized commercial allocators dedicating significant portfolio capital (37.8% office share) to workplace suites.",
-    3: "Senior estate builders holding the largest multi-tower footprints (mean 4.39 units, mean age 69.2) with high cumulative spend.",
+    2: "Specialized commercial allocators dedicating significant portfolio capital (37.78% office share) to workplace suites.",
+    3: "Senior estate builders holding the largest multi-tower footprints (mean 4.39 units, mean age 69.21) with high cumulative spend.",
 }
 
 
@@ -81,7 +81,7 @@ class ModelService:
         else:
             from scripts.compute_beta_grid import compute_beta_grid
 
-            res = compute_beta_grid(self.project_root / "data")
+            res = compute_beta_grid(self.models_dir.parent)
             grid = res["grid"]
 
         self._beta_grid_cache = grid
@@ -136,14 +136,14 @@ class ModelService:
                     "persona_label": persona_labels[s_id],
                     "buyer_count": b_count,
                     "population_share_pct": round(share, 2),
-                    "mean_age": round(m_age, 1),
+                    "mean_age": round(m_age, 2),
                     "mean_units": round(m_units, 2),
                     "total_units": tot_units,
                     "mean_spend_inr": round(m_spend, 2),
                     "mean_spend_display": format_inr(m_spend),
                     "total_spend_inr": round(tot_spend, 2),
                     "total_spend_display": format_inr(tot_spend),
-                    "commercial_office_share_pct": round(off_share, 1),
+                    "commercial_office_share_pct": round(off_share, 2),
                     "towers_hhi": round(hhi, 4),
                     "top_towers": top_towers_map[s_id],
                 }
@@ -259,7 +259,7 @@ class ModelService:
             "total_spend_inr": round(tot_spend, 2),
             "total_spend_display": format_inr(tot_spend),
             "mean_units": round(m_units, 2),
-            "commercial_office_share_pct": round(off_sh, 1),
+            "commercial_office_share_pct": round(off_sh, 2),
             "numeric_metrics": num_metrics,
             "categorical_distributions": cat_dist,
             "surrogate_rules": surrogate_map.get(segment_id, []),
@@ -461,7 +461,7 @@ class ModelService:
             ch_budget = total_budget_inr * alloc
             cpa = channel_cpas_inr[ch]
             mod_clients = ch_budget / cpa
-            mean_sales = channel_benchmarks[ch]["historical_mean_sales_per_client_inr"]
+            mean_sales = cast(float, channel_benchmarks[ch]["historical_mean_sales_per_client_inr"])
             mod_sales = mod_clients * mean_sales
 
             total_modeled_clients += mod_clients
@@ -519,9 +519,15 @@ class ModelService:
         if "is_multi_unit" not in input_df:
             input_df["is_multi_unit"] = bool(payload.get("n_units", 1) > 1)
         if "n_towers" not in input_df:
-            input_df["n_towers"] = min(int(payload.get("n_units", 1)), 20)
+            input_df["n_towers"] = min(int(payload.get("n_units", 1)), 4)
         if "price_per_sqft" not in input_df:
-            input_df["price_per_sqft"] = 300.0
+            input_df["price_per_sqft"] = 302.264583
+        if "avg_floor_area" not in input_df:
+            input_df["avg_floor_area"] = 1129.176667
+        if "portfolio_towers_hhi" not in input_df:
+            input_df["portfolio_towers_hhi"] = 0.25
+        if "purchase_span_months" not in input_df:
+            input_df["purchase_span_months"] = 13.0
 
         X_input = preprocessor.transform(input_df)
 
@@ -540,7 +546,9 @@ class ModelService:
         dists = np.linalg.norm(X_input[:, np.newaxis, :] - centroids[np.newaxis, :, :], axis=2)[0]
 
         probs = softmax(-1.12 * dists)
+        sorted_probs = sorted(probs, reverse=True)
         pred_cluster = int(np.argmin(dists))
+        is_margin_ambiguous = bool((sorted_probs[0] - sorted_probs[1]) < 0.10)
 
         segment_names = CLUSTER_DISPLAY_NAMES
 
@@ -551,7 +559,8 @@ class ModelService:
                 f"Cluster_{i}": round(float(probs[i]), 4) for i in range(4)
             },
             "temperature_beta": 1.12,
-            "is_ambiguous_prediction": bool(max(probs) < 0.60),
+            "is_ambiguous_prediction": bool(max(probs) < 0.50),
+            "is_ambiguous_margin": is_margin_ambiguous,
             "portfolio_requirement_rationale": (
                 "Model B3 requires portfolio inputs (n_units, office_share, tower HHI, purchase_span_months) "
                 "because the underlying clustering model was trained on these behavioral and portfolio architecture features."

@@ -44,7 +44,12 @@ class SegmentPredictionResponse(BaseModel):
     )
     temperature_beta: float = Field(default=1.0, examples=[1.0])
     is_ambiguous_prediction: bool = Field(
-        description="True if max soft probability < 0.60.",
+        description="True if max soft probability < 0.50 (absence of strict majority).",
+        examples=[False],
+    )
+    is_ambiguous_margin: bool = Field(
+        default=False,
+        description="True if top-2 softmax probability margin (p_1 - p_2) < 0.10.",
         examples=[False],
     )
     portfolio_requirement_rationale: str = Field(

@@ -2,7 +2,12 @@
 
 from fastapi import APIRouter, HTTPException
 
-from apps.api.schemas.campaigns import ScenarioRequest, ScenarioResponse
+from apps.api.schemas.campaigns import (
+    ScenarioCompareRequest,
+    ScenarioCompareResponse,
+    ScenarioRequest,
+    ScenarioResponse,
+)
 from apps.api.schemas.common import ActiveFilters, ResponseMetadata
 from apps.api.services.model_service import model_service
 
@@ -68,4 +73,31 @@ async def run_scenario(request: ScenarioRequest) -> ScenarioResponse:
         channel_breakdown=res["channel_breakdown"],
         active_filters=ActiveFilters(),
         metadata=metadata,
+    )
+
+
+
+@router.post(
+    "/compare",
+    response_model=ScenarioCompareResponse,
+    summary="Marketing Scenario Compare Engine (Scenario A vs Scenario B)",
+)
+async def compare_scenarios(request: ScenarioCompareRequest) -> ScenarioCompareResponse:
+    """Compare two marketing budget allocations side-by-side with incremental ROI analysis."""
+    resp_a = await run_scenario(request.scenario_a)
+    resp_b = await run_scenario(request.scenario_b)
+
+    budget_delta = resp_b.total_budget_inr - resp_a.total_budget_inr
+    clients_delta = resp_b.total_modeled_clients - resp_a.total_modeled_clients
+    sales_delta = resp_b.total_modeled_gross_sales_volume_inr - resp_a.total_modeled_gross_sales_volume_inr
+
+    inc_roi = round(sales_delta / max(budget_delta, 1.0), 2) if budget_delta > 0 else 0.0
+
+    return ScenarioCompareResponse(
+        scenario_a=resp_a,
+        scenario_b=resp_b,
+        budget_delta_inr=round(budget_delta, 2),
+        clients_delta=round(clients_delta, 1),
+        sales_delta_inr=round(sales_delta, 2),
+        incremental_roi=inc_roi,
     )

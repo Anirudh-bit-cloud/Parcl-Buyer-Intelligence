@@ -33,6 +33,19 @@ class DataService:
         self._available_properties: pd.DataFrame | None = None
         self._pca_cache: tuple[np.ndarray, list[float]] | None = None
 
+    def switch_to(self, processed_dir: Path) -> None:
+        """Switch data directory and clear all cached DataFrames.
+
+        This allows the singleton data_service to serve data from a different
+        processed directory (e.g. sample vs full) without restarting the server.
+        """
+        self.processed_dir = processed_dir
+        self._clients_clean = None
+        self._client_features = None
+        self._transactions = None
+        self._available_properties = None
+        self._pca_cache = None
+
     @property
     def clients_clean(self) -> pd.DataFrame:
         if self._clients_clean is None:
@@ -208,7 +221,10 @@ class DataService:
             col = f"soft_prob_cluster_{k}"
             soft_probs[f"Cluster_{k}"] = round(float(client_info.get(col, 0.25)), 4)
 
-        max_prob = max(soft_probs.values()) if soft_probs else 1.0
+        sorted_probs = sorted(soft_probs.values(), reverse=True)
+        max_prob = sorted_probs[0] if sorted_probs else 1.0
+        sec_prob = sorted_probs[1] if len(sorted_probs) > 1 else 0.0
+        is_margin_ambiguous = bool(round(max_prob - sec_prob, 4) < 0.10)
 
         # Purchases
         trans = self.transactions[self.transactions["client_ref"] == client_id].copy()
@@ -251,7 +267,8 @@ class DataService:
             "assigned_cluster": cid,
             "assigned_segment_name": segment_names.get(cid, f"Cluster {cid}"),
             "soft_membership_probabilities": soft_probs,
-            "is_ambiguous_boundary": bool(max_prob < 0.60),
+            "is_ambiguous_boundary": bool(max_prob < 0.50),
+            "is_ambiguous_margin": is_margin_ambiguous,
             "transactions": tx_records,
         }
 
@@ -384,7 +401,7 @@ class DataService:
         total = len(cohort)
 
         def make_breakdown(col: str) -> list[dict[str, Any]]:
-            items = []
+            items: list[dict[str, Any]] = []
             if cohort.empty:
                 return items
             for val, group in cohort.groupby(col):
@@ -400,7 +417,7 @@ class DataService:
                         "loan_rate": round(float(group["loan_applied"].mean()), 4),
                     }
                 )
-            return sorted(items, key=lambda x: x["buyer_count"], reverse=True)
+            return sorted(items, key=lambda x: int(x["buyer_count"]), reverse=True)
 
         # Commercial vs residential
         off_buyers = int((cohort["office_share"] > 0).sum()) if not cohort.empty else 0
@@ -452,7 +469,7 @@ class DataService:
         diff_pct = round((dom_spend - intl_spend) / intl_spend * 100.0, 2) if intl_spend else 0.0
 
         def make_geo_list(col: str, top_n: int = 10) -> list[dict[str, Any]]:
-            items = []
+            items: list[dict[str, Any]] = []
             if cohort.empty:
                 return items
             for val, grp in cohort.groupby(col):
@@ -469,7 +486,7 @@ class DataService:
                         "investment_purpose_share_pct": round(inv_sh, 2),
                     }
                 )
-            return sorted(items, key=lambda x: x["buyer_count"], reverse=True)[:top_n]
+            return sorted(items, key=lambda x: int(x["buyer_count"]), reverse=True)[:top_n]
 
         return {
             "total_buyers_evaluated": total,

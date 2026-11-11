@@ -248,9 +248,9 @@ def test_parquet_recomputation_channel_medians(phase4_data: dict[str, Any]) -> N
     """Test directly recomputing referral channel medians from client_features.parquet.
 
     Directly verifies microdata values:
-    - Website: $1,238,162.97 (~$1,238,163)
-    - Agency: $1,210,176.20 (~$1,210,176)
-    - Client: $1,223,339.08 (~$1,223,339)
+    - Website: ₹12,38,162.97 (~₹12,38,163)
+    - Agency: ₹12,10,176.20 (~₹12,10,176)
+    - Client: ₹12,23,339.08 (~₹12,23,339)
     """
     cf = phase4_data["client_features"]
     medians = cf.groupby("referral_channel")["total_spend"].median().to_dict()

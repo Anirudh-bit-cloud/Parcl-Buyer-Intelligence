@@ -99,7 +99,7 @@ class SegmentDetailResponse(BaseModel):
     total_spend_inr: float = Field(examples=[412728147.48])
     total_spend_display: str = Field(examples=["₹41,27,28,147"])
     mean_units: float = Field(examples=[3.00])
-    commercial_office_share_pct: float = Field(examples=[37.8])
+    commercial_office_share_pct: float = Field(examples=[37.78])
     numeric_metrics: dict[str, dict[str, float]]
     categorical_distributions: dict[str, Any]
     surrogate_rules: list[str] = Field(examples=[["quantile_units__n_units <= -2.33 (units == 3)", "std_num__office_share > 0.10 (office > 0%)"]])

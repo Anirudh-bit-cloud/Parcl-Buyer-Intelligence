@@ -88,3 +88,59 @@ def test_rate_limiting_enforcement(client: TestClient) -> None:
             break
 
     assert hit_429, f"Failed to trigger 429 after {limit + 5} requests"
+
+
+def test_vary_authorization_and_cache_control_headers(client: TestClient) -> None:
+    """Verify Vary: Authorization and Cache-Control: private headers on GET endpoints."""
+    token = create_access_token(subject="analyst", role="analyst")
+    headers = {"Authorization": f"Bearer {token}"}
+    res = client.get("/api/v1/overview", headers=headers)
+    assert res.status_code == 200
+    assert res.headers.get("Vary") == "Authorization"
+    assert "private" in res.headers.get("Cache-Control", "")
+
+
+def test_notices_field_in_analytical_metadata(client: TestClient) -> None:
+    """Verify metadata.notices list exists on /overview, /behavior, /geo, /towers."""
+    token = create_access_token(subject="analyst", role="analyst")
+    headers = {"Authorization": f"Bearer {token}"}
+    for endpoint in ["/api/v1/overview", "/api/v1/behavior", "/api/v1/geo", "/api/v1/towers"]:
+        res = client.get(endpoint, headers=headers)
+        assert res.status_code == 200
+        data = res.json()
+        assert "metadata" in data
+        assert "notices" in data["metadata"]
+        assert isinstance(data["metadata"]["notices"], list)
+        assert len(data["metadata"]["notices"]) > 0
+
+
+def test_prd_filters_on_analytical_endpoints(client: TestClient) -> None:
+    """Verify that PRD filters (country, acquisition_purpose, client_type) correctly filter analytics."""
+    token = create_access_token(subject="analyst", role="analyst")
+    headers = {"Authorization": f"Bearer {token}"}
+    query = "?country=USA&acquisition_purpose=INVESTMENT&client_type=INDIVIDUAL"
+
+    # Overview
+    res_ov = client.get(f"/api/v1/overview{query}", headers=headers)
+    assert res_ov.status_code == 200
+    ov_data = res_ov.json()
+    assert ov_data["active_filters"]["country"] == "USA"
+    assert ov_data["active_filters"]["acquisition_purpose"] == "INVESTMENT"
+    assert ov_data["active_filters"]["client_type"] == "INDIVIDUAL"
+    assert ov_data["total_buyers"] == 443
+
+    # Behavior
+    res_beh = client.get(f"/api/v1/behavior{query}", headers=headers)
+    assert res_beh.status_code == 200
+    assert res_beh.json()["active_filters"]["country"] == "USA"
+
+    # Geo
+    res_geo = client.get(f"/api/v1/geo{query}", headers=headers)
+    assert res_geo.status_code == 200
+    assert res_geo.json()["active_filters"]["country"] == "USA"
+
+    # Towers
+    res_tow = client.get(f"/api/v1/towers{query}", headers=headers)
+    assert res_tow.status_code == 200
+    assert res_tow.json()["active_filters"]["country"] == "USA"
+

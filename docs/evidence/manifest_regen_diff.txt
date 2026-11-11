@@ -1,0 +1,69 @@
+=== Stored MANIFEST.json Provenance ===
+Path: E:\parcl-buyer-intelligence\docs\samples\MANIFEST.json
+Byte Size: 19547 bytes
+Full SHA-256: d41cdbd607e80653868ee7d71e3b4074c3d92256fb0234105f2c24189ce1b219
+
+Regenerating all samples into temp directory: C:\Users\saini\AppData\Local\Temp\tmp58rchaz9
+Generated root.json (244 bytes, sha256: 3e3f45cabe75...)
+Generated api_v1.json (244 bytes, sha256: 3e3f45cabe75...)
+Generated health.json (380 bytes, sha256: ddb7adb4278d...)
+Generated meta_filters.json (7752 bytes, sha256: b49c367efd13...)
+Generated overview.json (2486 bytes, sha256: a5c2dd89c126...)
+Generated clients.json (3347 bytes, sha256: d95b0925f977...)
+Generated client_detail_c0001.json (2333 bytes, sha256: 59d0f998cdd5...)
+Generated segments_catalog.json (4079 bytes, sha256: a5f34f08e2eb...)
+Generated segment_detail_cluster_2.json (3844 bytes, sha256: eefc8f722746...)
+Generated behavior.json (2987 bytes, sha256: 4f709c4c7748...)
+Generated geo.json (5893 bytes, sha256: a2da1fa9a081...)
+Generated towers.json (9918 bytes, sha256: 1d59e28ede37...)
+Generated opportunities_segment_2_office.json (2997 bytes, sha256: 31d249a02f45...)
+Generated nbo_c0001.json (4278 bytes, sha256: 4d1f4c026be1...)
+Generated campaign_scenario.json (4020 bytes, sha256: fa7f6e22add9...)
+Generated campaign_allocate.json (4020 bytes, sha256: fa7f6e22add9...)
+Generated campaign_simulate.json (4020 bytes, sha256: fa7f6e22add9...)
+Generated predict_segment.json (1023 bytes, sha256: 7d2dd097b4d3...)
+Generated model_selection.json (7819 bytes, sha256: 496cd5379271...)
+Generated model_compare.json (2401 bytes, sha256: d0a70b7c48fa...)
+Generated data_quality.json (1896 bytes, sha256: a4e5e0aa92c2...)
+Generated model_card.json (7907 bytes, sha256: 8978d3e93283...)
+Generated projection.json (643598 bytes, sha256: 29b409626a29...)
+Generated clients_analyst_masked.json (3347 bytes, sha256: d95b0925f977...)
+Generated clients_admin_unmasked.json (3284 bytes, sha256: f0a87592b20a...)
+Generated export.csv (54695 bytes, sha256: 4d76fecb995f...)
+Generated demo_token.json (127 bytes, sha256: 475fc23e04bd...)
+
+Manifest successfully written to C:\Users\saini\AppData\Local\Temp\tmp58rchaz9\MANIFEST.json (git sha: b9fba2e37d, canonical routes: 23)
+
+=== Byte-for-Byte Sample Diff (Regenerated vs Disk) ===
+[MATCH] api_v1.json                        Size:     244 bytes | SHA: 3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1
+[MATCH] behavior.json                      Size:    2987 bytes | SHA: 4f709c4c77489f2fdc8c61ef7c677a2a8f3da8d1d1db828aa3bb6358d38719d8
+[MATCH] campaign_allocate.json             Size:    4020 bytes | SHA: fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a
+[MATCH] campaign_scenario.json             Size:    4020 bytes | SHA: fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a
+[MATCH] campaign_simulate.json             Size:    4020 bytes | SHA: fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a
+[MATCH] client_detail_c0001.json           Size:    2333 bytes | SHA: 59d0f998cdd5387bbf388ebe29cef9992265cb7fd9db280716a89a1f8ac23cbe
+[MATCH] clients.json                       Size:    3347 bytes | SHA: d95b0925f9770b1ce26ccf6aad92089d006af5fb9667c69c673fddf2e794965c
+[MATCH] clients_admin_unmasked.json        Size:    3284 bytes | SHA: f0a87592b20a0e234bebfd4cfe07777dd085222ef4a0334d10b60b9bb8aac23f
+[MATCH] clients_analyst_masked.json        Size:    3347 bytes | SHA: d95b0925f9770b1ce26ccf6aad92089d006af5fb9667c69c673fddf2e794965c
+[MATCH] data_quality.json                  Size:    1896 bytes | SHA: a4e5e0aa92c2c5b7fb7a99df47789e0b17d23af77e45c9cb542a6f5d5ce5b00b
+[MATCH] demo_token.json                    Size:     127 bytes | SHA: 475fc23e04bd488f9777c3ff43f1d5d36433147d2572b904a00672532748c4f4
+[MATCH] export.csv                         Size:   54695 bytes | SHA: 4d76fecb995f70889302966e7210ea1e911f3b482f02df0c758237578fd2ffaa
+[MATCH] geo.json                           Size:    5893 bytes | SHA: a2da1fa9a08174f563445ccbc4bb4309daa3f304cf48035c0cf0cd9dbb26b784
+[MATCH] health.json                        Size:     380 bytes | SHA: ddb7adb4278d5b2f70c01ed9b1103c3a593dcb835b63bd1b40b34ed05f364b14
+[MATCH] MANIFEST.json: All sample SHA256s identical (ignoring timestamp_utc and git_commit)
+[MATCH] meta_filters.json                  Size:    7752 bytes | SHA: b49c367efd1335fce550bb6a84cbae8c7a674e0acd4b943c1906d10f0933dfff
+[MATCH] model_card.json                    Size:    7907 bytes | SHA: 8978d3e9328359c0de5f294b961b2f2e729d3d70ba8a74e58bff46774484fdeb
+[MATCH] model_compare.json                 Size:    2401 bytes | SHA: d0a70b7c48fa275fa0d3e567e13e76fc590e935839dfe5dce1ee27fea9bd2c21
+[MATCH] model_selection.json               Size:    7819 bytes | SHA: 496cd53792717ff41d351af40bae658bc6a34dab45c676039fc3d757c225619d
+[MATCH] nbo_c0001.json                     Size:    4278 bytes | SHA: 4d1f4c026be1fde77ace834b94e2cc9f91a1466c5f46e4c4090166f46a861def
+[MATCH] opportunities_segment_2_office.json Size:    2997 bytes | SHA: 31d249a02f458b736c3c345dcd3187f088230e77d325042c15209b85e1df4132
+[MATCH] overview.json                      Size:    2486 bytes | SHA: a5c2dd89c12636efb2bcb7bef9ac5f724b1fc2c65f03de27dd6e631c2a50db0c
+[MATCH] predict_segment.json               Size:    1023 bytes | SHA: 7d2dd097b4d3878b98ab06d3ea94e9ac0d68b7943de246f5f5ce0cbb90b3e2d0
+[MATCH] projection.json                    Size:  643598 bytes | SHA: 29b409626a290e0ba0984da48a266171f1d01ca386c907ce56be487f1916d584
+[MATCH] root.json                          Size:     244 bytes | SHA: 3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1
+[MATCH] segment_detail_cluster_2.json      Size:    3844 bytes | SHA: eefc8f722746924056338f8828fea434a0cb14aaa9b495551eef8f6e5c246166
+[MATCH] segments_catalog.json              Size:    4079 bytes | SHA: a5f34f08e2eb86842108d9b65cde38a11e236d5379d46cee7a9e60638a1ffb30
+[MATCH] towers.json                        Size:    9918 bytes | SHA: 1d59e28ede371fb0b30885969bcba90b6f54bc8189a76ae8ddee9b42358f66de
+
+Total Files Evaluated: 28
+Total Matches: 28
+Total Divergences: 0

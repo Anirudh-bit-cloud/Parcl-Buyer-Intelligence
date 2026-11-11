@@ -232,7 +232,7 @@
         },
         {
           "k": 3,
-          "inertia": 13361.231738523,
+          "inertia": 13361.231738522998,
           "silhouette": 0.33751843811845866,
           "davies_bouldin": 1.832750315245595,
           "calinski_harabasz": 1608.5858374401832,
@@ -259,7 +259,7 @@
         },
         {
           "k": 6,
-          "inertia": 11328.782684547754,
+          "inertia": 11328.782684547756,
           "silhouette": 0.11677209956189985,
           "davies_bouldin": 2.2964399168489855,
           "calinski_harabasz": 829.2771798255071,
@@ -429,7 +429,7 @@
     {
       "k": 2,
       "gap": 1.3313747513481449,
-      "s_k": 0.009217977121703701,
+      "s_k": 0.009217977121704314,
       "actual_log_wcss": 9.56939444929843,
       "ref_log_wcss": 10.900769200646575
     },
@@ -456,9 +456,9 @@
     },
     {
       "k": 6,
-      "gap": 1.2801289352678786,
+      "gap": 1.2801289352678769,
       "s_k": 0.0019285736395058648,
-      "actual_log_wcss": 9.336508946165518,
+      "actual_log_wcss": 9.33650894616552,
       "ref_log_wcss": 10.616637881433396
     },
     {
@@ -538,7 +538,7 @@
     "Cluster_0": {
       "cluster_id": 0,
       "generated_name": "Emerging Multi-Tower Accumulators",
-      "persona": "Younger acquisitive buyers (mean age 42.1) building multi-unit holdings (mean 4.06 units) across residential and commercial towers.",
+      "persona": "Younger acquisitive buyers (mean age 42.05) building multi-unit holdings (mean 4.06 units) across residential and commercial towers.",
       "size": 536,
       "share": 0.268,
       "measured_traits": {
@@ -562,7 +562,7 @@
     "Cluster_2": {
       "cluster_id": 2,
       "generated_name": "Commercial Office Diversifiers",
-      "persona": "Specialized commercial allocators dedicating significant portfolio capital (37.8% office share) to workplace suites.",
+      "persona": "Specialized commercial allocators dedicating significant portfolio capital (37.78% office share) to workplace suites.",
       "size": 375,
       "share": 0.1875,
       "measured_traits": {
@@ -574,7 +574,7 @@
     "Cluster_3": {
       "cluster_id": 3,
       "generated_name": "Established Senior Estate Investors",
-      "persona": "Senior mature capital allocators (mean age 69.2) holding the largest multi-tower portfolios (mean 4.39 units, span 15.5 months).",
+      "persona": "Senior mature capital allocators (mean age 69.21) holding the largest multi-tower portfolios (mean 4.39 units, span 15.5 months).",
       "size": 532,
       "share": 0.266,
       "measured_traits": {

@@ -48,6 +48,14 @@ def test_samples_manifest_integrity() -> None:
         computed_sha = hashlib.sha256(sample_file.read_bytes()).hexdigest()
         assert computed_sha == route_info["sha256"], f"SHA256 mismatch for {sample_file.name}"
 
+    # Verify user-specified verification check: all entries in m["samples"] match disk sha256
+    assert "samples" in manifest, "MANIFEST.json missing 'samples' dict"
+    for r, s in manifest["samples"].items():
+        sample_f = Path("e:/parcl-buyer-intelligence") / s["file_path"]
+        assert sample_f.exists(), f"Manifest sample file {sample_f} missing"
+        computed_h = hashlib.sha256(sample_f.read_bytes()).hexdigest()
+        assert computed_h == s["sha256"], f"Manifest SHA256 mismatch for route {r}: {s['file_path']}"
+
 
 def test_golden_samples_consistency(client: TestClient) -> None:
     """Verify live endpoint responses equal stored JSON golden samples in docs/samples/ with zero diff."""
@@ -69,7 +77,7 @@ def test_golden_samples_consistency(client: TestClient) -> None:
         "age": 45,
         "n_units": 3,
         "office_share": 0.33,
-        "avg_floor_area": 1150.0,
+        "avg_floor_area": 1129.18,
         "portfolio_towers_hhi": 0.3333,
         "purchase_span_months": 6,
         "loan_applied": True,

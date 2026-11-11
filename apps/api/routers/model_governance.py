@@ -1,6 +1,7 @@
 """Model Governance, Selection, Comparison, and Data Quality router."""
 
 import json
+from typing import Any
 
 from fastapi import APIRouter
 
@@ -204,4 +205,87 @@ async def get_model_card() -> ModelCardResponse:
         beta_calibration_grid=[BetaCalibrationPoint(**p) for p in beta_grid],
         prd_truth_matrix=prd_matrix,
         metadata=metadata,
+    )
+
+
+
+@router.get(
+    "/api/v1/governance/drift",
+    summary="Data & Concept Drift Monitoring (PSI, KS-Test, Cluster Mix)",
+)
+async def get_drift_monitoring() -> dict[str, Any]:
+    """Execute live drift monitoring across temporal client purchase windows."""
+    from parcl_core.drift import run_full_drift_audit
+
+    from apps.api.services.data_service import data_service
+
+    audit_result = run_full_drift_audit(data_service.client_features)
+    audit_result["metadata"] = {
+        "as_of": "December 2025",
+        "reference_window": "First-half client cohort",
+        "current_window": "Second-half client cohort",
+        "thresholds": "PSI < 0.10: Stable, 0.10 - 0.25: Moderate Drift, >= 0.25: Critical Drift",
+    }
+    return audit_result
+
+
+@router.get(
+    "/api/v1/governance/fairness",
+    summary="Algorithmic Fairness and Demographic Parity Audit",
+)
+async def get_fairness_audit() -> dict[str, Any]:
+    """Retrieve demographic parity and sensitivity audit report for Age and Country."""
+    from parcl_core.registry import run_fairness_audit
+
+    from apps.api.services.data_service import data_service
+
+    return run_fairness_audit(data_service.client_features)
+
+
+@router.get(
+    "/api/v1/governance/registry",
+    summary="Model Registry Metadata, Checksums, and Extended Evaluation",
+)
+async def get_model_registry() -> dict[str, Any]:
+    """Retrieve production model card, Git commit SHA, dataset SHA-256, and confusion matrix."""
+    from parcl_core.clustering.selection import compute_per_cluster_silhouette_and_distance_matrix
+    from parcl_core.explain import compute_surrogate_evaluation_report
+    from parcl_core.registry import get_model_registry_card
+
+    card = get_model_registry_card(
+        model_version="v2.0.0-b3",
+        data_path=api_settings.data_dir / "processed" / "clients_cleaned.parquet",
+    )
+
+    # Attach per-cluster silhouette & distance matrix
+    if model_service.models_bundle and "model_b3_matrix" in model_service.models_bundle:
+        X = model_service.models_bundle["model_b3_matrix"]
+        y = model_service.models_bundle["labels"]
+        sil_breakdown = compute_per_cluster_silhouette_and_distance_matrix(X, y)
+        card["silhouette_breakdown"] = sil_breakdown
+
+    # Attach surrogate tree classification metrics
+    if model_service.models_bundle and "surrogate_tree" in model_service.models_bundle:
+        dt = model_service.models_bundle["surrogate_tree"]
+        X_surr = model_service.models_bundle.get("model_b3_matrix")
+        y = model_service.models_bundle.get("labels")
+        if X_surr is not None and y is not None:
+            card["surrogate_tree_report"] = compute_surrogate_evaluation_report(dt, X_surr, y)
+
+    return card
+
+
+@router.get(
+    "/api/v1/governance/clv-baseline",
+    summary="Experimental Segment CLV and Purchase Propensity Baseline",
+)
+async def get_clv_baseline() -> dict[str, Any]:
+    """Retrieve experimental customer lifetime value estimates and purchase propensity scores."""
+    from parcl_core.recommend import calculate_segment_clv_and_propensity
+
+    from apps.api.services.data_service import data_service
+
+    return calculate_segment_clv_and_propensity(
+        data_service.client_features,
+        data_service.transactions,
     )

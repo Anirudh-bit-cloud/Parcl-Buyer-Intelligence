@@ -1,0 +1,218 @@
+{
+  "total_buyers_evaluated": 2000,
+  "domestic_vs_international": {
+    "domestic_buyers": 1538,
+    "domestic_mean_spend_inr": 1269852.05,
+    "domestic_mean_spend_display": "₹12,69,852",
+    "domestic_investment_share_pct": 30.56,
+    "international_buyers": 462,
+    "international_mean_spend_inr": 1228827.94,
+    "international_mean_spend_display": "₹12,28,828",
+    "international_investment_share_pct": 31.39,
+    "spend_difference_pct": 3.34,
+    "two_sample_t_stat": 2.2443,
+    "t_test_p_value": 0.0251,
+    "cohens_d": 0.1181
+  },
+  "top_countries": [
+    {
+      "name": "USA",
+      "buyer_count": 1538,
+      "share_pct": 76.9,
+      "mean_spend_inr": 1269852.05,
+      "mean_spend_display": "₹12,69,852",
+      "mean_units": 3.68,
+      "investment_purpose_share_pct": 30.56
+    },
+    {
+      "name": "UK",
+      "buyer_count": 95,
+      "share_pct": 4.75,
+      "mean_spend_inr": 1284490.26,
+      "mean_spend_display": "₹12,84,490",
+      "mean_units": 3.66,
+      "investment_purpose_share_pct": 30.53
+    },
+    {
+      "name": "Canada",
+      "buyer_count": 85,
+      "share_pct": 4.25,
+      "mean_spend_inr": 1207422.89,
+      "mean_spend_display": "₹12,07,423",
+      "mean_units": 3.53,
+      "investment_purpose_share_pct": 38.82
+    },
+    {
+      "name": "Germany",
+      "buyer_count": 56,
+      "share_pct": 2.8,
+      "mean_spend_inr": 1194135.19,
+      "mean_spend_display": "₹11,94,135",
+      "mean_units": 3.48,
+      "investment_purpose_share_pct": 28.57
+    },
+    {
+      "name": "France",
+      "buyer_count": 53,
+      "share_pct": 2.65,
+      "mean_spend_inr": 1224509.52,
+      "mean_spend_display": "₹12,24,510",
+      "mean_units": 3.53,
+      "investment_purpose_share_pct": 30.19
+    },
+    {
+      "name": "Belgium",
+      "buyer_count": 43,
+      "share_pct": 2.15,
+      "mean_spend_inr": 1261068.18,
+      "mean_spend_display": "₹12,61,068",
+      "mean_units": 3.77,
+      "investment_purpose_share_pct": 37.21
+    },
+    {
+      "name": "Mexico",
+      "buyer_count": 40,
+      "share_pct": 2.0,
+      "mean_spend_inr": 1210743.67,
+      "mean_spend_display": "₹12,10,744",
+      "mean_units": 3.6,
+      "investment_purpose_share_pct": 37.5
+    },
+    {
+      "name": "Australia",
+      "buyer_count": 39,
+      "share_pct": 1.95,
+      "mean_spend_inr": 1124868.06,
+      "mean_spend_display": "₹11,24,868",
+      "mean_units": 3.41,
+      "investment_purpose_share_pct": 20.51
+    },
+    {
+      "name": "Russia",
+      "buyer_count": 36,
+      "share_pct": 1.8,
+      "mean_spend_inr": 1240606.34,
+      "mean_spend_display": "₹12,40,606",
+      "mean_units": 3.56,
+      "investment_purpose_share_pct": 22.22
+    },
+    {
+      "name": "Denmark",
+      "buyer_count": 15,
+      "share_pct": 0.75,
+      "mean_spend_inr": 1340203.57,
+      "mean_spend_display": "₹13,40,204",
+      "mean_units": 3.47,
+      "investment_purpose_share_pct": 26.67
+    }
+  ],
+  "top_regions": [
+    {
+      "name": "California",
+      "buyer_count": 633,
+      "share_pct": 31.65,
+      "mean_spend_inr": 1304663.74,
+      "mean_spend_display": "₹13,04,664",
+      "mean_units": 3.79,
+      "investment_purpose_share_pct": 30.02
+    },
+    {
+      "name": "Nevada",
+      "buyer_count": 143,
+      "share_pct": 7.15,
+      "mean_spend_inr": 1280537.36,
+      "mean_spend_display": "₹12,80,537",
+      "mean_units": 3.69,
+      "investment_purpose_share_pct": 35.66
+    },
+    {
+      "name": "Colorado",
+      "buyer_count": 118,
+      "share_pct": 5.9,
+      "mean_spend_inr": 1234178.2,
+      "mean_spend_display": "₹12,34,178",
+      "mean_units": 3.65,
+      "investment_purpose_share_pct": 32.2
+    },
+    {
+      "name": "Arizona",
+      "buyer_count": 108,
+      "share_pct": 5.4,
+      "mean_spend_inr": 1237170.07,
+      "mean_spend_display": "₹12,37,170",
+      "mean_units": 3.56,
+      "investment_purpose_share_pct": 33.33
+    },
+    {
+      "name": "Oregon",
+      "buyer_count": 96,
+      "share_pct": 4.8,
+      "mean_spend_inr": 1272468.21,
+      "mean_spend_display": "₹12,72,468",
+      "mean_units": 3.73,
+      "investment_purpose_share_pct": 39.58
+    },
+    {
+      "name": "Utah",
+      "buyer_count": 87,
+      "share_pct": 4.35,
+      "mean_spend_inr": 1230653.26,
+      "mean_spend_display": "₹12,30,653",
+      "mean_units": 3.56,
+      "investment_purpose_share_pct": 31.03
+    },
+    {
+      "name": "Washington",
+      "buyer_count": 73,
+      "share_pct": 3.65,
+      "mean_spend_inr": 1193661.97,
+      "mean_spend_display": "₹11,93,662",
+      "mean_units": 3.34,
+      "investment_purpose_share_pct": 27.4
+    },
+    {
+      "name": "Virginia",
+      "buyer_count": 65,
+      "share_pct": 3.25,
+      "mean_spend_inr": 1269861.33,
+      "mean_spend_display": "₹12,69,861",
+      "mean_units": 3.62,
+      "investment_purpose_share_pct": 30.77
+    },
+    {
+      "name": "Texas",
+      "buyer_count": 56,
+      "share_pct": 2.8,
+      "mean_spend_inr": 1198792.53,
+      "mean_spend_display": "₹11,98,793",
+      "mean_units": 3.52,
+      "investment_purpose_share_pct": 32.14
+    },
+    {
+      "name": "Florida",
+      "buyer_count": 50,
+      "share_pct": 2.5,
+      "mean_spend_inr": 1333435.16,
+      "mean_spend_display": "₹13,33,435",
+      "mean_units": 3.72,
+      "investment_purpose_share_pct": 14.0
+    }
+  ],
+  "active_filters": {
+    "country": null,
+    "region": null,
+    "acquisition_purpose": null,
+    "client_type": null,
+    "assigned_cluster": null
+  },
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": false,
+    "untested_assumptions_notice": "Geographic significance evaluated via Welch's two-sample t-test and Cohen's d effect size.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

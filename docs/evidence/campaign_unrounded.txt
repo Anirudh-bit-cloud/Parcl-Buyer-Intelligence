@@ -1,0 +1,44 @@
+=== Scenario Request Fixture ===
+Path: E:\parcl-buyer-intelligence\data\fixtures\campaign_scenario_request.json
+SHA-256: 6dab577a07a412b3e6ac4fa9cff542ce588343996733155087514eec1937bba1
+
+Stored Campaign Sample Path: E:\parcl-buyer-intelligence\docs\samples\campaign_scenario.json
+Stored Campaign Sample SHA-256: fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a
+Stored Phase 4 / Endpoint Sample Modeled GMV: 75881028.0
+
+=== Channel Empirical Spend & Modeled Acquisitions ===
+
+Channel: Website
+  Allocated Budget: 50000.00
+  CPA: 1200.00
+  Modeled Clients: 41.66666667
+  Historical Mean (Unrounded): 1274770.9302810517
+  Historical Mean (Paise-Rounded): 1274770.93
+  Modeled GMV (Unrounded): 53115455.42837715
+  Modeled GMV (From Paise Mean): 53115455.416666664
+
+Channel: Agency
+  Allocated Budget: 35000.00
+  CPA: 3500.00
+  Modeled Clients: 10.00000000
+  Historical Mean (Unrounded): 1243488.9008085106
+  Historical Mean (Paise-Rounded): 1243488.9
+  Modeled GMV (Unrounded): 12434889.008085106
+  Modeled GMV (From Paise Mean): 12434889.0
+
+Channel: Client
+  Allocated Budget: 15000.00
+  CPA: 1800.00
+  Modeled Clients: 8.33333333
+  Historical Mean (Unrounded): 1239682.02953125
+  Historical Mean (Paise-Rounded): 1239682.03
+  Modeled GMV (Unrounded): 10330683.579427084
+  Modeled GMV (From Paise Mean): 10330683.583333334
+
+=== Total Modeled Portfolio Outcomes ===
+Total Budget: 100000.00
+Total Modeled Clients: 60.00000000
+Total Modeled GMV (Unrounded Historical Means): 75881028.01588933
+Total Modeled GMV (Paise-Rounded Historical Means): 75881028.0
+Difference (Unrounded - Paise-Rounded): 0.015889331698417664
+Stored Endpoint Match with Paise-Rounded: True

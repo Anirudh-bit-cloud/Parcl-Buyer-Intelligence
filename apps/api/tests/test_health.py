@@ -31,3 +31,25 @@ def test_root_endpoint(client: TestClient) -> None:
     assert data["as_of"] == "December 2025"
     assert data["currency"] == "INR"
     assert "/docs" in data["docs"]
+
+
+def test_health_live_and_ready(client: TestClient) -> None:
+    """Verify Kubernetes liveness and readiness probes."""
+    res_live = client.get("/health/live")
+    assert res_live.status_code == 200
+    assert res_live.json() == {"status": "alive"}
+
+    res_ready = client.get("/health/ready")
+    assert res_ready.status_code == 200
+    ready_data = res_ready.json()
+    assert ready_data["status"] == "ready"
+    assert ready_data["database"] == "connected"
+    assert ready_data["records_loaded"] == 2000
+
+
+def test_prometheus_metrics(client: TestClient) -> None:
+    """Verify Prometheus scrape endpoint returns valid OpenMetrics formatted text."""
+    res = client.get("/metrics")
+    assert res.status_code == 200
+    assert "text/plain" in res.headers["content-type"]
+    assert "http_requests_total" in res.text

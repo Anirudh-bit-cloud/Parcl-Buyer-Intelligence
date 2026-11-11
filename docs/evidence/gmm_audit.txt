@@ -1,0 +1,17 @@
+Total Clients Evaluated: 2000
+
+GMM Component Sizes & Shares:
+Component 0: 149 clients (7.4500%)
+Component 1: 902 clients (45.1000%)
+Component 2: 229 clients (11.4500%)
+Component 3: 720 clients (36.0000%)
+
+GMM Component vs Production K-Means Cluster Crosstab:
+KMeans_Cluster    0    1    2    3
+GMM_Component                     
+0                 0   89   60    0
+1               426   11   10  455
+2               110   29   13   77
+3                 0  428  292    0
+
+Unaligned Diagonal Agreement (gmm_preds == prod_labels): 24/2000 (1.2000%)

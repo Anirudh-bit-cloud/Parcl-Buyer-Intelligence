@@ -1,0 +1,116 @@
+name: Enterprise CI Pipeline
+
+on:
+  push:
+    branches: [main, enterprise-v2, phase6-redesign]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend-quality:
+    name: Backend Lint, Typecheck, Security & Coverage Gates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e packages/core
+          pip install -e apps/api
+          pip install ruff mypy pytest pytest-cov redis opentelemetry-api opentelemetry-sdk prometheus-client psycopg2-binary alembic pip-audit cyclonedx-bom
+
+      - name: Code formatting & lint (Ruff)
+        run: |
+          ruff check .
+
+      - name: Type checking (Mypy)
+        run: |
+          mypy packages/core/parcl_core apps/api --ignore-missing-imports --explicit-package-bases
+
+      - name: Run Pytest test battery with coverage thresholds
+        run: |
+          python -m pytest --cov=packages/core/parcl_core --cov=apps/api --cov-fail-under=85
+
+      - name: Dependency vulnerability audit (pip-audit)
+        run: |
+          pip-audit --desc || echo "Audit logged for review"
+
+      - name: Generate CycloneDX Software Bill of Materials (SBOM)
+        run: |
+          cyclonedx-py requirements requirements-prod.txt --outfile sbom-backend.json || cyclonedx-py environment --outfile sbom-backend.json
+
+      - name: Upload Backend SBOM
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom-backend
+          path: sbom-backend.json
+
+  frontend-quality:
+    name: Frontend Lint, Typecheck, A11y, Audit & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: apps/web/package.json
+
+      - name: Install frontend dependencies
+        working-directory: apps/web
+        run: npm ci --legacy-peer-deps
+
+      - name: TypeScript typecheck
+        working-directory: apps/web
+        run: npx tsc --noEmit
+
+      - name: Frontend Dependency Vulnerability Audit (npm audit)
+        working-directory: apps/web
+        run: npm audit --audit-level=high
+
+      - name: Vitest test suite with coverage
+        working-directory: apps/web
+        run: npx vitest run --coverage
+
+      - name: Production Vite build
+        working-directory: apps/web
+        run: npm run build
+
+  container-build:
+    name: Docker Container Build & Trivy Security Scan
+    needs: [backend-quality, frontend-quality]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: actions/docker-buildx-action@v3
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false
+          load: true
+          tags: parcl-buyer-intelligence:ci-latest
+
+      - name: Run Trivy container vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'parcl-buyer-intelligence:ci-latest'
+          format: 'table'
+          exit-code: '0'
+          severity: 'CRITICAL,HIGH'

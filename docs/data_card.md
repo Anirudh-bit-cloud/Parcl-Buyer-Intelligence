@@ -97,4 +97,4 @@ To establish complete provenance and eliminate hand-written discrepancy:
 
 ### Audit Notes on C0001
 1. **Name and Origin**: The authentic client identity in the underlying data has always been **Kareem Liu, USA, California**.
-2. **Age Derivation**: On configured reference date `2025-12-31`, with date of birth `1968-11-05`, the client has lived 20,875 days. Dividing by 365.2425 yields completed integer age **57**. (The legacy Phase 5 walkthrough reference to age 49 was an error caused by evaluating age relative to 2017: 2017 - 1968 = 49).
+2. **Age Derivation**: On configured reference date `2025-12-31`, with date of birth `1968-11-05`, the client has lived 20,875 days. Dividing by 365.2425 yields completed integer age **57**. (The legacy Phase 5 walkthrough reference to age 49 was hand-typed in the original sample; no recoverable reference date).

@@ -80,6 +80,14 @@ class ClientDetailResponse(BaseModel):
     soft_membership_probabilities: dict[str, float] = Field(
         examples=[{"Cluster_0": 0.4532, "Cluster_1": 0.2104, "Cluster_2": 0.1842, "Cluster_3": 0.1522}]
     )
-    is_ambiguous_boundary: bool = Field(examples=[True])
+    is_ambiguous_boundary: bool = Field(
+        description="True if max soft probability < 0.50 (absence of strict majority).",
+        examples=[True],
+    )
+    is_ambiguous_margin: bool = Field(
+        default=False,
+        description="True if top-2 softmax probability margin (p_1 - p_2) < 0.10.",
+        examples=[True],
+    )
     transactions: list[ClientTransactionItem]
     metadata: ResponseMetadata

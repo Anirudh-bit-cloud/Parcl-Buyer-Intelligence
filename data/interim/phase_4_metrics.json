@@ -42,7 +42,7 @@
         "mrr": 0.7127
       },
       "price_only_baseline": {
-        "hit_rate_pct": 25.5,
+        "hit_rate_pct": 25.51,
         "mrr": 0.5365
       },
       "area_only_baseline": {
@@ -60,7 +60,7 @@
       "lift_over_majority_pct_points": 15.36,
       "lift_over_category_only_pct_points": 15.7,
       "lift_over_tower_only_pct_points": 0.21,
-      "price_area_discriminative_signal": "Price-only (25.5%) and Area-only (25.41%) achieve random-level hit rates (~25.5%), confirming that unit sizing and pricing alone provide virtually zero discriminative signal across segments."
+      "price_area_discriminative_signal": "Price-only (25.51%) and Area-only (25.41%) achieve random-level hit rates (~25.5%), confirming that unit sizing and pricing alone provide virtually zero discriminative signal across segments."
     },
     "volume_group_structural_property": {
       "volume_group_accuracy_pct": 79.4,

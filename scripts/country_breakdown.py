@@ -1,6 +1,7 @@
 """Compute exact country breakdowns, statistical tests, and cohort figures directly from Parquet tables."""
 
 import sys
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -9,9 +10,11 @@ from scipy import stats
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
+repo_root = Path(__file__).resolve().parents[1]
+
 # 1. Load clean datasets
-cf = pd.read_parquet("data/processed/client_features.parquet")
-tx = pd.read_parquet("data/processed/transactions_clean.parquet")
+cf = pd.read_parquet(repo_root / "data/processed/client_features.parquet")
+tx = pd.read_parquet(repo_root / "data/processed/transactions_clean.parquet")
 
 print("=== 1. COUNTRY BREAKDOWN ===")
 country_groups = []

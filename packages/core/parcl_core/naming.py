@@ -20,22 +20,22 @@ def generate_segment_names_and_personas(
         units_mean = num.get("n_units", {}).get("mean", 3.0)
 
         # Grounded rules mapping directly to surrogate tree decisions and measured differences:
-        # Cluster 0: Emerging Multi-Tower Accumulators (younger buyers mean age 42.1, 4.06 units across 4 towers, 13.4% office)
-        # Cluster 1: Concentrated Residential Buyers (100% residential, 0% office, exactly 3 units across 3 towers, HHI=0.33, mean age 54.1)
-        # Cluster 2: Commercial Office Diversifiers (37.8% office share, exactly 3 units across 3 towers, HHI=0.33, mean age 55.2)
-        # Cluster 3: Established Senior Estate Investors (senior buyers mean age 69.2, 4.39 units across 4 towers, 15.8% office)
+        # Cluster 0: Emerging Multi-Tower Accumulators (younger buyers mean age 42.05, 4.06 units across 4 towers, 13.38% office)
+        # Cluster 1: Concentrated Residential Buyers (100% residential, 0.00% office, exactly 3 units across 3 towers, HHI=0.33, mean age 54.11)
+        # Cluster 2: Commercial Office Diversifiers (37.78% office share, exactly 3 units across 3 towers, HHI=0.33, mean age 55.19)
+        # Cluster 3: Established Senior Estate Investors (senior buyers mean age 69.21, 4.39 units across 4 towers, 15.80% office)
         if units_mean > 3.5 and age_mean < 50.0:
             name = "Emerging Multi-Tower Accumulators"
-            persona = "Younger acquisitive buyers (mean age 42.1) building multi-unit holdings (mean 4.06 units) across residential and commercial towers."
+            persona = "Younger acquisitive buyers (mean age 42.05) building multi-unit holdings (mean 4.06 units) across residential and commercial towers."
         elif units_mean <= 3.2 and office_mean < 0.05:
             name = "Concentrated Residential Buyers"
             persona = "Pure residential buyers purchasing exactly 3 residential units across three towers with zero commercial office allocation."
         elif units_mean <= 3.2 and office_mean >= 0.05:
             name = "Commercial Office Diversifiers"
-            persona = "Specialized commercial allocators dedicating significant portfolio capital (37.8% office share) to workplace suites."
+            persona = "Specialized commercial allocators dedicating significant portfolio capital (37.78% office share) to workplace suites."
         elif units_mean > 3.5 and age_mean >= 50.0:
             name = "Established Senior Estate Investors"
-            persona = "Senior mature capital allocators (mean age 69.2) holding the largest multi-tower portfolios (mean 4.39 units, span 15.5 months)."
+            persona = "Senior mature capital allocators (mean age 69.21) holding the largest multi-tower portfolios (mean 4.39 units, span 15.5 months)."
         else:
             name = f"Segment {c_id}"
             persona = "Behavioral cohort with balanced portfolio holding."

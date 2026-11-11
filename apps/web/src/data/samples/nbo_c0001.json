@@ -1,0 +1,112 @@
+{
+  "client_id": "C0001",
+  "client_segment_id": 0,
+  "client_segment_name": "Emerging Multi-Tower Accumulators",
+  "owned_towers": [
+    3,
+    4,
+    9,
+    15
+  ],
+  "unowned_towers_count": 16,
+  "mean_bonus_eligibility_share_pct": 81.86,
+  "recommendations": [
+    {
+      "listing_id": 20365,
+      "tower_number": 2,
+      "unit_number": 43,
+      "unit_category": "Apartment",
+      "sale_price_inr": 315555.56,
+      "sale_price_display": "₹3,15,556",
+      "floor_area_sqft": 1118.94,
+      "price_per_sqft_inr": 282.01,
+      "segment_affinity_score": 0.9883,
+      "tower_diversification_bonus": 0.15,
+      "category_diversification_bonus": 0.0,
+      "final_nbo_score": 1.1383,
+      "diversifies_towers": true,
+      "untested_assumption_note": "Bonuses (+0.15 tower, +0.10 category) are heuristic assumptions. Unclipped score. Client owns 4 of 20 towers (16 unowned); mean available bonus eligibility is ~82%."
+    },
+    {
+      "listing_id": 200449,
+      "tower_number": 20,
+      "unit_number": 51,
+      "unit_category": "Apartment",
+      "sale_price_inr": 328980.19,
+      "sale_price_display": "₹3,28,980",
+      "floor_area_sqft": 1062.33,
+      "price_per_sqft_inr": 309.68,
+      "segment_affinity_score": 0.9734,
+      "tower_diversification_bonus": 0.15,
+      "category_diversification_bonus": 0.0,
+      "final_nbo_score": 1.1234,
+      "diversifies_towers": true,
+      "untested_assumption_note": "Bonuses (+0.15 tower, +0.10 category) are heuristic assumptions. Unclipped score. Client owns 4 of 20 towers (16 unowned); mean available bonus eligibility is ~82%."
+    },
+    {
+      "listing_id": 80385,
+      "tower_number": 8,
+      "unit_number": 46,
+      "unit_category": "Apartment",
+      "sale_price_inr": 320650.8,
+      "sale_price_display": "₹3,20,651",
+      "floor_area_sqft": 1175.51,
+      "price_per_sqft_inr": 272.78,
+      "segment_affinity_score": 0.9728,
+      "tower_diversification_bonus": 0.15,
+      "category_diversification_bonus": 0.0,
+      "final_nbo_score": 1.1228,
+      "diversifies_towers": true,
+      "untested_assumption_note": "Bonuses (+0.15 tower, +0.10 category) are heuristic assumptions. Unclipped score. Client owns 4 of 20 towers (16 unowned); mean available bonus eligibility is ~82%."
+    },
+    {
+      "listing_id": 130408,
+      "tower_number": 13,
+      "unit_number": 46,
+      "unit_category": "Apartment",
+      "sale_price_inr": 301584.36,
+      "sale_price_display": "₹3,01,584",
+      "floor_area_sqft": 1098.38,
+      "price_per_sqft_inr": 274.57,
+      "segment_affinity_score": 0.9686,
+      "tower_diversification_bonus": 0.15,
+      "category_diversification_bonus": 0.0,
+      "final_nbo_score": 1.1186,
+      "diversifies_towers": true,
+      "untested_assumption_note": "Bonuses (+0.15 tower, +0.10 category) are heuristic assumptions. Unclipped score. Client owns 4 of 20 towers (16 unowned); mean available bonus eligibility is ~82%."
+    },
+    {
+      "listing_id": 200200,
+      "tower_number": 20,
+      "unit_number": 24,
+      "unit_category": "Apartment",
+      "sale_price_inr": 368118.52,
+      "sale_price_display": "₹3,68,119",
+      "floor_area_sqft": 1188.07,
+      "price_per_sqft_inr": 309.85,
+      "segment_affinity_score": 0.9589,
+      "tower_diversification_bonus": 0.15,
+      "category_diversification_bonus": 0.0,
+      "final_nbo_score": 1.1089,
+      "diversifies_towers": true,
+      "untested_assumption_note": "Bonuses (+0.15 tower, +0.10 category) are heuristic assumptions. Unclipped score. Client owns 4 of 20 towers (16 unowned); mean available bonus eligibility is ~82%."
+    }
+  ],
+  "active_filters": {
+    "country": null,
+    "region": null,
+    "acquisition_purpose": null,
+    "client_type": null,
+    "assigned_cluster": 0
+  },
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": false,
+    "untested_assumptions_notice": "Untested assumptions: Tower diversification bonus (+0.15) and category bonus (+0.10) are additive heuristic adjustments. Portfolio spans 20 towers; ~81.86% of available units earn tower bonus.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

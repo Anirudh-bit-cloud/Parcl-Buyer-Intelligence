@@ -1,0 +1,398 @@
+{
+  "total_clients": 2000,
+  "countries": [
+    {
+      "value": "USA",
+      "display_label": "USA",
+      "count": 1538
+    },
+    {
+      "value": "UK",
+      "display_label": "UK",
+      "count": 95
+    },
+    {
+      "value": "Canada",
+      "display_label": "Canada",
+      "count": 85
+    },
+    {
+      "value": "Germany",
+      "display_label": "Germany",
+      "count": 56
+    },
+    {
+      "value": "France",
+      "display_label": "France",
+      "count": 53
+    },
+    {
+      "value": "Belgium",
+      "display_label": "Belgium",
+      "count": 43
+    },
+    {
+      "value": "Mexico",
+      "display_label": "Mexico",
+      "count": 40
+    },
+    {
+      "value": "Australia",
+      "display_label": "Australia",
+      "count": 39
+    },
+    {
+      "value": "Russia",
+      "display_label": "Russia",
+      "count": 36
+    },
+    {
+      "value": "Denmark",
+      "display_label": "Denmark",
+      "count": 15
+    }
+  ],
+  "regions": [
+    {
+      "value": "California",
+      "display_label": "California",
+      "count": 633
+    },
+    {
+      "value": "Nevada",
+      "display_label": "Nevada",
+      "count": 143
+    },
+    {
+      "value": "Colorado",
+      "display_label": "Colorado",
+      "count": 118
+    },
+    {
+      "value": "Arizona",
+      "display_label": "Arizona",
+      "count": 108
+    },
+    {
+      "value": "Oregon",
+      "display_label": "Oregon",
+      "count": 96
+    },
+    {
+      "value": "Utah",
+      "display_label": "Utah",
+      "count": 87
+    },
+    {
+      "value": "Washington",
+      "display_label": "Washington",
+      "count": 73
+    },
+    {
+      "value": "Virginia",
+      "display_label": "Virginia",
+      "count": 65
+    },
+    {
+      "value": "Texas",
+      "display_label": "Texas",
+      "count": 56
+    },
+    {
+      "value": "Florida",
+      "display_label": "Florida",
+      "count": 50
+    },
+    {
+      "value": "New York",
+      "display_label": "New York",
+      "count": 49
+    },
+    {
+      "value": "Georgia",
+      "display_label": "Georgia",
+      "count": 34
+    },
+    {
+      "value": "England",
+      "display_label": "England",
+      "count": 29
+    },
+    {
+      "value": "Alberta",
+      "display_label": "Alberta",
+      "count": 27
+    },
+    {
+      "value": "Scotland",
+      "display_label": "Scotland",
+      "count": 25
+    },
+    {
+      "value": "Ohio",
+      "display_label": "Ohio",
+      "count": 24
+    },
+    {
+      "value": "Northern Ireland",
+      "display_label": "Northern Ireland",
+      "count": 24
+    },
+    {
+      "value": "British Columbia",
+      "display_label": "British Columbia",
+      "count": 20
+    },
+    {
+      "value": "Wales",
+      "display_label": "Wales",
+      "count": 17
+    },
+    {
+      "value": "Brittany",
+      "display_label": "Brittany",
+      "count": 16
+    },
+    {
+      "value": "Flanders",
+      "display_label": "Flanders",
+      "count": 16
+    },
+    {
+      "value": "Hamburg",
+      "display_label": "Hamburg",
+      "count": 16
+    },
+    {
+      "value": "Ile-de-France",
+      "display_label": "Ile-de-France",
+      "count": 15
+    },
+    {
+      "value": "Manitoba",
+      "display_label": "Manitoba",
+      "count": 15
+    },
+    {
+      "value": "Wallonia",
+      "display_label": "Wallonia",
+      "count": 15
+    },
+    {
+      "value": "Quebec",
+      "display_label": "Quebec",
+      "count": 14
+    },
+    {
+      "value": "Victoria",
+      "display_label": "Victoria",
+      "count": 13
+    },
+    {
+      "value": "New South Wales",
+      "display_label": "New South Wales",
+      "count": 13
+    },
+    {
+      "value": "Brussels",
+      "display_label": "Brussels",
+      "count": 12
+    },
+    {
+      "value": "Bavaria",
+      "display_label": "Bavaria",
+      "count": 12
+    },
+    {
+      "value": "Berlin",
+      "display_label": "Berlin",
+      "count": 11
+    },
+    {
+      "value": "Krasnodar Krai",
+      "display_label": "Krasnodar Krai",
+      "count": 10
+    },
+    {
+      "value": "North Rhine-Westphalia",
+      "display_label": "North Rhine-Westphalia",
+      "count": 10
+    },
+    {
+      "value": "Nuevo Leon",
+      "display_label": "Nuevo Leon",
+      "count": 10
+    },
+    {
+      "value": "Saint Petersburg",
+      "display_label": "Saint Petersburg",
+      "count": 10
+    },
+    {
+      "value": "Provence",
+      "display_label": "Provence",
+      "count": 10
+    },
+    {
+      "value": "Jalisco",
+      "display_label": "Jalisco",
+      "count": 9
+    },
+    {
+      "value": "Ontario",
+      "display_label": "Ontario",
+      "count": 9
+    },
+    {
+      "value": "Tatarstan",
+      "display_label": "Tatarstan",
+      "count": 8
+    },
+    {
+      "value": "Occitanie",
+      "display_label": "Occitanie",
+      "count": 8
+    },
+    {
+      "value": "Mexico City",
+      "display_label": "Mexico City",
+      "count": 7
+    },
+    {
+      "value": "Baja California",
+      "display_label": "Baja California",
+      "count": 7
+    },
+    {
+      "value": "Hesse",
+      "display_label": "Hesse",
+      "count": 7
+    },
+    {
+      "value": "Puebla",
+      "display_label": "Puebla",
+      "count": 7
+    },
+    {
+      "value": "Western Australia",
+      "display_label": "Western Australia",
+      "count": 6
+    },
+    {
+      "value": "Novosibirsk",
+      "display_label": "Novosibirsk",
+      "count": 5
+    },
+    {
+      "value": "Capital Region",
+      "display_label": "Capital Region",
+      "count": 5
+    },
+    {
+      "value": "Queensland",
+      "display_label": "Queensland",
+      "count": 4
+    },
+    {
+      "value": "North Denmark",
+      "display_label": "North Denmark",
+      "count": 4
+    },
+    {
+      "value": "Normandy",
+      "display_label": "Normandy",
+      "count": 4
+    },
+    {
+      "value": "Moscow Oblast",
+      "display_label": "Moscow Oblast",
+      "count": 3
+    },
+    {
+      "value": "Southern Denmark",
+      "display_label": "Southern Denmark",
+      "count": 3
+    },
+    {
+      "value": "South Australia",
+      "display_label": "South Australia",
+      "count": 3
+    },
+    {
+      "value": "Zealand",
+      "display_label": "Zealand",
+      "count": 2
+    },
+    {
+      "value": "Kansas",
+      "display_label": "Kansas",
+      "count": 1
+    },
+    {
+      "value": "Wyoming",
+      "display_label": "Wyoming",
+      "count": 1
+    },
+    {
+      "value": "Central Denmark",
+      "display_label": "Central Denmark",
+      "count": 1
+    }
+  ],
+  "acquisition_purposes": [
+    {
+      "value": "HOME",
+      "display_label": "HOME",
+      "count": 1385
+    },
+    {
+      "value": "INVESTMENT",
+      "display_label": "INVESTMENT",
+      "count": 615
+    }
+  ],
+  "client_types": [
+    {
+      "value": "INDIVIDUAL",
+      "display_label": "INDIVIDUAL",
+      "count": 1897
+    },
+    {
+      "value": "COMPANY",
+      "display_label": "COMPANY",
+      "count": 103
+    }
+  ],
+  "assigned_clusters": [
+    {
+      "value": "1",
+      "display_label": "Cluster 1: Concentrated Residential Buyers",
+      "count": 557
+    },
+    {
+      "value": "0",
+      "display_label": "Cluster 0: Emerging Multi-Tower Accumulators",
+      "count": 536
+    },
+    {
+      "value": "3",
+      "display_label": "Cluster 3: Established Senior Estate Investors",
+      "count": 532
+    },
+    {
+      "value": "2",
+      "display_label": "Cluster 2: Commercial Office Diversifiers",
+      "count": 375
+    }
+  ],
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": false,
+    "untested_assumptions_notice": "Counts reflect discrete totals across the complete 2,000-buyer baseline cohort.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

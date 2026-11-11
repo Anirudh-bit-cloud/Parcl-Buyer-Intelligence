@@ -1,0 +1,100 @@
+{
+  "calculator_type": "Marketing Scenario Calculator (Illustrative)",
+  "total_budget_inr": 100000.0,
+  "total_budget_display": "₹1,00,000",
+  "total_modeled_clients": 60.0,
+  "total_modeled_gross_sales_volume_inr": 75881028.0,
+  "total_modeled_gross_sales_display": "₹7,58,81,028",
+  "revenue_label_notice": "Figures reflect modeled gross sales volume (GMV) in INR (₹), NOT net profit. Assumes every acquired client buys at historical average sales, with no conversion funnel or attribution.",
+  "channel_targeting_empirical_finding": {
+    "spend_difference_pct": 2.83,
+    "spend_anova_f": 2.1176,
+    "spend_anova_p": 0.1206,
+    "segment_mix_chi2": 0.75,
+    "segment_mix_p": 0.9933,
+    "segment_mix_dof": 6,
+    "conclusion": "The empirical data DOES NOT SUPPORT segment-specific channel targeting. Segment mix across channels is statistically indistinguishable (chi2=0.7500, p=0.9933)."
+  },
+  "channel_breakdown": {
+    "Website": {
+      "channel_name": "Website",
+      "allocated_budget_inr": 50000.0,
+      "allocated_budget_display": "₹50,000",
+      "budget_share": 0.5,
+      "illustrative_cpa_inr": 1200.0,
+      "illustrative_cpa_display": "₹1,200",
+      "modeled_clients_acquired": 41.67,
+      "modeled_gross_sales_volume_inr": 53115455.42,
+      "modeled_gross_sales_display": "₹5,31,15,455",
+      "historical_channel_metrics": {
+        "historical_client_count": 1103,
+        "historical_share": 0.5515,
+        "historical_mean_sales_per_client_inr": 1274770.93,
+        "historical_mean_sales_display": "₹12,74,771",
+        "historical_median_sales_per_client_inr": 1238162.97,
+        "historical_median_sales_display": "₹12,38,163",
+        "mean_units": 3.68,
+        "loan_rate": 0.3663
+      }
+    },
+    "Agency": {
+      "channel_name": "Agency",
+      "allocated_budget_inr": 35000.0,
+      "allocated_budget_display": "₹35,000",
+      "budget_share": 0.35,
+      "illustrative_cpa_inr": 3500.0,
+      "illustrative_cpa_display": "₹3,500",
+      "modeled_clients_acquired": 10.0,
+      "modeled_gross_sales_volume_inr": 12434889.0,
+      "modeled_gross_sales_display": "₹1,24,34,889",
+      "historical_channel_metrics": {
+        "historical_client_count": 705,
+        "historical_share": 0.3525,
+        "historical_mean_sales_per_client_inr": 1243488.9,
+        "historical_mean_sales_display": "₹12,43,489",
+        "historical_median_sales_per_client_inr": 1210176.2,
+        "historical_median_sales_display": "₹12,10,176",
+        "mean_units": 3.61,
+        "loan_rate": 0.366
+      }
+    },
+    "Client": {
+      "channel_name": "Client",
+      "allocated_budget_inr": 15000.0,
+      "allocated_budget_display": "₹15,000",
+      "budget_share": 0.15,
+      "illustrative_cpa_inr": 1800.0,
+      "illustrative_cpa_display": "₹1,800",
+      "modeled_clients_acquired": 8.33,
+      "modeled_gross_sales_volume_inr": 10330683.58,
+      "modeled_gross_sales_display": "₹1,03,30,684",
+      "historical_channel_metrics": {
+        "historical_client_count": 192,
+        "historical_share": 0.096,
+        "historical_mean_sales_per_client_inr": 1239682.03,
+        "historical_mean_sales_display": "₹12,39,682",
+        "historical_median_sales_per_client_inr": 1223339.08,
+        "historical_median_sales_display": "₹12,23,339",
+        "mean_units": 3.63,
+        "loan_rate": 0.3854
+      }
+    }
+  },
+  "active_filters": {
+    "country": null,
+    "region": null,
+    "acquisition_purpose": null,
+    "client_type": null,
+    "assigned_cluster": null
+  },
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": false,
+    "untested_assumptions_notice": "Gross sales volume (GMV) output in INR (₹); assumes every client buys at historical average; CPAs are user inputs; segment-channel targeting is empirically unsupported.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

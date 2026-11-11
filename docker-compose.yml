@@ -1,34 +1,77 @@
-version: '3.8'
-
 services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: parcl_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: parcl_db
+      POSTGRES_USER: parcl_user
+      POSTGRES_PASSWORD: parcl_secure_password_2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U parcl_user -d parcl_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: parcl_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   api:
     build:
       context: .
-      dockerfile: apps/api/Dockerfile
+      dockerfile: Dockerfile
+    image: parcl-buyer-intelligence:latest
+    container_name: parcl_api
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     ports:
       - "8000:8000"
-    volumes:
-      - ./data:/app/data
     environment:
-      - PARCL_PROJECT_ROOT=/app
+      - PARCL_API_ENVIRONMENT=production
+      - PARCL_API_HOST=0.0.0.0
+      - PARCL_API_PORT=8000
+      - PARCL_API_DATABASE_URL=postgresql+psycopg2://parcl_user:parcl_secure_password_2026@postgres:5432/parcl_db
+      - PARCL_API_REDIS_URL=redis://redis:6379/0
+      - PARCL_API_REDIS_ENABLED=true
+      - PARCL_API_JWT_SECRET=production-grade-hmac-sha256-signing-secret-key-32bytes
+      - PARCL_API_DEMO_AUTH_ENABLED=false
+      - PARCL_API_TELEMETRY_ENABLED=true
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8000/health/ready"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
 
-  web:
-    build:
-      context: apps/web
-      dockerfile: Dockerfile
+  prometheus:
+    image: prom/prometheus:v2.51.0
+    container_name: parcl_prometheus
+    restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "9090:9090"
+    volumes:
+      - ./infra/prometheus.yml:/etc/prometheus/prometheus.yml:ro
     depends_on:
       - api
-    restart: unless-stopped
 
-  streamlit:
-    build:
-      context: .
-      dockerfile: apps/streamlit/Dockerfile
-    ports:
-      - "8501:8501"
-    volumes:
-      - ./data:/app/data
-    restart: unless-stopped
+volumes:
+  postgres_data:
+  redis_data:

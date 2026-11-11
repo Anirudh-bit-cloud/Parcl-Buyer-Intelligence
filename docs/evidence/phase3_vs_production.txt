@@ -1,0 +1,31 @@
+=== Model B Ablation Battery (B1-B4) ===
+Variant | Features | Silhouette (k=4) | ARI vs Production B3
+----------------------------------------------------------
+Model B1 |       85 | 0.101043         | 0.625604
+Model B2 |       84 | 0.105294         | 0.968351
+Model B3 |       84 | 0.121096         | 1.000000
+Model B4 |       17 | 0.127520         | 0.943254
+
+Adjusted Rand Index between Model B2 and Model B3: 0.968351
+
+=== Crosstab: Model B2 Clusters vs Model B3 Clusters ===
+Model_B3_Cluster    0    1    2    3
+Model_B2_Cluster                    
+0                   0  557    0    0
+1                  17    0    0  526
+2                 519    0    0    6
+3                   0    0  375    0
+
+=== Production Cluster Means (Model B3) ===
+               age   n_units  office_share  portfolio_towers_hhi  loan_applied
+cluster                                                                       
+0        42.054104  4.055970      0.133831              0.251799      0.395522
+1        54.111311  3.000000      0.000000              0.333300      0.371634
+2        55.194667  3.000000      0.377778              0.333300      0.352000
+3        69.208647  4.389098      0.157975              0.241613      0.347744
+
+=== Production Model Artifact Provenance ===
+Path: E:\parcl-buyer-intelligence\data\models\cluster_models.joblib
+File Size: 215746 bytes
+Modification Time (mtime): 2026-11-04T21:36:19.735188
+SHA-256: b30f4bf90c28f249ab312992aa7db8f85ecbbe94157680c096c94e1b3b552449

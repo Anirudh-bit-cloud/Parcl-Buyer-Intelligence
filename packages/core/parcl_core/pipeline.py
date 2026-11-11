@@ -3,6 +3,7 @@
 import argparse
 import json
 import logging
+from typing import cast
 
 from parcl_core.cleaning import (
     clean_clients,
@@ -325,7 +326,7 @@ def run_phase_3() -> dict[str, str]:
             "asymptotic_p_value": float(p_val),
             "descriptive_note": "Circular feature separation metric; effect size only",
         })
-    kw_descriptive.sort(key=lambda x: x["asymptotic_p_value"])
+    kw_descriptive.sort(key=lambda x: cast(float, x["asymptotic_p_value"]))
 
     cat_cols = ["acquisition_purpose", "loan_applied", "referral_channel", "client_type", "country"]
     chi2_cluster_descriptive = []
@@ -341,7 +342,7 @@ def run_phase_3() -> dict[str, str]:
             "p_value": float(p_val),
             "cramers_v": v,
         })
-    chi2_cluster_descriptive.sort(key=lambda x: x["p_value"])
+    chi2_cluster_descriptive.sort(key=lambda x: cast(float, x["p_value"]))
 
     # PRD hypothesis truth matrix
     truth_matrix = generate_prd_hypothesis_truth_matrix(profiles)

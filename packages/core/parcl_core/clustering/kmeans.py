@@ -47,8 +47,8 @@ def evaluate_kmeans_range(
 
         # Cluster size balance
         _, counts = np.unique(labels, return_counts=True)
-        min_size = int(counts.min())
-        max_size = int(counts.max())
+        min_size = int(np.min(counts))
+        max_size = int(np.max(counts))
 
         metrics_list.append(
             {

@@ -1,0 +1,298 @@
+{
+  "production_variant": "Model_B3_Downweighted_Geo",
+  "k_selected": 4,
+  "kneedle_elbow": 5,
+  "k2_silhouette": 0.5072,
+  "k2_davies_bouldin": 0.8066,
+  "k4_silhouette": 0.1211,
+  "k4_davies_bouldin": 2.6079,
+  "cophenetic_correlation": 0.9066,
+  "kmeans_k_metrics": [
+    {
+      "k": 2,
+      "inertia": 14319.742368101484,
+      "silhouette": 0.5071608418128659,
+      "davies_bouldin": 0.8066260110914135,
+      "calinski_harabasz": 2869.590525590454,
+      "min_cluster_size": 932,
+      "max_cluster_size": 1068
+    },
+    {
+      "k": 3,
+      "inertia": 13361.231738522998,
+      "silhouette": 0.33751843811845866,
+      "davies_bouldin": 1.832750315245595,
+      "calinski_harabasz": 1608.5858374401832,
+      "min_cluster_size": 375,
+      "max_cluster_size": 1068
+    },
+    {
+      "k": 4,
+      "inertia": 12597.778405532525,
+      "silhouette": 0.12109575025524469,
+      "davies_bouldin": 2.6079365562973615,
+      "calinski_harabasz": 1177.1309389013966,
+      "min_cluster_size": 375,
+      "max_cluster_size": 557
+    },
+    {
+      "k": 5,
+      "inertia": 11808.05263239865,
+      "silhouette": 0.13018852714914067,
+      "davies_bouldin": 2.325173265498778,
+      "calinski_harabasz": 974.7779775697959,
+      "min_cluster_size": 87,
+      "max_cluster_size": 557
+    },
+    {
+      "k": 6,
+      "inertia": 11328.782684547756,
+      "silhouette": 0.11677209956189985,
+      "davies_bouldin": 2.2964399168489855,
+      "calinski_harabasz": 829.2771798255071,
+      "min_cluster_size": 87,
+      "max_cluster_size": 508
+    },
+    {
+      "k": 7,
+      "inertia": 10878.344510227229,
+      "silhouette": 0.11359276412460564,
+      "davies_bouldin": 2.191747473238281,
+      "calinski_harabasz": 733.0721843638263,
+      "min_cluster_size": 86,
+      "max_cluster_size": 385
+    },
+    {
+      "k": 8,
+      "inertia": 10515.118789402512,
+      "silhouette": 0.109108715605617,
+      "davies_bouldin": 2.0678427063234865,
+      "calinski_harabasz": 659.5565514434128,
+      "min_cluster_size": 32,
+      "max_cluster_size": 405
+    },
+    {
+      "k": 9,
+      "inertia": 10183.632269671918,
+      "silhouette": 0.10792833201271361,
+      "davies_bouldin": 2.055425419742134,
+      "calinski_harabasz": 603.6994669130876,
+      "min_cluster_size": 84,
+      "max_cluster_size": 305
+    },
+    {
+      "k": 10,
+      "inertia": 9866.804421894618,
+      "silhouette": 0.10919672057687614,
+      "davies_bouldin": 1.9432592128265154,
+      "calinski_harabasz": 560.6747375972027,
+      "min_cluster_size": 32,
+      "max_cluster_size": 320
+    },
+    {
+      "k": 11,
+      "inertia": 9635.05667004043,
+      "silhouette": 0.10660341509994509,
+      "davies_bouldin": 1.918556074336003,
+      "calinski_harabasz": 521.2687420220434,
+      "min_cluster_size": 32,
+      "max_cluster_size": 258
+    },
+    {
+      "k": 12,
+      "inertia": 9424.942196586755,
+      "silhouette": 0.10565969103284428,
+      "davies_bouldin": 1.9237950674469955,
+      "calinski_harabasz": 488.23058167267095,
+      "min_cluster_size": 32,
+      "max_cluster_size": 242
+    }
+  ],
+  "beta_calibration_grid": [
+    {
+      "beta": 0.1,
+      "mean_agreement_log_likelihood": -1.1682,
+      "mean_log_likelihood": -1.1682,
+      "ambiguity_pct": 100.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 0.3,
+      "mean_agreement_log_likelihood": -0.8734,
+      "mean_log_likelihood": -0.8734,
+      "ambiguity_pct": 90.15,
+      "is_chosen": false
+    },
+    {
+      "beta": 0.51,
+      "mean_agreement_log_likelihood": -0.7114,
+      "mean_log_likelihood": -0.7114,
+      "ambiguity_pct": 19.15,
+      "is_chosen": false
+    },
+    {
+      "beta": 0.71,
+      "mean_agreement_log_likelihood": -0.639,
+      "mean_log_likelihood": -0.639,
+      "ambiguity_pct": 4.4,
+      "is_chosen": false
+    },
+    {
+      "beta": 0.92,
+      "mean_agreement_log_likelihood": -0.6085,
+      "mean_log_likelihood": -0.6085,
+      "ambiguity_pct": 1.6,
+      "is_chosen": false
+    },
+    {
+      "beta": 1.12,
+      "mean_agreement_log_likelihood": -0.6021,
+      "mean_log_likelihood": -0.6021,
+      "ambiguity_pct": 0.55,
+      "is_chosen": true
+    },
+    {
+      "beta": 1.33,
+      "mean_agreement_log_likelihood": -0.6086,
+      "mean_log_likelihood": -0.6086,
+      "ambiguity_pct": 0.35,
+      "is_chosen": false
+    },
+    {
+      "beta": 1.53,
+      "mean_agreement_log_likelihood": -0.6223,
+      "mean_log_likelihood": -0.6223,
+      "ambiguity_pct": 0.1,
+      "is_chosen": false
+    },
+    {
+      "beta": 1.73,
+      "mean_agreement_log_likelihood": -0.641,
+      "mean_log_likelihood": -0.641,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 1.94,
+      "mean_agreement_log_likelihood": -0.6646,
+      "mean_log_likelihood": -0.6646,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 2.14,
+      "mean_agreement_log_likelihood": -0.69,
+      "mean_log_likelihood": -0.69,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 2.35,
+      "mean_agreement_log_likelihood": -0.7193,
+      "mean_log_likelihood": -0.7193,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 2.55,
+      "mean_agreement_log_likelihood": -0.7492,
+      "mean_log_likelihood": -0.7492,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 2.75,
+      "mean_agreement_log_likelihood": -0.781,
+      "mean_log_likelihood": -0.781,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 2.96,
+      "mean_agreement_log_likelihood": -0.8159,
+      "mean_log_likelihood": -0.8159,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 3.16,
+      "mean_agreement_log_likelihood": -0.8505,
+      "mean_log_likelihood": -0.8505,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 3.37,
+      "mean_agreement_log_likelihood": -0.8881,
+      "mean_log_likelihood": -0.8881,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 3.57,
+      "mean_agreement_log_likelihood": -0.925,
+      "mean_log_likelihood": -0.925,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 3.78,
+      "mean_agreement_log_likelihood": -0.9647,
+      "mean_log_likelihood": -0.9647,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 3.98,
+      "mean_agreement_log_likelihood": -1.0032,
+      "mean_log_likelihood": -1.0032,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 4.18,
+      "mean_agreement_log_likelihood": -1.0425,
+      "mean_log_likelihood": -1.0425,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 4.39,
+      "mean_agreement_log_likelihood": -1.0844,
+      "mean_log_likelihood": -1.0844,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 4.59,
+      "mean_agreement_log_likelihood": -1.1248,
+      "mean_log_likelihood": -1.1248,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 4.8,
+      "mean_agreement_log_likelihood": -1.1678,
+      "mean_log_likelihood": -1.1678,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    },
+    {
+      "beta": 5.0,
+      "mean_agreement_log_likelihood": -1.2092,
+      "mean_log_likelihood": -1.2092,
+      "ambiguity_pct": 0.0,
+      "is_chosen": false
+    }
+  ],
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": true,
+    "untested_assumptions_notice": "Model B3 selected per pre-registered decision rule; k=2 is strong macrostructure, k=4 is weak substructure.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

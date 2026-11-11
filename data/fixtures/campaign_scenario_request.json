@@ -1,0 +1,13 @@
+{
+  "total_budget_inr": 100000.0,
+  "channel_allocations": {
+    "Website": 0.50,
+    "Agency": 0.35,
+    "Client": 0.15
+  },
+  "channel_cpas_inr": {
+    "Website": 1200.0,
+    "Agency": 3500.0,
+    "Client": 1800.0
+  }
+}

@@ -109,3 +109,26 @@ class ScenarioResponse(BaseModel):
     channel_breakdown: dict[str, ChannelScenarioResult]
     active_filters: ActiveFilters
     metadata: ResponseMetadata
+
+
+
+class ScenarioCompareRequest(BaseModel):
+    """Payload to compare two distinct marketing budget allocation scenarios."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    scenario_a: ScenarioRequest
+    scenario_b: ScenarioRequest
+
+
+class ScenarioCompareResponse(BaseModel):
+    """Side-by-side comparison of two scenarios with differential ROI."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    scenario_a: ScenarioResponse
+    scenario_b: ScenarioResponse
+    budget_delta_inr: float
+    clients_delta: float
+    sales_delta_inr: float
+    incremental_roi: float

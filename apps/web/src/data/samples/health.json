@@ -1,0 +1,16 @@
+{
+  "status": "healthy",
+  "service": "Parcl Buyer Intelligence API",
+  "version": "1.2.0",
+  "environment": "development",
+  "currency": "INR",
+  "currency_symbol": "₹",
+  "reference_date": "2025-12-31",
+  "datasets": {
+    "clients_count": 2000,
+    "transactions_count": 7305,
+    "current_available_inventory": 313,
+    "towers_count": 20,
+    "as_of": "December 2025"
+  }
+}

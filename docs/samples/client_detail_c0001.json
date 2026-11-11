@@ -27,7 +27,8 @@
     "Cluster_2": 0.0044,
     "Cluster_3": 0.4812
   },
-  "is_ambiguous_boundary": true,
+  "is_ambiguous_boundary": false,
+  "is_ambiguous_margin": true,
   "transactions": [
     {
       "listing_id": 90343,

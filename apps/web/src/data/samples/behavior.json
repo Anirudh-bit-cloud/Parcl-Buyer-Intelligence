@@ -1,0 +1,115 @@
+{
+  "total_buyers_evaluated": 2000,
+  "acquisition_purpose_breakdown": [
+    {
+      "cohort_label": "HOME",
+      "buyer_count": 1385,
+      "share_pct": 69.25,
+      "mean_spend_inr": 1263587.55,
+      "mean_spend_display": "₹12,63,588",
+      "mean_units": 3.65,
+      "loan_rate": 0.3625
+    },
+    {
+      "cohort_label": "INVESTMENT",
+      "buyer_count": 615,
+      "share_pct": 30.75,
+      "mean_spend_inr": 1253141.79,
+      "mean_spend_display": "₹12,53,142",
+      "mean_units": 3.65,
+      "loan_rate": 0.3805
+    }
+  ],
+  "loan_application_breakdown": [
+    {
+      "cohort_label": "False",
+      "buyer_count": 1264,
+      "share_pct": 63.2,
+      "mean_spend_inr": 1260851.48,
+      "mean_spend_display": "₹12,60,851",
+      "mean_units": 3.66,
+      "loan_rate": 0.0
+    },
+    {
+      "cohort_label": "True",
+      "buyer_count": 736,
+      "share_pct": 36.8,
+      "mean_spend_inr": 1259558.0,
+      "mean_spend_display": "₹12,59,558",
+      "mean_units": 3.65,
+      "loan_rate": 1.0
+    }
+  ],
+  "client_type_breakdown": [
+    {
+      "cohort_label": "INDIVIDUAL",
+      "buyer_count": 1897,
+      "share_pct": 94.85,
+      "mean_spend_inr": 1260192.07,
+      "mean_spend_display": "₹12,60,192",
+      "mean_units": 3.65,
+      "loan_rate": 0.3653
+    },
+    {
+      "cohort_label": "COMPANY",
+      "buyer_count": 103,
+      "share_pct": 5.15,
+      "mean_spend_inr": 1263753.49,
+      "mean_spend_display": "₹12,63,753",
+      "mean_units": 3.7,
+      "loan_rate": 0.4175
+    }
+  ],
+  "referral_channel_breakdown": [
+    {
+      "cohort_label": "Website",
+      "buyer_count": 1103,
+      "share_pct": 55.15,
+      "mean_spend_inr": 1274770.93,
+      "mean_spend_display": "₹12,74,771",
+      "mean_units": 3.68,
+      "loan_rate": 0.3663
+    },
+    {
+      "cohort_label": "Agency",
+      "buyer_count": 705,
+      "share_pct": 35.25,
+      "mean_spend_inr": 1243488.9,
+      "mean_spend_display": "₹12,43,489",
+      "mean_units": 3.61,
+      "loan_rate": 0.366
+    },
+    {
+      "cohort_label": "Client",
+      "buyer_count": 192,
+      "share_pct": 9.6,
+      "mean_spend_inr": 1239682.03,
+      "mean_spend_display": "₹12,39,682",
+      "mean_units": 3.63,
+      "loan_rate": 0.3854
+    }
+  ],
+  "commercial_office_vs_residential": {
+    "pure_residential_buyers": 1105,
+    "pure_residential_share_pct": 55.25,
+    "commercial_office_allocators": 895,
+    "commercial_office_share_pct": 44.75
+  },
+  "active_filters": {
+    "country": null,
+    "region": null,
+    "acquisition_purpose": null,
+    "client_type": null,
+    "assigned_cluster": null
+  },
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": false,
+    "untested_assumptions_notice": "Behavioral cross-tabulations computed directly from active microdata cohort.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

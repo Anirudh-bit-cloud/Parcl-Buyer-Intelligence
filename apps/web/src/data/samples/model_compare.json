@@ -1,0 +1,65 @@
+{
+  "evaluated_variants": [
+    {
+      "variant_name": "Model_A_PRD_Baseline",
+      "feature_dimensions": 76,
+      "silhouette_k4": 0.1332,
+      "davies_bouldin_k4": 1.8925,
+      "calinski_harabasz_k4": 345.34,
+      "stability_mean_ari": 0.783,
+      "is_production_choice": false,
+      "selection_verdict": "REJECTED (Uninformative PRD fields, no portfolio signal)"
+    },
+    {
+      "variant_name": "Model_B1_Full_With_Sat",
+      "feature_dimensions": 85,
+      "silhouette_k4": 0.0984,
+      "davies_bouldin_k4": 3.451,
+      "calinski_harabasz_k4": 954.12,
+      "stability_mean_ari": 0.684,
+      "is_production_choice": false,
+      "selection_verdict": "REJECTED (Noise penalty: includes non-informative satisfaction)"
+    },
+    {
+      "variant_name": "Model_B2_Purged_Satisfaction",
+      "feature_dimensions": 84,
+      "silhouette_k4": 0.1054,
+      "davies_bouldin_k4": 3.3039,
+      "calinski_harabasz_k4": 988.45,
+      "stability_mean_ari": 0.721,
+      "is_production_choice": false,
+      "selection_verdict": "PASSES FILTERS, but dominated by Model B3"
+    },
+    {
+      "variant_name": "Model_B3_Downweighted_Geo",
+      "feature_dimensions": 84,
+      "silhouette_k4": 0.1211,
+      "davies_bouldin_k4": 2.6079,
+      "calinski_harabasz_k4": 1177.13,
+      "stability_mean_ari": 0.773,
+      "is_production_choice": true,
+      "selection_verdict": "SELECTED PRODUCTION MODEL"
+    },
+    {
+      "variant_name": "Model_B4_Pure_Behavior_No_Geo",
+      "feature_dimensions": 17,
+      "silhouette_k4": 0.1275,
+      "davies_bouldin_k4": 2.5324,
+      "calinski_harabasz_k4": 1239.69,
+      "stability_mean_ari": 0.7977,
+      "is_production_choice": false,
+      "selection_verdict": "BEST MATHEMATICAL SCORES, Excluded for discarding regional demand"
+    }
+  ],
+  "justification_summary": "Model B3 downweights geographic one-hot indicators by 0.5x, achieving stable separation (DB=2.6079, ARI=0.7730) while preserving critical regional provenance without spatial dominance.",
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": true,
+    "untested_assumptions_notice": "All variants evaluated under identical random seed and pre-registered metric battery.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

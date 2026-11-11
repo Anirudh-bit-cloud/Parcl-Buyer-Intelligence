@@ -1,0 +1,24 @@
+{
+  "predicted_segment_id": 2,
+  "predicted_segment_name": "Commercial Office Diversifiers",
+  "calibrated_soft_probabilities": {
+    "Cluster_0": 0.0034,
+    "Cluster_1": 0.3222,
+    "Cluster_2": 0.6726,
+    "Cluster_3": 0.0018
+  },
+  "temperature_beta": 1.12,
+  "is_ambiguous_prediction": false,
+  "is_ambiguous_margin": false,
+  "portfolio_requirement_rationale": "Model B3 requires portfolio inputs (n_units, office_share, tower HHI, purchase_span_months) because the underlying clustering model was trained on these behavioral and portfolio architecture features.",
+  "metadata": {
+    "as_of": "December 2025",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "is_unfiltered_model_space": true,
+    "untested_assumptions_notice": "Calibrated centroid-softmax temperature beta=1.00; soft behavioral tendencies framing; classification requires behavioral portfolio attributes.",
+    "notices": [
+      "Monetary figures in INR (₹). Currency is a labeling convention and is independent of country."
+    ]
+  }
+}

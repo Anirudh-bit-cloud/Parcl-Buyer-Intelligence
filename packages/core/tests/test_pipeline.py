@@ -39,17 +39,23 @@ def test_evaluate_dob_sensitivity() -> None:
     assert 0.85 <= res["max_fractional_age_diff_years"] <= 0.90
 
 
-def test_run_phase_1_execution(tmp_path: Path) -> None:
-    """Test end-to-end Phase 1 execution produces all expected artifacts."""
+def test_run_phase_1_execution(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """Test end-to-end Phase 1 execution produces all expected artifacts in temp dir."""
+    from parcl_core.config import settings
+
+    monkeypatch.setattr(settings, "interim_data_dir", tmp_path / "interim")
+    monkeypatch.setattr(settings, "processed_data_dir", tmp_path / "processed")
     outputs = run_phase_1()
     for _key, file_path in outputs.items():
         assert Path(file_path).exists(), f"Output file missing: {file_path}"
 
 
-def test_run_phase_2_execution(tmp_path: Path) -> None:
-    """Test end-to-end Phase 2 execution produces features and bivariate outputs."""
+def test_run_phase_2_execution(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """Test end-to-end Phase 2 execution produces features and bivariate outputs in temp dir."""
+    from parcl_core.config import settings
     from parcl_core.pipeline import run_phase_2
 
+    monkeypatch.setattr(settings, "processed_data_dir", tmp_path / "processed")
     outputs = run_phase_2()
     for _key, file_path in outputs.items():
         assert Path(file_path).exists(), f"Output file missing: {file_path}"

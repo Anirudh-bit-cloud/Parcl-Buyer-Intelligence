@@ -1,5 +1,7 @@
 """Pytest configuration and test client fixture for FastAPI app."""
 
+from collections.abc import Generator
+
 import pytest
 from fastapi.testclient import TestClient
 
@@ -14,7 +16,7 @@ def reset_rate_limits() -> None:
 
 
 @pytest.fixture(scope="session")
-def client() -> TestClient:
+def client() -> Generator[TestClient, None, None]:
     """Session-scoped test client for FastAPI application."""
     with TestClient(app) as test_client:
         yield test_client

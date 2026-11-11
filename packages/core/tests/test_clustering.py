@@ -1,5 +1,7 @@
 """Unit and regression tests for Phase 3: Clustering, selection, stability, and auto-naming."""
 
+from pathlib import Path
+
 import numpy as np
 import pytest
 from parcl_core.clustering.gmm import fit_gmm
@@ -77,8 +79,17 @@ def test_prd_truth_matrix() -> None:
     assert cluster_ids == ["C1", "C2", "C3", "C4"]
 
 
-def test_run_phase_3_execution() -> None:
-    """Test end-to-end Phase 3 execution produces models and metrics."""
+def test_run_phase_3_execution(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """Test end-to-end Phase 3 execution produces models and metrics into isolated temp dir."""
+    from parcl_core.config import settings
+
+    models_dir = tmp_path / "models"
+    interim_dir = tmp_path / "interim"
+    models_dir.mkdir(parents=True, exist_ok=True)
+    interim_dir.mkdir(parents=True, exist_ok=True)
+
+    monkeypatch.setattr(settings, "models_dir", models_dir)
+    monkeypatch.setattr(settings, "interim_data_dir", interim_dir)
     res = run_phase_3()
     assert "models_bundle" in res
     assert "metrics_json" in res

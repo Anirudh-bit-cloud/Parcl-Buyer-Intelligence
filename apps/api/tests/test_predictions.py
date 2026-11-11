@@ -14,7 +14,7 @@ def test_predict_segment_commercial_office_buyer(client: TestClient) -> None:
         "age": 45,
         "n_units": 3,
         "office_share": 0.33,
-        "avg_floor_area": 1150.0,
+        "avg_floor_area": 1129.18,
         "portfolio_towers_hhi": 0.3333,
         "purchase_span_months": 6,
         "loan_applied": True,

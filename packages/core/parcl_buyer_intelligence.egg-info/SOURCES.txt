@@ -4,7 +4,11 @@ packages/core/parcl_buyer_intelligence.egg-info/SOURCES.txt
 packages/core/parcl_buyer_intelligence.egg-info/dependency_links.txt
 packages/core/parcl_buyer_intelligence.egg-info/requires.txt
 packages/core/parcl_buyer_intelligence.egg-info/top_level.txt
+packages/core/parcl_buyer_intelligence.egg-info/PKG-INFO
 packages/core/parcl_buyer_intelligence.egg-info/SOURCES.txt
+packages/core/parcl_buyer_intelligence.egg-info/dependency_links.txt
+packages/core/parcl_buyer_intelligence.egg-info/requires.txt
+packages/core/parcl_buyer_intelligence.egg-info/top_level.txt
 packages/core/parcl_core/__init__.py
 packages/core/parcl_core/cleaning.py
 packages/core/parcl_core/config.py

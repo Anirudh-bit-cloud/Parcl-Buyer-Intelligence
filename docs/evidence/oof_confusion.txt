@@ -1,0 +1,16 @@
+Out-of-Fold Confusion Matrix (Rows: Production Label, Columns: Fold Prediction):
+                Fold_Pred_0  Fold_Pred_1  Fold_Pred_2  Fold_Pred_3  Row_Total
+Prod_Cluster_0          501            0            0           35        536
+Prod_Cluster_1            0          557            0            0        557
+Prod_Cluster_2            0            0          375            0        375
+Prod_Cluster_3          249            0            0          283        532
+           Fold_Pred_0  Fold_Pred_1  Fold_Pred_2  Fold_Pred_3  Row_Total
+Col_Total          750          557          375          318       2000
+
+Overall Out-of-Fold Agreement: 85.8000%
+
+Per-Cluster Concordance & Precision:
+Cluster 0: Concordant=501/536 (93.4701%), Precision=501/750 (66.8000%)
+Cluster 1: Concordant=557/557 (100.0000%), Precision=557/557 (100.0000%)
+Cluster 2: Concordant=375/375 (100.0000%), Precision=375/375 (100.0000%)
+Cluster 3: Concordant=283/532 (53.1955%), Precision=283/318 (88.9937%)

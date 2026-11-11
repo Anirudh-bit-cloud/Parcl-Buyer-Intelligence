@@ -1,6 +1,8 @@
-"""Pydantic v2 schemas for filtered dataset export."""
+"""Pydantic v2 schemas for filtered dataset export and asynchronous export jobs."""
 
-from pydantic import BaseModel, ConfigDict, Field
+from __future__ import annotations
+
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from apps.api.schemas.common import ActiveFilters, ResponseMetadata
 
@@ -39,3 +41,37 @@ class ExportResponse(BaseModel):
     data: list[ExportClientRecord]
     active_filters: ActiveFilters
     metadata: ResponseMetadata
+
+
+class ExportJobCreateRequest(BaseModel):
+    """Payload for submitting an asynchronous export job."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    format: str = Field(default="csv", description="Export file format: 'csv' or 'json'.")
+    country: str | None = None
+    region: str | None = None
+    acquisition_purpose: str | None = None
+    client_type: str | None = None
+    assigned_cluster: int | None = Field(default=None, ge=0, le=3)
+
+    @field_validator("format")
+    @classmethod
+    def validate_format(cls, v: str) -> str:
+        if v.lower() not in ["csv", "json"]:
+            raise ValueError(f"Unsupported export format '{v}'. Supported formats: 'csv', 'json'.")
+        return v.lower()
+
+
+class ExportJobResponse(BaseModel):
+    """Status and metadata for an asynchronous export job."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    job_id: str
+    status: str
+    format: str
+    created_at: str
+    record_count: int
+    download_url: str | None = None
+    error_message: str | None = None

@@ -1,7 +1,7 @@
 {
   "segment_id": 2,
   "segment_name": "Commercial Office Diversifiers",
-  "persona_description": "Specialized commercial allocators dedicating significant portfolio capital (37.8% office share) to workplace suites.",
+  "persona_description": "Specialized commercial allocators dedicating significant portfolio capital (37.78% office share) to workplace suites.",
   "buyer_count": 375,
   "population_share_pct": 100.0,
   "mean_spend_inr": 1100608.39,
@@ -9,7 +9,7 @@
   "total_spend_inr": 412728147.48,
   "total_spend_display": "₹41,27,28,147",
   "mean_units": 3.0,
-  "commercial_office_share_pct": 37.8,
+  "commercial_office_share_pct": 37.78,
   "numeric_metrics": {
     "age": {
       "mean": 55.1947,

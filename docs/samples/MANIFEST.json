@@ -1,402 +1,533 @@
 {
   "generator_command": "python scripts/generate_samples.py",
-  "git_commit": "4a35b9dfa713307ae385c59d17aa8cfbe5ab18a5",
-  "timestamp_utc": "2026-11-01T19:50:20.744063+00:00",
+  "git_commit": "b9fba2e37d311f8910c95b0691cccc799860bf04",
+  "timestamp_utc": "2026-11-01T21:49:34.813167+00:00",
   "canonical_route_count": 23,
-  "total_sample_files": 26,
+  "total_sample_files": 27,
   "canonical_23_routes": [
     {
       "index": 1,
       "name": "root",
-      "route": "/",
+      "route_key": "/",
+      "route_path": "/",
       "method": "GET",
       "file": "root.json",
-      "sha256": "3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1"
+      "file_path": "docs/samples/root.json",
+      "sha256": "3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1",
+      "byte_size": 244
     },
     {
       "index": 2,
       "name": "api_v1",
-      "route": "/api/v1",
+      "route_key": "/api/v1",
+      "route_path": "/api/v1",
       "method": "GET",
       "file": "api_v1.json",
-      "sha256": "3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1"
+      "file_path": "docs/samples/api_v1.json",
+      "sha256": "3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1",
+      "byte_size": 244
     },
     {
       "index": 3,
       "name": "health",
-      "route": "/api/v1/health",
+      "route_key": "/api/v1/health",
+      "route_path": "/api/v1/health",
       "method": "GET",
       "file": "health.json",
-      "sha256": "ddb7adb4278d5b2f70c01ed9b1103c3a593dcb835b63bd1b40b34ed05f364b14"
+      "file_path": "docs/samples/health.json",
+      "sha256": "ddb7adb4278d5b2f70c01ed9b1103c3a593dcb835b63bd1b40b34ed05f364b14",
+      "byte_size": 380
     },
     {
       "index": 4,
       "name": "meta_filters",
-      "route": "/api/v1/meta/filters",
+      "route_key": "/api/v1/meta/filters",
+      "route_path": "/api/v1/meta/filters",
       "method": "GET",
       "file": "meta_filters.json",
-      "sha256": "b49c367efd1335fce550bb6a84cbae8c7a674e0acd4b943c1906d10f0933dfff"
+      "file_path": "docs/samples/meta_filters.json",
+      "sha256": "b49c367efd1335fce550bb6a84cbae8c7a674e0acd4b943c1906d10f0933dfff",
+      "byte_size": 7752
     },
     {
       "index": 5,
       "name": "overview",
-      "route": "/api/v1/overview",
+      "route_key": "/api/v1/overview",
+      "route_path": "/api/v1/overview",
       "method": "GET",
       "file": "overview.json",
-      "sha256": "a5c2dd89c12636efb2bcb7bef9ac5f724b1fc2c65f03de27dd6e631c2a50db0c"
+      "file_path": "docs/samples/overview.json",
+      "sha256": "a5c2dd89c12636efb2bcb7bef9ac5f724b1fc2c65f03de27dd6e631c2a50db0c",
+      "byte_size": 2486
     },
     {
       "index": 6,
       "name": "clients",
-      "route": "/api/v1/clients?page=1&page_size=5",
+      "route_key": "/api/v1/clients",
+      "route_path": "/api/v1/clients?page=1&page_size=5",
       "method": "GET",
       "file": "clients.json",
-      "sha256": "d95b0925f9770b1ce26ccf6aad92089d006af5fb9667c69c673fddf2e794965c"
+      "file_path": "docs/samples/clients.json",
+      "sha256": "d95b0925f9770b1ce26ccf6aad92089d006af5fb9667c69c673fddf2e794965c",
+      "byte_size": 3347
     },
     {
       "index": 7,
       "name": "client_detail_c0001",
-      "route": "/api/v1/clients/C0001",
+      "route_key": "/api/v1/clients/C0001",
+      "route_path": "/api/v1/clients/C0001",
       "method": "GET",
       "file": "client_detail_c0001.json",
-      "sha256": "c1d7688d0c83e1304f4e7e4d5651285081d151131b495d1d992803681f24512a"
+      "file_path": "docs/samples/client_detail_c0001.json",
+      "sha256": "59d0f998cdd5387bbf388ebe29cef9992265cb7fd9db280716a89a1f8ac23cbe",
+      "byte_size": 2333
     },
     {
       "index": 8,
       "name": "segments_catalog",
-      "route": "/api/v1/segments",
+      "route_key": "/api/v1/segments",
+      "route_path": "/api/v1/segments",
       "method": "GET",
       "file": "segments_catalog.json",
-      "sha256": "71c503ba8d0fe85a6e93b7605a41562657898ccaa782e637c03693d0d059618f"
+      "file_path": "docs/samples/segments_catalog.json",
+      "sha256": "a5f34f08e2eb86842108d9b65cde38a11e236d5379d46cee7a9e60638a1ffb30",
+      "byte_size": 4079
     },
     {
       "index": 9,
       "name": "segment_detail_cluster_2",
-      "route": "/api/v1/segments/2",
+      "route_key": "/api/v1/segments/2",
+      "route_path": "/api/v1/segments/2",
       "method": "GET",
       "file": "segment_detail_cluster_2.json",
-      "sha256": "a2aed76acbd25c50e4f31c8fa61b0af1841916111167f6c102b32b3cd85ea116"
+      "file_path": "docs/samples/segment_detail_cluster_2.json",
+      "sha256": "eefc8f722746924056338f8828fea434a0cb14aaa9b495551eef8f6e5c246166",
+      "byte_size": 3844
     },
     {
       "index": 10,
       "name": "behavior",
-      "route": "/api/v1/behavior",
+      "route_key": "/api/v1/behavior",
+      "route_path": "/api/v1/behavior",
       "method": "GET",
       "file": "behavior.json",
-      "sha256": "4f709c4c77489f2fdc8c61ef7c677a2a8f3da8d1d1db828aa3bb6358d38719d8"
+      "file_path": "docs/samples/behavior.json",
+      "sha256": "4f709c4c77489f2fdc8c61ef7c677a2a8f3da8d1d1db828aa3bb6358d38719d8",
+      "byte_size": 2987
     },
     {
       "index": 11,
       "name": "geo",
-      "route": "/api/v1/geo",
+      "route_key": "/api/v1/geo",
+      "route_path": "/api/v1/geo",
       "method": "GET",
       "file": "geo.json",
-      "sha256": "a2da1fa9a08174f563445ccbc4bb4309daa3f304cf48035c0cf0cd9dbb26b784"
+      "file_path": "docs/samples/geo.json",
+      "sha256": "a2da1fa9a08174f563445ccbc4bb4309daa3f304cf48035c0cf0cd9dbb26b784",
+      "byte_size": 5893
     },
     {
       "index": 12,
       "name": "towers",
-      "route": "/api/v1/towers",
+      "route_key": "/api/v1/towers",
+      "route_path": "/api/v1/towers",
       "method": "GET",
       "file": "towers.json",
-      "sha256": "1d59e28ede371fb0b30885969bcba90b6f54bc8189a76ae8ddee9b42358f66de"
+      "file_path": "docs/samples/towers.json",
+      "sha256": "1d59e28ede371fb0b30885969bcba90b6f54bc8189a76ae8ddee9b42358f66de",
+      "byte_size": 9918
     },
     {
       "index": 13,
       "name": "opportunities_segment_2_office",
-      "route": "/api/v1/recommendations/opportunities?segment_id=2&category_filter=Office&limit=5",
+      "route_key": "/api/v1/recommendations/opportunities",
+      "route_path": "/api/v1/recommendations/opportunities?segment_id=2&category_filter=Office&limit=5",
       "method": "GET",
       "file": "opportunities_segment_2_office.json",
-      "sha256": "31d249a02f458b736c3c345dcd3187f088230e77d325042c15209b85e1df4132"
+      "file_path": "docs/samples/opportunities_segment_2_office.json",
+      "sha256": "31d249a02f458b736c3c345dcd3187f088230e77d325042c15209b85e1df4132",
+      "byte_size": 2997
     },
     {
       "index": 14,
       "name": "nbo_c0001",
-      "route": "/api/v1/recommendations/nbo/C0001?top_n=5",
+      "route_key": "/api/v1/recommendations/nbo/C0001",
+      "route_path": "/api/v1/recommendations/nbo/C0001?top_n=5",
       "method": "GET",
       "file": "nbo_c0001.json",
-      "sha256": "4d1f4c026be1fde77ace834b94e2cc9f91a1466c5f46e4c4090166f46a861def"
+      "file_path": "docs/samples/nbo_c0001.json",
+      "sha256": "4d1f4c026be1fde77ace834b94e2cc9f91a1466c5f46e4c4090166f46a861def",
+      "byte_size": 4278
     },
     {
       "index": 15,
       "name": "campaign_scenario",
-      "route": "/api/v1/campaigns/scenario",
+      "route_key": "/api/v1/campaigns/scenario",
+      "route_path": "/api/v1/campaigns/scenario",
       "method": "POST",
       "file": "campaign_scenario.json",
-      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a"
+      "file_path": "docs/samples/campaign_scenario.json",
+      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a",
+      "byte_size": 4020
     },
     {
       "index": 16,
       "name": "campaign_allocate",
-      "route": "/api/v1/campaigns/allocate",
+      "route_key": "/api/v1/campaigns/allocate",
+      "route_path": "/api/v1/campaigns/allocate",
       "method": "POST",
       "file": "campaign_allocate.json",
-      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a"
+      "file_path": "docs/samples/campaign_allocate.json",
+      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a",
+      "byte_size": 4020
     },
     {
       "index": 17,
       "name": "campaign_simulate",
-      "route": "/api/v1/campaigns/simulate",
+      "route_key": "/api/v1/campaigns/simulate",
+      "route_path": "/api/v1/campaigns/simulate",
       "method": "POST",
       "file": "campaign_simulate.json",
-      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a"
+      "file_path": "docs/samples/campaign_simulate.json",
+      "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a",
+      "byte_size": 4020
     },
     {
       "index": 18,
       "name": "predict_segment",
-      "route": "/api/v1/predict/segment",
+      "route_key": "/api/v1/predict/segment",
+      "route_path": "/api/v1/predict/segment",
       "method": "POST",
       "file": "predict_segment.json",
-      "sha256": "7eb3f2fec5a5d33b0a0f3396b4f55ffdcac7924b793962489f6ff457951ea69c"
+      "file_path": "docs/samples/predict_segment.json",
+      "sha256": "7d2dd097b4d3878b98ab06d3ea94e9ac0d68b7943de246f5f5ce0cbb90b3e2d0",
+      "byte_size": 1023
     },
     {
       "index": 19,
       "name": "model_selection",
-      "route": "/api/v1/model/selection",
+      "route_key": "/api/v1/model/selection",
+      "route_path": "/api/v1/model/selection",
       "method": "GET",
       "file": "model_selection.json",
-      "sha256": "1b327b7c90ebf3597e28661ee2b3e5626f55a0b77b0cf5c77d11727514ec0771"
+      "file_path": "docs/samples/model_selection.json",
+      "sha256": "496cd53792717ff41d351af40bae658bc6a34dab45c676039fc3d757c225619d",
+      "byte_size": 7819
     },
     {
       "index": 20,
       "name": "model_compare",
-      "route": "/api/v1/model/compare",
+      "route_key": "/api/v1/model/compare",
+      "route_path": "/api/v1/model/compare",
       "method": "GET",
       "file": "model_compare.json",
-      "sha256": "d0a70b7c48fa275fa0d3e567e13e76fc590e935839dfe5dce1ee27fea9bd2c21"
+      "file_path": "docs/samples/model_compare.json",
+      "sha256": "d0a70b7c48fa275fa0d3e567e13e76fc590e935839dfe5dce1ee27fea9bd2c21",
+      "byte_size": 2401
     },
     {
       "index": 21,
       "name": "data_quality",
-      "route": "/api/v1/governance/data-quality",
+      "route_key": "/api/v1/governance/data-quality",
+      "route_path": "/api/v1/governance/data-quality",
       "method": "GET",
       "file": "data_quality.json",
-      "sha256": "a4e5e0aa92c2c5b7fb7a99df47789e0b17d23af77e45c9cb542a6f5d5ce5b00b"
+      "file_path": "docs/samples/data_quality.json",
+      "sha256": "a4e5e0aa92c2c5b7fb7a99df47789e0b17d23af77e45c9cb542a6f5d5ce5b00b",
+      "byte_size": 1896
     },
     {
       "index": 22,
       "name": "model_card",
-      "route": "/api/v1/governance/model-card",
+      "route_key": "/api/v1/governance/model-card",
+      "route_path": "/api/v1/governance/model-card",
       "method": "GET",
       "file": "model_card.json",
-      "sha256": "8978d3e9328359c0de5f294b961b2f2e729d3d70ba8a74e58bff46774484fdeb"
+      "file_path": "docs/samples/model_card.json",
+      "sha256": "8978d3e9328359c0de5f294b961b2f2e729d3d70ba8a74e58bff46774484fdeb",
+      "byte_size": 7907
     },
     {
       "index": 23,
       "name": "projection",
-      "route": "/api/v1/projection",
+      "route_key": "/api/v1/projection",
+      "route_path": "/api/v1/projection",
       "method": "GET",
       "file": "projection.json",
-      "sha256": "29b409626a290e0ba0984da48a266171f1d01ca386c907ce56be487f1916d584"
+      "file_path": "docs/samples/projection.json",
+      "sha256": "29b409626a290e0ba0984da48a266171f1d01ca386c907ce56be487f1916d584",
+      "byte_size": 643598
     }
   ],
-  "all_samples": {
-    "root": {
+  "samples": {
+    "/": {
+      "route_key": "/",
       "route_path": "/",
       "http_method": "GET",
+      "file_path": "docs/samples/root.json",
       "filename": "root.json",
       "sha256": "3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1",
       "byte_size": 244,
       "is_canonical_23_route": true
     },
-    "api_v1": {
+    "/api/v1": {
+      "route_key": "/api/v1",
       "route_path": "/api/v1",
       "http_method": "GET",
+      "file_path": "docs/samples/api_v1.json",
       "filename": "api_v1.json",
       "sha256": "3e3f45cabe758eb371d6b8c684644f8c79e3a1688f26fa6b6fc83d207fc440a1",
       "byte_size": 244,
       "is_canonical_23_route": true
     },
-    "health": {
+    "/api/v1/health": {
+      "route_key": "/api/v1/health",
       "route_path": "/api/v1/health",
       "http_method": "GET",
+      "file_path": "docs/samples/health.json",
       "filename": "health.json",
       "sha256": "ddb7adb4278d5b2f70c01ed9b1103c3a593dcb835b63bd1b40b34ed05f364b14",
       "byte_size": 380,
       "is_canonical_23_route": true
     },
-    "meta_filters": {
+    "/api/v1/meta/filters": {
+      "route_key": "/api/v1/meta/filters",
       "route_path": "/api/v1/meta/filters",
       "http_method": "GET",
+      "file_path": "docs/samples/meta_filters.json",
       "filename": "meta_filters.json",
       "sha256": "b49c367efd1335fce550bb6a84cbae8c7a674e0acd4b943c1906d10f0933dfff",
       "byte_size": 7752,
       "is_canonical_23_route": true
     },
-    "overview": {
+    "/api/v1/overview": {
+      "route_key": "/api/v1/overview",
       "route_path": "/api/v1/overview",
       "http_method": "GET",
+      "file_path": "docs/samples/overview.json",
       "filename": "overview.json",
       "sha256": "a5c2dd89c12636efb2bcb7bef9ac5f724b1fc2c65f03de27dd6e631c2a50db0c",
       "byte_size": 2486,
       "is_canonical_23_route": true
     },
-    "clients": {
+    "/api/v1/clients": {
+      "route_key": "/api/v1/clients",
       "route_path": "/api/v1/clients?page=1&page_size=5",
       "http_method": "GET",
+      "file_path": "docs/samples/clients.json",
       "filename": "clients.json",
       "sha256": "d95b0925f9770b1ce26ccf6aad92089d006af5fb9667c69c673fddf2e794965c",
       "byte_size": 3347,
       "is_canonical_23_route": true
     },
-    "client_detail_c0001": {
+    "/api/v1/clients/C0001": {
+      "route_key": "/api/v1/clients/C0001",
       "route_path": "/api/v1/clients/C0001",
       "http_method": "GET",
+      "file_path": "docs/samples/client_detail_c0001.json",
       "filename": "client_detail_c0001.json",
-      "sha256": "c1d7688d0c83e1304f4e7e4d5651285081d151131b495d1d992803681f24512a",
-      "byte_size": 2301,
+      "sha256": "59d0f998cdd5387bbf388ebe29cef9992265cb7fd9db280716a89a1f8ac23cbe",
+      "byte_size": 2333,
       "is_canonical_23_route": true
     },
-    "segments_catalog": {
+    "/api/v1/segments": {
+      "route_key": "/api/v1/segments",
       "route_path": "/api/v1/segments",
       "http_method": "GET",
+      "file_path": "docs/samples/segments_catalog.json",
       "filename": "segments_catalog.json",
-      "sha256": "71c503ba8d0fe85a6e93b7605a41562657898ccaa782e637c03693d0d059618f",
-      "byte_size": 4073,
+      "sha256": "a5f34f08e2eb86842108d9b65cde38a11e236d5379d46cee7a9e60638a1ffb30",
+      "byte_size": 4079,
       "is_canonical_23_route": true
     },
-    "segment_detail_cluster_2": {
+    "/api/v1/segments/2": {
+      "route_key": "/api/v1/segments/2",
       "route_path": "/api/v1/segments/2",
       "http_method": "GET",
+      "file_path": "docs/samples/segment_detail_cluster_2.json",
       "filename": "segment_detail_cluster_2.json",
-      "sha256": "a2aed76acbd25c50e4f31c8fa61b0af1841916111167f6c102b32b3cd85ea116",
-      "byte_size": 3842,
+      "sha256": "eefc8f722746924056338f8828fea434a0cb14aaa9b495551eef8f6e5c246166",
+      "byte_size": 3844,
       "is_canonical_23_route": true
     },
-    "behavior": {
+    "/api/v1/behavior": {
+      "route_key": "/api/v1/behavior",
       "route_path": "/api/v1/behavior",
       "http_method": "GET",
+      "file_path": "docs/samples/behavior.json",
       "filename": "behavior.json",
       "sha256": "4f709c4c77489f2fdc8c61ef7c677a2a8f3da8d1d1db828aa3bb6358d38719d8",
       "byte_size": 2987,
       "is_canonical_23_route": true
     },
-    "geo": {
+    "/api/v1/geo": {
+      "route_key": "/api/v1/geo",
       "route_path": "/api/v1/geo",
       "http_method": "GET",
+      "file_path": "docs/samples/geo.json",
       "filename": "geo.json",
       "sha256": "a2da1fa9a08174f563445ccbc4bb4309daa3f304cf48035c0cf0cd9dbb26b784",
       "byte_size": 5893,
       "is_canonical_23_route": true
     },
-    "towers": {
+    "/api/v1/towers": {
+      "route_key": "/api/v1/towers",
       "route_path": "/api/v1/towers",
       "http_method": "GET",
+      "file_path": "docs/samples/towers.json",
       "filename": "towers.json",
       "sha256": "1d59e28ede371fb0b30885969bcba90b6f54bc8189a76ae8ddee9b42358f66de",
       "byte_size": 9918,
       "is_canonical_23_route": true
     },
-    "opportunities_segment_2_office": {
+    "/api/v1/recommendations/opportunities": {
+      "route_key": "/api/v1/recommendations/opportunities",
       "route_path": "/api/v1/recommendations/opportunities?segment_id=2&category_filter=Office&limit=5",
       "http_method": "GET",
+      "file_path": "docs/samples/opportunities_segment_2_office.json",
       "filename": "opportunities_segment_2_office.json",
       "sha256": "31d249a02f458b736c3c345dcd3187f088230e77d325042c15209b85e1df4132",
       "byte_size": 2997,
       "is_canonical_23_route": true
     },
-    "nbo_c0001": {
+    "/api/v1/recommendations/nbo/C0001": {
+      "route_key": "/api/v1/recommendations/nbo/C0001",
       "route_path": "/api/v1/recommendations/nbo/C0001?top_n=5",
       "http_method": "GET",
+      "file_path": "docs/samples/nbo_c0001.json",
       "filename": "nbo_c0001.json",
       "sha256": "4d1f4c026be1fde77ace834b94e2cc9f91a1466c5f46e4c4090166f46a861def",
       "byte_size": 4278,
       "is_canonical_23_route": true
     },
-    "campaign_scenario": {
+    "/api/v1/campaigns/scenario": {
+      "route_key": "/api/v1/campaigns/scenario",
       "route_path": "/api/v1/campaigns/scenario",
       "http_method": "POST",
+      "file_path": "docs/samples/campaign_scenario.json",
       "filename": "campaign_scenario.json",
       "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a",
       "byte_size": 4020,
       "is_canonical_23_route": true
     },
-    "campaign_allocate": {
+    "/api/v1/campaigns/allocate": {
+      "route_key": "/api/v1/campaigns/allocate",
       "route_path": "/api/v1/campaigns/allocate",
       "http_method": "POST",
+      "file_path": "docs/samples/campaign_allocate.json",
       "filename": "campaign_allocate.json",
       "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a",
       "byte_size": 4020,
       "is_canonical_23_route": true
     },
-    "campaign_simulate": {
+    "/api/v1/campaigns/simulate": {
+      "route_key": "/api/v1/campaigns/simulate",
       "route_path": "/api/v1/campaigns/simulate",
       "http_method": "POST",
+      "file_path": "docs/samples/campaign_simulate.json",
       "filename": "campaign_simulate.json",
       "sha256": "fa7f6e22add9827f120d2b6222af4b0b07ccb4b5a002d697a61495ec5e9f044a",
       "byte_size": 4020,
       "is_canonical_23_route": true
     },
-    "predict_segment": {
+    "/api/v1/predict/segment": {
+      "route_key": "/api/v1/predict/segment",
       "route_path": "/api/v1/predict/segment",
       "http_method": "POST",
+      "file_path": "docs/samples/predict_segment.json",
       "filename": "predict_segment.json",
-      "sha256": "7eb3f2fec5a5d33b0a0f3396b4f55ffdcac7924b793962489f6ff457951ea69c",
-      "byte_size": 991,
+      "sha256": "7d2dd097b4d3878b98ab06d3ea94e9ac0d68b7943de246f5f5ce0cbb90b3e2d0",
+      "byte_size": 1023,
       "is_canonical_23_route": true
     },
-    "model_selection": {
+    "/api/v1/model/selection": {
+      "route_key": "/api/v1/model/selection",
       "route_path": "/api/v1/model/selection",
       "http_method": "GET",
+      "file_path": "docs/samples/model_selection.json",
       "filename": "model_selection.json",
-      "sha256": "1b327b7c90ebf3597e28661ee2b3e5626f55a0b77b0cf5c77d11727514ec0771",
-      "byte_size": 7820,
+      "sha256": "496cd53792717ff41d351af40bae658bc6a34dab45c676039fc3d757c225619d",
+      "byte_size": 7819,
       "is_canonical_23_route": true
     },
-    "model_compare": {
+    "/api/v1/model/compare": {
+      "route_key": "/api/v1/model/compare",
       "route_path": "/api/v1/model/compare",
       "http_method": "GET",
+      "file_path": "docs/samples/model_compare.json",
       "filename": "model_compare.json",
       "sha256": "d0a70b7c48fa275fa0d3e567e13e76fc590e935839dfe5dce1ee27fea9bd2c21",
       "byte_size": 2401,
       "is_canonical_23_route": true
     },
-    "data_quality": {
+    "/api/v1/governance/data-quality": {
+      "route_key": "/api/v1/governance/data-quality",
       "route_path": "/api/v1/governance/data-quality",
       "http_method": "GET",
+      "file_path": "docs/samples/data_quality.json",
       "filename": "data_quality.json",
       "sha256": "a4e5e0aa92c2c5b7fb7a99df47789e0b17d23af77e45c9cb542a6f5d5ce5b00b",
       "byte_size": 1896,
       "is_canonical_23_route": true
     },
-    "model_card": {
+    "/api/v1/governance/model-card": {
+      "route_key": "/api/v1/governance/model-card",
       "route_path": "/api/v1/governance/model-card",
       "http_method": "GET",
+      "file_path": "docs/samples/model_card.json",
       "filename": "model_card.json",
       "sha256": "8978d3e9328359c0de5f294b961b2f2e729d3d70ba8a74e58bff46774484fdeb",
       "byte_size": 7907,
       "is_canonical_23_route": true
     },
-    "projection": {
+    "/api/v1/projection": {
+      "route_key": "/api/v1/projection",
       "route_path": "/api/v1/projection",
       "http_method": "GET",
+      "file_path": "docs/samples/projection.json",
       "filename": "projection.json",
       "sha256": "29b409626a290e0ba0984da48a266171f1d01ca386c907ce56be487f1916d584",
       "byte_size": 643598,
       "is_canonical_23_route": true
     },
-    "clients_analyst_masked": {
+    "/api/v1/clients [analyst]": {
+      "route_key": "/api/v1/clients [analyst]",
       "route_path": "/api/v1/clients?page=1&page_size=5",
       "http_method": "GET",
+      "file_path": "docs/samples/clients_analyst_masked.json",
       "filename": "clients_analyst_masked.json",
       "sha256": "d95b0925f9770b1ce26ccf6aad92089d006af5fb9667c69c673fddf2e794965c",
       "byte_size": 3347,
       "is_canonical_23_route": false
     },
-    "clients_admin_unmasked": {
+    "/api/v1/clients [admin]": {
+      "route_key": "/api/v1/clients [admin]",
       "route_path": "/api/v1/clients?page=1&page_size=5",
       "http_method": "GET",
+      "file_path": "docs/samples/clients_admin_unmasked.json",
       "filename": "clients_admin_unmasked.json",
       "sha256": "f0a87592b20a0e234bebfd4cfe07777dd085222ef4a0334d10b60b9bb8aac23f",
       "byte_size": 3284,
       "is_canonical_23_route": false
     },
-    "export": {
-      "route_path": "/api/v1/export?country=USA&assigned_cluster=0",
+    "/api/v1/export": {
+      "route_key": "/api/v1/export",
+      "route_path": "/api/v1/export?country=USA&assigned_cluster=0&format=csv",
       "http_method": "GET",
-      "filename": "export.json",
-      "sha256": "52aeefaa9130f6fdc1c5419ad899d7ee5559f1a316c880f93e879ceff0b9fff2",
-      "byte_size": 222722,
+      "file_path": "docs/samples/export.csv",
+      "filename": "export.csv",
+      "sha256": "4d76fecb995f70889302966e7210ea1e911f3b482f02df0c758237578fd2ffaa",
+      "byte_size": 54695,
+      "is_canonical_23_route": false
+    },
+    "/api/v1/auth/demo-token": {
+      "route_key": "/api/v1/auth/demo-token",
+      "route_path": "/api/v1/auth/demo-token",
+      "http_method": "POST",
+      "file_path": "docs/samples/demo_token.json",
+      "filename": "demo_token.json",
+      "sha256": "475fc23e04bd488f9777c3ff43f1d5d36433147d2572b904a00672532748c4f4",
+      "byte_size": 127,
       "is_canonical_23_route": false
     }
   }

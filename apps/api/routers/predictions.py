@@ -46,6 +46,7 @@ async def predict_segment(request: SegmentPredictionRequest) -> SegmentPredictio
         calibrated_soft_probabilities=res["calibrated_soft_probabilities"],
         temperature_beta=res["temperature_beta"],
         is_ambiguous_prediction=res["is_ambiguous_prediction"],
+        is_ambiguous_margin=res["is_ambiguous_margin"],
         portfolio_requirement_rationale=res["portfolio_requirement_rationale"],
         metadata=metadata,
     )

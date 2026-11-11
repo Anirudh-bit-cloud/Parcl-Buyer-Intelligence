@@ -1,0 +1,46 @@
+=== 1. COUNTRY BREAKDOWN ===
+Country: USA             Buyers: 1538   Total Spend: ₹ 1,953,032,450.82 Mean Spend: ₹ 1,269,852.05 Total Units: 5656   Mean Units: 3.68
+Country: UK              Buyers: 95     Total Spend: ₹   122,026,574.83 Mean Spend: ₹ 1,284,490.26 Total Units: 348    Mean Units: 3.66
+Country: Canada          Buyers: 85     Total Spend: ₹   102,630,945.51 Mean Spend: ₹ 1,207,422.89 Total Units: 300    Mean Units: 3.53
+Country: Germany         Buyers: 56     Total Spend: ₹    66,871,570.62 Mean Spend: ₹ 1,194,135.19 Total Units: 195    Mean Units: 3.48
+Country: France          Buyers: 53     Total Spend: ₹    64,899,004.39 Mean Spend: ₹ 1,224,509.52 Total Units: 187    Mean Units: 3.53
+Country: Belgium         Buyers: 43     Total Spend: ₹    54,225,931.73 Mean Spend: ₹ 1,261,068.18 Total Units: 162    Mean Units: 3.77
+Country: Mexico          Buyers: 40     Total Spend: ₹    48,429,746.69 Mean Spend: ₹ 1,210,743.67 Total Units: 144    Mean Units: 3.60
+Country: Australia       Buyers: 39     Total Spend: ₹    43,869,854.35 Mean Spend: ₹ 1,124,868.06 Total Units: 133    Mean Units: 3.41
+Country: Russia          Buyers: 36     Total Spend: ₹    44,661,828.39 Mean Spend: ₹ 1,240,606.34 Total Units: 128    Mean Units: 3.56
+Country: Denmark         Buyers: 15     Total Spend: ₹    20,103,053.51 Mean Spend: ₹ 1,340,203.57 Total Units: 52     Mean Units: 3.47
+--------------------------------------------------------------------------------
+COHORT TOTAL:   Buyers: 2000   Total Spend: ₹ 2,520,750,960.84 Mean Spend: ₹ 1,260,375.48 Total Units: 7305
+
+=== 2. USA VS INTERNATIONAL (PRD_H1) ===
+USA Buyers: 1538 (76.90%)
+USA Total Spend: ₹1,953,032,450.82
+USA Mean Spend: ₹1,269,852.05
+International Buyers: 462 (23.10%)
+International Total Spend: ₹567,718,510.02
+International Mean Spend: ₹1,228,827.94
+USA Spend Premium: ₹41,024.10 (3.34%)
+Two-sample Welch's t-test: t = 2.2443, p = 0.0251
+Cohen's d = 0.1181
+Implied Cohort Mean: ₹1,260,375.48 (matches cohort: False)
+
+=== 3. INVESTMENT SHARE CONTINGENCY TABLE (PRD_H1) ===
+acquisition_purpose  HOME  INVESTMENT
+International         317         145
+USA                  1068         470
+Chi-Square test of independence: chi2 = 0.1139, p = 0.7358, dof = 1
+USA Investment Share: 30.56%
+International Investment Share: 31.39%
+
+=== 4. INDIVIDUALS VS COMPANIES (PRD_H3) ===
+Individual Buyers: 1897 (94.85%), Mean Units: 3.6500
+Company Buyers: 103 (5.15%), Mean Units: 3.6990
+One-Way ANOVA on units: F(1, 1998) = 0.3333, p = 0.5638
+Two-Sample t-test: t(1998) = -0.5773, p = 0.5638 (Note: F = t^2: 0.3333 == 0.3333)
+
+=== 5. CAMPAIGN SCENARIO LIVE FORMULA & ROW VALUES ===
+Channel Website : Allocated=₹50,000.00, CPA=₹1,200.00, Clients=41.6667, HistMean=₹1,274,770.9303, GMV=₹53,115,455.4284
+Channel Agency  : Allocated=₹35,000.00, CPA=₹3,500.00, Clients=10.0000, HistMean=₹1,243,488.9008, GMV=₹12,434,889.0081
+Channel Client  : Allocated=₹15,000.00, CPA=₹1,800.00, Clients=8.3333, HistMean=₹1,239,682.0295, GMV=₹10,330,683.5794
+Total Modeled Clients: 60.0000
+Total Modeled GMV:     ₹75,881,028.0159

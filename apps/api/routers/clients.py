@@ -105,6 +105,7 @@ async def get_client_detail(
         assigned_segment_name=client["assigned_segment_name"],
         soft_membership_probabilities=client["soft_membership_probabilities"],
         is_ambiguous_boundary=client["is_ambiguous_boundary"],
+        is_ambiguous_margin=client["is_ambiguous_margin"],
         transactions=client["transactions"],
         metadata=metadata,
     )

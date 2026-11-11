@@ -1,0 +1,6 @@
+{
+  "access_token": "<REDACTED_DEMO_JWT_TOKEN>",
+  "token_type": "bearer",
+  "role": "analyst",
+  "expires_in_seconds": 86400
+}

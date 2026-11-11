@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+    /* Light Theme (Default) */
+    --color-bg-app: #f8fafc;        /* slate-50 */
+    --color-bg-card: #ffffff;       /* pure white */
+    --color-bg-card-hover: #f1f5f9;  /* slate-100 */
+    --color-bg-sidebar: #ffffff;
+    --color-bg-header: #ffffff;
+    --color-bg-subtle: #f8fafc;
+    --color-bg-muted: #e2e8f0;
+
+    --color-border: #e2e8f0;        /* slate-200 */
+    --color-border-subtle: #f1f5f9; /* slate-100 */
+
+    --color-text-primary: #0f172a;   /* slate-900 */
+    --color-text-secondary: #475569; /* slate-600 */
+    --color-text-muted: #94a3b8;     /* slate-400 */
+
+    --color-accent: #2563eb;         /* blue-600 */
+    --color-accent-subtle: #eff6ff;  /* blue-50 */
+    --color-accent-border: #bfdbfe;  /* blue-200 */
+
+    color-scheme: light;
+  }
+
+  .dark {
+    /* Dark Theme */
+    --color-bg-app: #090d16;        /* deep enterprise slate */
+    --color-bg-card: #0f172a;       /* slate-900 */
+    --color-bg-card-hover: #1e293b;  /* slate-800 */
+    --color-bg-sidebar: #0b1120;
+    --color-bg-header: #0f172a;
+    --color-bg-subtle: #1e293b;
+    --color-bg-muted: #334155;
+
+    --color-border: #1e293b;        /* slate-800 */
+    --color-border-subtle: #172033;
+
+    --color-text-primary: #f8fafc;   /* slate-50 */
+    --color-text-secondary: #94a3b8; /* slate-400 */
+    --color-text-muted: #64748b;     /* slate-500 */
+
+    --color-accent: #3b82f6;         /* blue-500 */
+    --color-accent-subtle: rgba(59, 130, 246, 0.12);
+    --color-accent-border: rgba(59, 130, 246, 0.28);
+
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-app);
+    color: var(--color-text-primary);
+    transition: background-color 0.15s ease, color 0.15s ease;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Scrollbars for data tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+
+  .high-contrast {
+    --color-bg-app: #000000;
+    --color-bg-card: #000000;
+    --color-bg-card-hover: #111111;
+    --color-bg-sidebar: #000000;
+    --color-bg-header: #000000;
+    --color-bg-subtle: #111111;
+    --color-bg-muted: #222222;
+
+    --color-border: #ffffff;
+    --color-border-subtle: #cccccc;
+
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #ffffff;
+    --color-text-muted: #dddddd;
+
+    --color-accent: #ffff00;
+    --color-accent-subtle: rgba(255, 255, 0, 0.2);
+    --color-accent-border: #ffff00;
+
+    color-scheme: dark;
+  }
+
+/* Executive Print Stylesheet for High-Resolution PDF Board Packs */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 12mm;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  header, nav, aside, .print\:hidden {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .grid {
+    display: grid !important;
+    break-inside: avoid;
+  }
+
+  .rounded-xl, .rounded-lg {
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+}

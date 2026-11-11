@@ -1,0 +1,11 @@
+{
+  "name": "Parcl Buyer Intelligence API",
+  "version": "1.2.0",
+  "status": "online",
+  "as_of": "December 2025",
+  "currency": "INR",
+  "currency_symbol": "₹",
+  "docs": "/docs",
+  "openapi": "/openapi.json",
+  "api_v1_prefix": "/api/v1"
+}

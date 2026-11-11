@@ -1,0 +1,201 @@
+client_id,client_type,first_name,last_name,date_of_birth,gender,country,region,acquisition_purpose,satisfaction_score,loan_applied,referral_channel
+C0001,Individual,Aditi,Weber,01/19/1984,M,France,Provence-Alpes-Cote d'Azur,Investment,5,Yes,Website
+C0002,Individual,Chloe,Yamamoto,05/23/1970,F,UK,Wales,Home,1,No,Website
+C0003,Individual,Victoria,Sharma,03/06/1976,F,UK,Scotland,Home,4,No,Website
+C0004,Individual,George,O'Connor,12/23/1956,F,Belgium,Flanders,Home,3,No,Website
+C0005,Individual,Julia,Dumont,05/04/1983,F,Russia,Northwestern Federal District,Investment,1,No,Website
+C0006,Individual,Julia,Underwood,02/08/1970,M,Australia,New South Wales,Home,3,Yes,Website
+C0007,Individual,Maya,Hoffman,01/02/1976,F,Denmark,Central Denmark,Investment,2,No,Website
+C0008,Individual,Carlos,Chen,05/08/1955,F,Belgium,Flanders,Home,4,Yes,Website
+C0009,Individual,Isaac,Iqbal,12/15/1982,M,Australia,Victoria,Home,2,No,Website
+C0010,Individual,Yuki,Torres,11/27/1970,M,Russia,Volga Federal District,Home,3,Yes,Website
+C0011,Individual,Carlos,Moreau,01/23/1976,M,UK,Scotland,Investment,5,Yes,Agency
+C0012,Individual,Thomas,Espinoza,06/19/1956,F,USA,Colorado,Home,1,Yes,Website
+C0013,Individual,Noah,Sharma,05/04/1984,M,Denmark,Capital Region,Home,3,No,Website
+C0014,Individual,Alexander,Xu,08/20/1971,M,Denmark,Region of Southern Denmark,Home,3,No,Client
+C0015,Individual,Gabriel,Patel,08/22/1977,M,Canada,Quebec,Home,3,No,Website
+C0016,Individual,Nadia,Mendoza,10/23/1955,F,Mexico,Nuevo Leon,Home,3,No,Website
+C0017,Individual,Quinn,Bennett,12/21/1982,M,USA,Florida,Home,3,No,Agency
+C0018,Individual,Olivia,Nakamura,12/16/1970,M,Mexico,Nuevo Leon,Home,2,No,Agency
+C0019,Individual,Aditi,Chen,12/14/1975,M,Germany,North Rhine-Westphalia,Investment,4,No,Agency
+C0020,Individual,Amara,Jensen,08/20/1956,F,Germany,Bavaria,Investment,5,No,Agency
+C0021,Individual,Kavita,Yamamoto,08/24/1982,F,Canada,Quebec,Home,5,No,Website
+C0022,Company,Kavita,Rossi,06/22/1971,M,Mexico,Quintana Roo,Home,4,No,Agency
+C0023,Individual,Amara,Qureshi,01/19/1976,F,Mexico,Nuevo Leon,Home,4,Yes,Client
+C0024,Individual,Aditi,Novak,11/17/1955,F,Canada,Quebec,Home,5,No,Website
+C0025,Individual,David,Torres,01/07/1984,F,France,Ile-de-France,Home,1,Yes,Website
+C0026,Individual,Beatrice,Dumont,04/11/1972,F,Mexico,Nuevo Leon,Home,1,Yes,Website
+C0027,Individual,Noah,Moreau,06/29/1976,M,France,Ile-de-France,Home,2,No,Website
+C0028,Individual,Tariq,Bennett,09/25/1956,M,Russia,Northwestern Federal District,Home,3,Yes,Website
+C0029,Individual,Helena,Sharma,07/19/1982,M,Australia,Western Australia,Home,1,Yes,Client
+C0030,Individual,Zoe,Costa,03/04/1971,M,France,Occitanie,Home,5,No,Website
+C0031,Individual,Beatrice,Sharma,03/16/1977,F,USA,Florida,Home,4,Yes,Website
+C0032,Individual,Priya,Moreau,05/09/1955,F,Denmark,Central Denmark,Home,3,No,Client
+C0033,Individual,Noah,Larsson,07/30/1983,F,Denmark,Central Denmark,Home,1,No,Website
+C0034,Individual,Uma,Novak,07/23/1971,F,Australia,Western Australia,Home,5,Yes,Website
+C0035,Individual,Elena,Dumont,03/03/1976,F,UK,Scotland,Investment,5,No,Website
+C0036,Individual,Noah,Anderson,02/20/1956,F,France,Auvergne-Rhone-Alpes,Home,4,No,Website
+C0037,Company,Zoe,Gupta,03/10/1983,F,Russia,Northwestern Federal District,Home,2,Yes,Agency
+C0038,Individual,Sophia,Fischer,09/28/1970,M,Mexico,Mexico City,Investment,1,No,Agency
+C0039,Individual,Hiroshi,Fischer,01/07/1976,F,Denmark,Central Denmark,Home,5,Yes,Website
+C0040,Individual,Arthur,Tanaka,02/12/1957,F,Germany,North Rhine-Westphalia,Home,4,No,Agency
+C0041,Individual,Leila,Gupta,03/02/1984,F,USA,Illinois,Home,3,No,Website
+C0042,Individual,Carlos,Johansson,06/02/1971,F,Germany,North Rhine-Westphalia,Investment,3,Yes,Website
+C0043,Individual,Kavita,Eriksson,06/07/1977,F,USA,Washington,Home,1,No,Website
+C0044,Individual,Penelope,Iqbal,01/23/1957,F,Mexico,Jalisco,Home,4,No,Client
+C0045,Individual,Thomas,Jensen,11/01/1982,M,Germany,Baden-Wurttemberg,Investment,3,No,Agency
+C0046,Individual,Elena,Weber,07/31/1971,M,UK,Northern Ireland,Home,5,Yes,Website
+C0047,Individual,Oscar,Gupta,09/25/1976,F,Australia,Western Australia,Home,5,Yes,Website
+C0048,Individual,Yuki,Costa,03/16/1957,F,Germany,North Rhine-Westphalia,Home,4,No,Website
+C0049,Individual,Nadia,Yilmaz,05/30/1983,M,Mexico,Mexico City,Home,3,Yes,Website
+C0050,Individual,Priya,Venkatesh,03/29/1972,M,Belgium,Flanders,Home,4,Yes,Agency
+C0051,Individual,Chloe,Dubois,03/18/1977,F,Canada,Quebec,Home,1,Yes,Agency
+C0052,Individual,William,Moreau,04/24/1955,M,USA,California,Investment,2,No,Website
+C0053,Individual,Helena,Zhang,11/15/1983,F,Mexico,Nuevo Leon,Home,3,Yes,Client
+C0054,Individual,Liam,Gupta,07/09/1970,F,Canada,British Columbia,Home,1,Yes,Agency
+C0055,Individual,Rahul,Johansson,04/19/1977,M,Australia,New South Wales,Home,3,No,Website
+C0056,Individual,Zoe,Kowalski,04/03/1957,F,Germany,Hesse,Home,1,No,Agency
+C0057,Individual,Carlos,Venkatesh,01/27/1984,M,UK,Greater London,Home,5,No,Website
+C0058,Individual,Aditi,Xu,02/13/1971,M,France,Provence-Alpes-Cote d'Azur,Home,4,Yes,Client
+C0059,Individual,Julia,Yamamoto,11/28/1975,F,Canada,Quebec,Investment,5,No,Website
+C0060,Individual,Oscar,Kowalski,09/23/1955,M,Australia,Western Australia,Investment,5,No,Client
+C0061,Individual,Amara,Zhang,05/02/1982,M,Russia,Northwestern Federal District,Investment,3,Yes,Website
+C0062,Individual,Amara,Patel,06/12/1970,M,Mexico,Quintana Roo,Investment,4,No,Website
+C0063,Individual,Carlos,Hoffman,07/20/1976,F,Russia,Volga Federal District,Home,1,No,Website
+C0064,Individual,Tariq,Iqbal,07/23/1955,M,Belgium,Brussels-Capital,Investment,4,No,Website
+C0065,Individual,Marcus,Venkatesh,04/05/1983,F,France,Ile-de-France,Home,4,No,Client
+C0066,Individual,Zoe,Moreau,12/18/1970,F,Mexico,Jalisco,Home,1,No,Client
+C0067,Individual,Gabriel,Moreau,08/17/1975,M,Australia,New South Wales,Home,3,No,Client
+C0068,Individual,Hiroshi,Ferreira,04/04/1955,F,Russia,Northwestern Federal District,Home,3,No,Website
+C0069,Individual,Liam,Ferreira,10/27/1982,M,USA,Washington,Home,5,Yes,Client
+C0070,Individual,Ian,Larsson,11/25/1971,M,Canada,Alberta,Investment,1,No,Website
+C0071,Individual,Noah,Ivanov,01/31/1977,F,France,Ile-de-France,Home,5,Yes,Agency
+C0072,Individual,Leila,Iqbal,04/09/1955,M,France,Auvergne-Rhone-Alpes,Investment,4,Yes,Website
+C0073,Individual,Liam,Kapoor,12/26/1983,F,Belgium,Brussels-Capital,Home,2,No,Website
+C0074,Individual,Alexander,Zhang,02/17/1971,F,USA,Florida,Home,4,No,Agency
+C0075,Individual,Thomas,Johansson,07/25/1976,F,Germany,Baden-Wurttemberg,Home,1,Yes,Agency
+C0076,Individual,Freja,Ferreira,08/09/1956,F,Denmark,Central Denmark,Home,3,No,Client
+C0077,Individual,Xavier,Gomez,06/01/1983,F,Denmark,Central Denmark,Investment,1,No,Website
+C0078,Individual,Priya,O'Connor,09/02/1971,F,France,Auvergne-Rhone-Alpes,Investment,4,Yes,Website
+C0079,Individual,Olivia,Ueda,08/29/1975,F,UK,Wales,Home,4,Yes,Agency
+C0080,Individual,Sara,Ueda,06/19/1955,F,Australia,New South Wales,Home,5,No,Website
+C0081,Individual,Alexander,Anderson,10/12/1982,F,France,Ile-de-France,Home,4,No,Website
+C0082,Individual,Rahul,Fischer,07/20/1971,F,Mexico,Mexico City,Home,3,No,Website
+C0083,Individual,Nadia,Hansen,09/18/1975,F,Australia,Queensland,Home,3,No,Agency
+C0084,Individual,Thomas,Patel,01/17/1957,M,Denmark,Capital Region,Home,3,Yes,Agency
+C0085,Individual,George,Dumont,07/16/1983,F,France,Ile-de-France,Investment,2,No,Website
+C0086,Individual,Vikram,Fischer,03/01/1971,M,Russia,Central Federal District,Home,2,No,Website
+C0087,Individual,Kavita,Patel,08/08/1976,M,Australia,Queensland,Home,1,Yes,Agency
+C0088,Individual,Fatima,Gomez,10/17/1955,F,France,Provence-Alpes-Cote d'Azur,Investment,3,No,Agency
+C0089,Individual,Ethan,Underwood,02/21/1984,F,Mexico,Quintana Roo,Home,5,No,Agency
+C0090,Individual,Isaac,Yilmaz,04/23/1970,M,Denmark,Region of Southern Denmark,Home,2,No,Website
+C0091,Individual,George,Underwood,03/18/1976,F,France,Occitanie,Home,3,Yes,Website
+C0092,Individual,George,Lombardi,03/25/1955,M,Denmark,Region of Southern Denmark,Home,3,Yes,Agency
+C0093,Individual,Thomas,Anderson,02/18/1984,F,Mexico,Jalisco,Home,2,Yes,Website
+C0094,Individual,David,Hoffman,05/28/1970,F,Canada,Quebec,Home,3,Yes,Website
+C0095,Individual,Alexander,Fischer,09/01/1977,F,Mexico,Quintana Roo,Home,1,No,Website
+C0096,Individual,Freja,Kowalski,02/06/1957,F,USA,New York,Home,2,No,Agency
+C0097,Individual,Victoria,Underwood,05/31/1984,F,USA,Illinois,Home,2,No,Client
+C0098,Individual,Yuki,Costa,08/18/1970,F,Russia,Volga Federal District,Home,1,No,Website
+C0099,Individual,Hannah,Schmidt,12/31/1976,F,Mexico,Jalisco,Home,4,Yes,Website
+C0100,Individual,Sara,Novak,03/15/1955,M,Mexico,Nuevo Leon,Home,5,Yes,Website
+C0101,Individual,Zoe,Sharma,03/30/1984,F,UK,Northern Ireland,Home,3,Yes,Agency
+C0102,Individual,Victoria,Patel,05/30/1970,F,Belgium,Flanders,Home,4,No,Website
+C0103,Individual,Arthur,Zimmerman,08/20/1976,M,Denmark,Region of Southern Denmark,Home,1,No,Website
+C0104,Company,Carlos,Tanaka,06/14/1956,M,USA,Texas,Home,1,No,Website
+C0105,Individual,Freja,Larsson,11/17/1983,F,Belgium,Wallonia,Home,4,No,Agency
+C0106,Individual,Daphne,Yamamoto,07/02/1970,M,Mexico,Jalisco,Home,4,No,Agency
+C0107,Individual,Fatima,Mendoza,11/24/1976,M,Mexico,Quintana Roo,Home,4,No,Website
+C0108,Individual,Elena,Rossi,07/02/1955,M,Russia,Northwestern Federal District,Investment,4,No,Client
+C0109,Individual,Rahul,Ueda,01/17/1983,M,France,Auvergne-Rhone-Alpes,Investment,5,No,Agency
+C0110,Individual,Vikram,Costa,04/08/1971,M,UK,England,Investment,3,No,Website
+C0111,Individual,Jasmine,Bennett,08/27/1976,F,Germany,North Rhine-Westphalia,Investment,3,No,Website
+C0112,Individual,Penelope,Ivanov,05/20/1956,F,France,Provence-Alpes-Cote d'Azur,Investment,1,No,Website
+C0113,Individual,Elena,Bennett,04/13/1982,F,Canada,Alberta,Home,1,Yes,Website
+C0114,Individual,Elena,Lombardi,03/19/1972,M,Mexico,Nuevo Leon,Home,2,Yes,Agency
+C0115,Individual,Ethan,Moreau,02/12/1976,M,Russia,Central Federal District,Home,1,No,Agency
+C0116,Individual,Freja,Schmidt,05/12/1956,M,Canada,Alberta,Investment,1,No,Website
+C0117,Individual,Priya,Torres,01/14/1984,M,Mexico,Jalisco,Home,4,Yes,Agency
+C0118,Individual,Elena,Zimmerman,02/28/1972,M,USA,Washington,Home,1,Yes,Client
+C0119,Company,Rohan,Hansen,06/06/1977,F,Germany,Baden-Wurttemberg,Investment,1,Yes,Website
+C0120,Individual,Helena,Xu,12/11/1955,F,UK,Greater London,Home,2,No,Client
+C0121,Individual,Gabriel,Anderson,04/24/1984,F,Mexico,Mexico City,Home,1,No,Website
+C0122,Individual,David,Gomez,09/25/1971,F,Canada,Alberta,Home,4,No,Website
+C0123,Individual,Victoria,Zimmerman,12/03/1975,F,Denmark,Capital Region,Home,4,Yes,Website
+C0124,Individual,Chloe,Ueda,02/07/1956,M,Germany,Hesse,Home,3,Yes,Client
+C0125,Company,Ian,Lombardi,01/25/1984,F,France,Ile-de-France,Home,4,No,Website
+C0126,Individual,Kai,Patel,11/04/1971,F,France,Occitanie,Home,1,Yes,Website
+C0127,Individual,Freja,Ferreira,11/19/1976,M,Belgium,Brussels-Capital,Home,2,Yes,Agency
+C0128,Individual,Freja,Weber,11/10/1955,M,USA,Florida,Investment,4,No,Agency
+C0129,Individual,Aditi,Hoffman,12/12/1983,F,Australia,New South Wales,Home,2,Yes,Website
+C0130,Individual,Caleb,Petrov,11/24/1971,M,Belgium,Flanders,Home,5,No,Website
+C0131,Individual,Hiroshi,Moreau,08/19/1975,M,Belgium,Brussels-Capital,Home,4,Yes,Agency
+C0132,Individual,Carlos,Watanabe,11/19/1955,F,France,Ile-de-France,Home,4,No,Client
+C0133,Individual,Quinn,Bhatia,12/24/1983,M,Mexico,Jalisco,Home,1,Yes,Website
+C0134,Individual,Leila,Sharma,08/01/1970,F,UK,Northern Ireland,Home,4,No,Client
+C0135,Individual,Kavita,Rossi,04/11/1976,F,Denmark,Capital Region,Investment,1,Yes,Website
+C0136,Individual,Chloe,Zhang,07/08/1956,M,USA,New York,Investment,2,No,Website
+C0137,Individual,Elena,Adler,01/03/1984,M,Canada,Quebec,Home,1,No,Agency
+C0138,Individual,Aditi,Venkatesh,02/24/1971,F,France,Auvergne-Rhone-Alpes,Home,1,No,Website
+C0139,Individual,Caleb,Yilmaz,08/13/1977,F,Russia,Northwestern Federal District,Home,2,Yes,Agency
+C0140,Individual,Arthur,Gomez,12/14/1955,F,Mexico,Mexico City,Home,4,No,Website
+C0141,Individual,Fatima,Petrov,04/14/1982,F,Canada,Ontario,Home,3,No,Agency
+C0142,Individual,Noah,Olsen,01/18/1971,M,Belgium,Wallonia,Investment,3,Yes,Website
+C0143,Individual,Xavier,Zhang,04/07/1976,F,Mexico,Mexico City,Investment,2,Yes,Agency
+C0144,Individual,Thomas,Larsson,03/20/1957,F,Belgium,Brussels-Capital,Home,3,No,Client
+C0145,Individual,Caleb,Venkatesh,06/10/1984,M,Canada,British Columbia,Home,3,Yes,Agency
+C0146,Individual,Aditi,Schmidt,08/22/1970,F,USA,Florida,Investment,3,Yes,Website
+C0147,Individual,Sara,Ferreira,12/01/1975,M,Belgium,Flanders,Investment,4,Yes,Website
+C0148,Company,Amara,Ricci,04/27/1955,F,UK,England,Home,4,No,Website
+C0149,Individual,Jasmine,Torres,05/15/1982,F,Australia,Queensland,Home,1,No,Agency
+C0150,Individual,Fatima,Ricci,02/17/1970,F,Canada,British Columbia,Home,5,Yes,Agency
+C0151,Individual,Hannah,Hansen,05/11/1977,F,Canada,Ontario,Investment,1,No,Agency
+C0152,Individual,Maya,Petrov,04/25/1955,F,Belgium,Flanders,Home,5,No,Website
+C0153,Individual,Carlos,Yilmaz,08/25/1983,F,Australia,Queensland,Investment,1,No,Agency
+C0154,Individual,Kai,Olsen,10/19/1971,M,France,Provence-Alpes-Cote d'Azur,Home,3,No,Website
+C0155,Individual,Aarav,Venkatesh,02/29/1976,M,Belgium,Brussels-Capital,Home,5,No,Website
+C0156,Individual,Alexander,Olsen,06/27/1955,F,Denmark,Capital Region,Home,5,No,Website
+C0157,Individual,Noah,Zhang,05/24/1984,F,Belgium,Wallonia,Home,4,No,Client
+C0158,Individual,Quinn,Hansen,01/04/1971,F,Belgium,Brussels-Capital,Home,4,No,Client
+C0159,Individual,Hannah,Sharma,08/23/1977,F,France,Provence-Alpes-Cote d'Azur,Investment,3,Yes,Website
+C0160,Individual,Nadia,Dubois,12/28/1955,F,Mexico,Quintana Roo,Investment,3,No,Website
+C0161,Individual,Ian,Qureshi,08/16/1982,M,USA,Washington,Investment,1,Yes,Website
+C0162,Individual,Jasmine,Ricci,09/22/1970,M,Belgium,Wallonia,Home,5,No,Client
+C0163,Company,Elena,Yamamoto,08/10/1976,F,France,Auvergne-Rhone-Alpes,Home,3,No,Website
+C0164,Individual,Oscar,Bennett,05/09/1957,M,UK,Scotland,Investment,4,No,Client
+C0165,Individual,Marcus,Vogel,08/04/1982,F,Denmark,Capital Region,Home,1,No,Website
+C0166,Individual,Aarav,Jensen,02/25/1971,M,Russia,Central Federal District,Home,5,No,Website
+C0167,Individual,Isaac,Hansen,03/31/1976,F,Canada,Ontario,Investment,5,No,Website
+C0168,Individual,Caleb,Costa,09/23/1955,F,Belgium,Brussels-Capital,Investment,2,No,Website
+C0169,Individual,Maya,Vogel,10/08/1983,M,UK,England,Investment,1,No,Agency
+C0170,Individual,Nadia,Patel,02/18/1970,M,Denmark,Region of Southern Denmark,Home,4,Yes,Agency
+C0171,Individual,Jasmine,Hoffman,05/31/1977,M,Belgium,Wallonia,Home,1,Yes,Agency
+C0172,Individual,Vikram,O'Connor,08/19/1956,M,Russia,Northwestern Federal District,Investment,4,No,Client
+C0173,Individual,Alexander,Ivanov,04/27/1982,M,Denmark,Region of Southern Denmark,Home,1,No,Website
+C0174,Individual,Gabriel,Lombardi,10/16/1971,F,Canada,British Columbia,Home,4,No,Website
+C0175,Individual,Beatrice,Novak,01/14/1976,M,Denmark,Capital Region,Home,1,Yes,Agency
+C0176,Individual,Sophia,Yilmaz,03/01/1956,F,Denmark,Capital Region,Home,2,No,Website
+C0177,Individual,Uma,Jensen,08/12/1983,M,Russia,Northwestern Federal District,Home,3,No,Website
+C0178,Individual,Chloe,Johansson,02/13/1970,F,Australia,Western Australia,Home,3,Yes,Website
+C0179,Individual,Caleb,Costa,05/02/1977,M,USA,Florida,Investment,5,Yes,Website
+C0180,Individual,Aarav,Weber,09/30/1955,F,UK,England,Investment,5,No,Website
+C0181,Individual,Ian,Bhatia,03/02/1984,F,Australia,New South Wales,Home,2,No,Website
+C0182,Individual,Sophia,Mendoza,07/03/1971,F,Germany,Berlin,Home,2,No,Agency
+C0183,Individual,Uma,Novak,11/21/1976,F,Belgium,Wallonia,Investment,5,No,Website
+C0184,Individual,Penelope,Hoffman,06/19/1956,F,Australia,Queensland,Home,2,No,Website
+C0185,Individual,David,Vogel,08/17/1982,M,France,Provence-Alpes-Cote d'Azur,Investment,2,Yes,Client
+C0186,Individual,Beatrice,Olsen,10/26/1970,F,UK,Northern Ireland,Home,3,No,Client
+C0187,Individual,Victoria,Sharma,01/11/1976,F,Belgium,Wallonia,Home,4,No,Website
+C0188,Individual,Rahul,Underwood,02/23/1956,F,France,Auvergne-Rhone-Alpes,Home,4,No,Client
+C0189,Individual,Kai,Johansson,07/20/1982,M,UK,Northern Ireland,Home,3,No,Website
+C0190,Individual,Tariq,Eriksson,12/22/1970,M,Russia,Central Federal District,Home,3,No,Website
+C0191,Individual,Aarav,Zimmerman,05/18/1976,F,Mexico,Nuevo Leon,Investment,5,No,Website
+C0192,Individual,Noah,Sharma,02/16/1957,F,Russia,Northwestern Federal District,Investment,2,Yes,Website
+C0193,Individual,Amara,Rossi,06/26/1982,M,Mexico,Mexico City,Home,3,No,Agency
+C0194,Individual,George,Hoffman,03/11/1972,M,UK,Wales,Home,3,No,Client
+C0195,Individual,Alexander,Lombardi,07/26/1975,F,Australia,Victoria,Home,2,No,Agency
+C0196,Individual,Zoe,Vogel,12/28/1956,F,Germany,Bavaria,Home,2,Yes,Website
+C0197,Individual,Aditi,Novak,04/28/1983,F,Belgium,Brussels-Capital,Investment,5,No,Website
+C0198,Company,Vikram,Ricci,11/27/1971,F,Australia,Queensland,Home,1,Yes,Client
+C0199,Individual,Amara,Novak,07/11/1977,M,France,Ile-de-France,Investment,1,No,Client
+C0200,Individual,Helena,Watanabe,05/01/1957,M,Australia,Western Australia,Home,2,No,Website

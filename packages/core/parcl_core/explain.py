@@ -1,13 +1,51 @@
 """Explainability, surrogate decision tree extraction, TreeSHAP, and PRD hypothesis truth matrix."""
 
 import logging
-from typing import Any
+from typing import Any, cast
 
 import numpy as np
 import shap
+from sklearn.metrics import confusion_matrix, precision_recall_fscore_support
 from sklearn.tree import DecisionTreeClassifier, export_text
 
 logger = logging.getLogger(__name__)
+
+
+def compute_surrogate_evaluation_report(
+    dt: DecisionTreeClassifier,
+    X: np.ndarray,
+    y: np.ndarray,
+) -> dict[str, Any]:
+    """Compute surrogate decision tree classification fidelity, confusion matrix, and per-cluster PRF."""
+    preds = dt.predict(X)
+    fidelity_acc = float(dt.score(X, y))
+
+    p, r, f1, sup = precision_recall_fscore_support(y, preds, average=None, zero_division=0)
+    p_macro, r_macro, f1_macro, _ = precision_recall_fscore_support(
+        y, preds, average="macro", zero_division=0
+    )
+
+    cm = confusion_matrix(y, preds).tolist()
+
+    per_class = []
+    for cls_idx in range(len(p)):
+        per_class.append(
+            {
+                "cluster_id": int(cls_idx),
+                "precision": float(round(p[cls_idx], 4)),
+                "recall": float(round(r[cls_idx], 4)),
+                "f1_score": float(round(f1[cls_idx], 4)),
+                "support": int(sup[cls_idx]),
+            }
+        )
+
+    return {
+        "metric_type": "Classification Fidelity (replaces deprecated R²)",
+        "fidelity_accuracy": float(round(fidelity_acc, 4)),
+        "f1_macro": float(round(f1_macro, 4)),
+        "confusion_matrix": cm,
+        "per_class_metrics": per_class,
+    }
 
 
 def fit_surrogate_decision_tree(
@@ -44,7 +82,7 @@ def compute_tree_shap_feature_importance(
         {"feature": name, "mean_abs_shap": float(score)}
         for name, score in zip(feature_names, mean_abs, strict=False)
     ]
-    importances.sort(key=lambda x: x["mean_abs_shap"], reverse=True)
+    importances.sort(key=lambda x: cast(float, x["mean_abs_shap"]), reverse=True)
     return importances
 
 
