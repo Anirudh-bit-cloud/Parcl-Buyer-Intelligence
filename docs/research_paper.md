@@ -1,7 +1,7 @@
 # Parcl: A Production-Grade, Interpretable Machine Learning Framework for Multi-Unit Real Estate Buyer Segmentation, Next-Best-Offer Recommendation, and Disparity Governance
 
-**Authors**: Parcl Co. Machine Learning & Systems Engineering Group  
-**Affiliation**: Unified Mentor Applied Intelligence Research  
+**Author**: Anirudh Saini  
+**Affiliation**: Parcl Research & Unified Mentor Applied Intelligence Group  
 **Release**: Platform v2.0.0 (Enterprise Edition)  
 **Date**: November 2026  
 **Status**: Peer-Review Ready Technical Paper  
